@@ -1,0 +1,651 @@
+/* ========================================= */
+/*          GLOBAL / COMMON STYLES           */
+/* ========================================= */
+
+/* --- VARIABLES based on Logo --- */
+:root {
+    --primary-blue: #0033cc;
+    /* From Freedom Discovery Text */
+    --accent-orange: #ff8c00;
+    /* From Eagle Logo */
+    --dark-text: #333333;
+    --light-bg: #f4f7fa;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+/* --- RESET & BASICS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--accent-orange);
+    color: var(--white);
+    border: 2px solid var(--accent-orange);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--accent-orange);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    margin-left: 10px;
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--primary-blue);
+}
+
+/* --- NAVBAR --- */
+/* --- NAVBAR UPDATES (Non-Sticky) --- */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* CHANGED: Removed 'position: fixed' and 'top: 0' */
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-img {
+    height: 60px;
+    /* Adjust based on your logo file */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-orange);
+}
+
+.btn-nav {
+    background: var(--primary-blue);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.btn-nav:hover {
+    background: var(--accent-orange) !important;
+    color: var(--white) !important;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+}
+
+/* ========================================= */
+/*             INDEX PAGE STYLES             */
+/* ========================================= */
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    margin-top: 0;
+    height: calc(100vh - 80px);
+    /* Offset fixed navbar */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 51, 204, 0.8), rgba(0, 20, 100, 0.9));
+    /* Blue overlay matching logo */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.text-highlight {
+    color: var(--accent-orange);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+/* --- SECTIONS --- */
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background: var(--light-bg);
+}
+
+.section-subtitle {
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- ABOUT GRID --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.check-list {
+    margin: 20px 0;
+}
+
+.check-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.check-list i {
+    color: var(--accent-orange);
+    margin-right: 10px;
+}
+
+.btn-text {
+    color: var(--primary-blue);
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-orange);
+}
+
+/* --- SERVICES GRID --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    border-top: 4px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-top: 4px solid var(--accent-orange);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: var(--dark-text);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* --- CTA BANNER --- */
+.cta-banner {
+    background: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.cta-banner h2 {
+    margin-bottom: 15px;
+}
+
+.cta-banner p {
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+#backToTop {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--accent-orange);
+    /* Your Orange Brand Color */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    /* Circular button */
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+#backToTop:hover {
+    background-color: var(--primary-blue);
+    /* Hovers to Blue */
+    transform: translateY(-5px);
+}
+
+/* --- FOOTER --- */
+.footer {
+    background: #001a66;
+    /* Darker version of primary blue */
+    color: #ccc;
+    padding-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer h3,
+.footer h4 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+    color: var(--accent-orange);
+}
+
+.social-icons a {
+    color: var(--white);
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-150%);
+        transition: var(--transition);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================= */
+/*             ABOUT PAGE STYLES             */
+/* ========================================= */
+
+/* --- PAGE HEADER (Mini Hero) --- */
+.page-header {
+    background: linear-gradient(rgba(0, 51, 204, 0.9), rgba(0, 20, 100, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 100px 0 60px 0;
+    text-align: center;
+}
+
+/* --- SPLIT LAYOUT (Coach & Intro) --- */
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    /* Image takes less space than text */
+    gap: 60px;
+    align-items: center;
+}
+
+.split-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 0 var(--primary-blue);
+    /* Cool offset border effect */
+}
+
+.image-caption {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.image-caption h3 {
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.image-caption p {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.quote-box {
+    border-left: 5px solid var(--accent-orange);
+    padding-left: 20px;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+}
+
+
+/* --- MILESTONE GRID (The Journey) --- */
+.milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.milestone-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+}
+
+.milestone-card:hover {
+    border-bottom: 3px solid var(--accent-orange);
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: #e6ecff;
+    /* Light Blue */
+    color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+}
+
+/* --- ACCREDITATION CARDS GRID --- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: var(--white);
+    border: 1px solid #eee;
+    padding: 40px 30px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 51, 204, 0.15);
+    border-color: var(--primary-blue);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--accent-orange);
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.card-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.card-list i {
+    color: var(--accent-orange);
+    margin-right: 12px;
+    margin-top: 5px;
+    /* Aligns checkmark with text */
+}
+
+/* --- IMPACT STATS (Blue Background) --- */
+.bg-blue {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.big-num {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+}
+
+.label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- SCROLL ANIMATIONS --- */
+
+/* 1. Base Class: Hidden and pushed down slightly */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Pushed down 50px */
+    transition: all 0.8s ease-out;
+    /* Smooth transition duration */
+    will-change: opacity, transform;
+    /* Performance optimization */
+}
+
+/* 2. Active Class: Visible and back to original position */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 3. Staggered Delays (Optional: For cards appearing one by one) */
+.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.delay-300 {
+    transition-delay: 0.3s;
+}
