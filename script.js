@@ -10,6 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Contact Form Handler (Mailto) ---
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const finalSubject = encodeURIComponent(`[Website Inquiry] ${subject} - ${name}`);
+            const finalBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+            window.location.href = `mailto:info@freedomdiscovery.net?subject=${finalSubject}&body=${finalBody}`;
+        });
+    }
+
     // --- Back to Top Button Logic ---
     const backToTopBtn = document.getElementById("backToTop");
 

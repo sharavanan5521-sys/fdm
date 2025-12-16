@@ -5,7 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Freedom Discovery Management</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Get in touch with Freedom Discovery Management. Call us at 012 488 3300 or visit our HQ in Penang. Ready to transform your workforce?">
+    <link rel="canonical" href="https://freedomdiscovery.net/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://freedomdiscovery.net/contact.html">
+    <meta property="og:title" content="Contact Us - Freedom Discovery Management">
+    <meta property="og:description"
+        content="Start your transformation journey with us. Contact our consultants for a proposal today.">
+    <meta property="og:image" content="https://freedomdiscovery.net/assets/logo.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
@@ -73,6 +87,35 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
+            </div>
+
+            <div class="contact-form-wrapper animate-on-scroll delay-200 mt-50"
+                style="max-width: 800px; margin: 50px auto 0;">
+                <h3 style="text-align: center; margin-bottom: 30px; color: var(--primary-blue);">Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Training Proposal">Request Training Proposal</option>
+                            <option value="Consulting">Business Consulting</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
