@@ -1461,13 +1461,35 @@ ul {
         margin: 15px 0;
     }
 
+    /* Typography Updates for Mobile */
     .hero h1 {
         font-size: 2rem;
     }
 
+    .section-title {
+        font-size: 1.8rem;
+        /* Smaller section titles */
+    }
+
+    /* Section Padding */
+    .section {
+        padding: 50px 0;
+        /* Reduced padding */
+    }
+
+    /* Stack Grids */
     .about-grid,
-    .footer-grid {
+    .footer-grid,
+    .split-layout,
+    /* Added split-layout to stack */
+    .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .split-image {
+        order: -1;
+        /* Image comes first in stacked view */
+        margin-bottom: 20px;
     }
 
     /* Services Page */
@@ -1503,10 +1525,5 @@ ul {
         justify-content: center;
         flex-direction: column;
         gap: 5px;
-    }
-
-    /* Contact Page */
-    .contact-grid {
-        grid-template-columns: 1fr;
     }
 }
