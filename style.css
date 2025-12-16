@@ -80,7 +80,7 @@ ul {
 .navbar {
     background: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* CHANGED: Removed 'position: fixed' and 'top: 0' */
+
     position: relative;
     width: 100%;
     z-index: 1000;
@@ -166,7 +166,7 @@ ul {
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0, 51, 204, 0.8), rgba(0, 20, 100, 0.9));
-    /* Blue overlay matching logo */
+
 }
 
 .hero-content {
@@ -338,7 +338,7 @@ ul {
 
 #backToTop {
     display: none;
-    /* Hidden by default */
+
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -405,43 +405,7 @@ ul {
     font-size: 0.9rem;
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
 
-    .nav-links {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: var(--white);
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        transform: translateY(-150%);
-        transition: var(--transition);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        transform: translateY(0);
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .about-grid,
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ========================================= */
 /*             ABOUT PAGE STYLES             */
@@ -526,7 +490,7 @@ ul {
     width: 70px;
     height: 70px;
     background: #e6ecff;
-    /* Light Blue */
+
     color: var(--primary-blue);
     border-radius: 50%;
     display: flex;
@@ -724,12 +688,7 @@ ul {
     font-size: 0.8rem;
 }
 
-/* --- MOBILE TWEAK --- */
-@media (max-width: 768px) {
-    .services-catalog-grid {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 /* --- TRAINER GRID --- */
 .trainer-grid {
@@ -848,13 +807,13 @@ ul {
 .team-group-photo {
     width: 100%;
     margin-bottom: 50px;
-    /* Space between photo and profile cards */
+
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 51, 204, 0.15);
-    /* Blue-ish shadow */
+
     border: 5px solid var(--white);
-    /* White frame effect */
+
 }
 
 .team-group-photo img {
@@ -869,12 +828,7 @@ ul {
     transform: scale(1.02);
 }
 
-/* --- MOBILE TWEAK --- */
-@media (max-width: 768px) {
-    .associates-grid {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 /* --- VIDEO GRID --- */
 .video-grid {
@@ -1003,12 +957,7 @@ ul {
     color: #666;
 }
 
-/* --- MOBILE TWEAK --- */
-@media (max-width: 768px) {
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 /* --- UPCOMING EVENTS (Ticket Style) --- */
 .events-list {
@@ -1195,27 +1144,7 @@ ul {
     gap: 10px;
 }
 
-/* --- RESPONSIVE TWEAKS --- */
-@media (max-width: 768px) {
-    .event-ticket {
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 20px;
-    }
 
-    .date-badge {
-        width: 100%;
-        height: 60px;
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .meta-info {
-        justify-content: center;
-        flex-direction: column;
-        gap: 5px;
-    }
-}
 
 /* --- CONTACT PAGE GRID --- */
 .contact-grid {
@@ -1323,15 +1252,15 @@ ul {
 /* --- MAP SECTION --- */
 .map-section iframe {
     display: block;
-    /* Removes bottom gap */
+
     filter: grayscale(100%);
-    /* Makes map black & white (Classy look) */
+
     transition: filter 0.3s;
 }
 
 .map-section iframe:hover {
     filter: grayscale(0%);
-    /* Color returns on hover */
+
 }
 
 /* --- CLOSURE SECTION --- */
@@ -1347,7 +1276,7 @@ ul {
 
 .closure-title {
     font-family: 'Times New Roman', serif;
-    /* Matching the logo font style */
+
     color: var(--primary-blue);
     font-style: italic;
     margin-bottom: 20px;
@@ -1374,12 +1303,7 @@ ul {
     color: var(--dark-text);
 }
 
-/* --- RESPONSIVE TWEAKS --- */
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 /* --- CONTACT CARDS GRID (New Layout) --- */
 .contact-cards-grid {
@@ -1502,4 +1426,87 @@ ul {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* ========================================= */
+/*       RESPONSIVE / MOBILE STYLES          */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Navbar & General */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-150%);
+        transition: var(--transition);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Services Page */
+    .services-catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Team Page */
+    .associates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Video Section */
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Events List */
+    .event-ticket {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .date-badge {
+        width: 100%;
+        height: 60px;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .meta-info {
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Contact Page */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
