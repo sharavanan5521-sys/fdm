@@ -1570,6 +1570,35 @@ ul {
     border: none;
 }
 
+/* --- BACK TO TOP BUTTON --- */
+#backToTop {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 120px;
+    /* Above the contact widget */
+    right: 30px;
+    z-index: 90;
+    /* Lower than contact widget */
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+#backToTop:hover {
+    background-color: var(--accent-orange);
+    transform: translateY(-5px);
+}
+
 /* ========================================= */
 /*       RESPONSIVE / MOBILE STYLES          */
 /* ========================================= */
