@@ -1058,7 +1058,7 @@ ul {
 /* --- FLOATING CONTACT WIDGET --- */
 .floating-contact-widget {
     position: fixed;
-    bottom: 40px;
+    bottom: 120px;
     /* Aligned with back-to-top button usually, or slightly above */
     right: 30px;
     z-index: 99;
@@ -1575,7 +1575,7 @@ ul {
     display: none;
     /* Hidden by default */
     position: fixed;
-    bottom: 120px;
+    bottom: 40px;
     /* Above the contact widget */
     right: 30px;
     z-index: 90;
