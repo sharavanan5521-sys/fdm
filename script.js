@@ -85,9 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="https://wa.me/60124883300" target="_blank" class="contact-icon whatsapp" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="tel:+60124883300" class="contact-icon phone" title="Call Us" aria-label="Call Us">
-            <i class="fas fa-phone-alt"></i>
-        </a>
     `;
     document.body.appendChild(widgetDiv);
 });

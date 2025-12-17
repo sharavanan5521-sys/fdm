@@ -1058,40 +1058,55 @@ ul {
 /* --- FLOATING CONTACT WIDGET --- */
 .floating-contact-widget {
     position: fixed;
-    bottom: 90px;
-    /* Above back-to-top button */
+    bottom: 40px;
+    /* Aligned with back-to-top button usually, or slightly above */
     right: 30px;
-    z-index: 98;
+    z-index: 99;
+    /* High z-index */
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
 .contact-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    /* Increased size */
+    height: 60px;
     border-radius: 50%;
     color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: var(--transition);
+    font-size: 2rem;
+    /* Larger icon */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .contact-icon.whatsapp {
     background-color: #25D366;
-}
-
-.contact-icon.phone {
-    background-color: var(--primary-blue);
+    animation: pulse-green 2s infinite;
 }
 
 .contact-icon:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    /* Green glow on hover */
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
 
 
