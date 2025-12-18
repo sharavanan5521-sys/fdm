@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Generative AI Masterclass",
+        "date": "25 October 2025",
+        "location": "Zoom Online",
+        "description": "A deep dive into LLMs and their application in business."
+    },
+    {
+        "name": "Innothinking Workshop",
+        "date": "12 November 2025",
+        "location": "Kuala Lumpur",
+        "description": "Unlock your team's creative potential with our signature methodology."
+    },
+    {
+        "name": "Safety Officer Refresher",
+        "date": "05 December 2025",
+        "location": "Penang HQ",
+        "description": "Annual refresher course for certified safety officers."
+    },
+    {
+        "name": "Digital Transformation Summit",
+        "date": "15 January 2026",
+        "location": "Hyatt Regency, KL",
+        "description": "Start the year with insights from top industry leaders."
+    }
+]

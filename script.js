@@ -87,4 +87,110 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>
     `;
     document.body.appendChild(widgetDiv);
+
+    // --- PROMO POPUP LOGIC ---
+    const POSTER_PATH = 'assets/promo-poster.jpg';
+    const modal = document.getElementById('promoModal');
+    const closeBtn = document.querySelector('.close-btn');
+    const promoImage = document.getElementById('promoImage');
+
+    if (modal && promoImage) {
+        // Function to Open Modal
+        function showModal() {
+            // Cache Busting: Add timestamp to force reload image
+            const uniqueSrc = POSTER_PATH + '?v=' + new Date().getTime();
+
+            // Check if image exists (fail-safe)
+            const imgCheck = new Image();
+            imgCheck.src = uniqueSrc;
+
+            imgCheck.onload = function () {
+                promoImage.src = uniqueSrc;
+                modal.style.display = 'flex';
+                // optional: sessionStorage.setItem('promoShown', 'true');
+            };
+
+            imgCheck.onerror = function () {
+                console.log("No promo poster found, skipping popup.");
+            };
+        }
+
+        // Logic: Show ONCE per session
+        if (!sessionStorage.getItem('promoShown')) {
+            // Delay slightly for better UX
+            setTimeout(showModal, 1500);
+        }
+
+        // Close Events
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+                sessionStorage.setItem('promoShown', 'true'); // Mark as shown when closed
+            });
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                sessionStorage.setItem('promoShown', 'true');
+            }
+        });
+    }
+
+    // --- DYNAMIC EVENTS RENDERING ---
+    const eventsList = document.querySelector('.events-list');
+    if (eventsList) {
+        fetch('data/events.json')
+            .then(response => response.json())
+            .then(data => {
+                if (data.length === 0) {
+                    eventsList.innerHTML = '<p class="text-center">No upcoming events currently scheduled.</p>';
+                    return;
+                }
+                eventsList.innerHTML = ''; // Clear placeholder content
+
+                data.forEach((event, index) => {
+                    // Simple date parsing for badge
+                    // Assuming format "25 October 2025" or similar
+                    const parts = event.date.split(' ');
+                    const day = parts[0] || 'TBD';
+                    const month = parts[1] ? parts[1].substring(0, 3).toUpperCase() : 'UPC';
+
+                    // HTML Construction
+                    const eventCard = document.createElement('div');
+                    eventCard.className = `event-ticket animate-on-scroll`;
+                    // Stagger animation slightly
+                    eventCard.style.transitionDelay = `${index * 0.1}s`;
+
+                    eventCard.innerHTML = `
+                        <div class="date-badge">
+                            <span class="month">${month}</span>
+                            <span class="day">${day}</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>${event.name}</h3>
+                            <div class="meta-info">
+                                <span><i class="far fa-clock"></i> ${event.date}</span>
+                                <span><i class="fas fa-map-marker-alt"></i> ${event.location}</span>
+                            </div>
+                            <p>${event.description}</p>
+                        </div>
+                        <div class="event-action">
+                            <a href="contact.html" class="btn btn-outline-blue">Register Now</a>
+                        </div>
+                    `;
+
+                    eventsList.appendChild(eventCard);
+
+                    // Observe new element for scroll animation
+                    if (typeof observer !== 'undefined') {
+                        observer.observe(eventCard);
+                    }
+                });
+            })
+            .catch(err => {
+                console.error('Error loading events:', err);
+                eventsList.innerHTML = '<p class="text-center">Unable to load events at this time.</p>';
+            });
+    }
 });

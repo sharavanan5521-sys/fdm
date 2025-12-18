@@ -210,9 +210,24 @@
             <p>&copy; 2025 Freedom Discovery Management Sdn. Bhd. All Rights Reserved.</p>
         </div>
     </footer>
-    <button id="backToTop" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+
+    <!-- === PROMO POPUP MODAL === -->
+    <div id="promoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <img id="promoImage" src="" alt="New Programme">
+            </div>
+        </div>
+    </div>
+
+    <!-- === ADMIN ACCESS BUTTON === -->
+    <a href="admin/login.php" class="admin-trigger" title="Admin Login">
+        <i class="fas fa-robot"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>

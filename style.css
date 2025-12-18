@@ -1698,3 +1698,93 @@ ul {
         gap: 5px;
     }
 }
+/* --- PROMO POPUP MODAL --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 2000; /* Sit on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    width: 90%;
+    max-width: 600px; /* Max width of poster */
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+    animation: slideDown 0.5s;
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: white;
+    color: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 2001;
+}
+
+.close-btn:hover {
+    background: var(--accent-orange);
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+/* --- ROBOT ADMIN TRIGGER --- */
+.admin-trigger {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; /* Bottom Left of Footer/Page */
+    color: rgba(255,255,255,0.3);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 1001; /* Ensure above footer overlay */
+}
+
+/* If inside footer relative container */
+.footer {
+    position: relative;
+}
+
+.admin-trigger:hover {
+    color: var(--accent-orange);
+    transform: scale(1.2) rotate(20deg);
+    color: rgba(255, 140, 0, 1);
+}
+
