@@ -10,21 +10,53 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Contact Form Handler (Mailto) ---
+    // Close mobile menu when a nav link is clicked
+    if (navLinks) {
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
+    // --- Contact Form Handler (Formspree) ---
+    // TODO: Sign up at https://formspree.io, create a form, and replace YOUR_FORM_ID below
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mkopokql';
+
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
 
-            const finalSubject = encodeURIComponent(`[Website Inquiry] ${subject} - ${name}`);
-            const finalBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+            };
 
-            window.location.href = `mailto:info@freedomdiscovery.net?subject=${finalSubject}&body=${finalBody}`;
+            try {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    contactForm.innerHTML = '<p style="text-align:center;color:var(--primary-blue);font-size:1.1rem;padding:40px 0;">✅ Thank you! Your message has been sent. We\'ll be in touch shortly.</p>';
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                alert('Sorry, there was an error sending your message. Please email us directly at info@freedomdiscovery.net');
+            }
         });
     }
 

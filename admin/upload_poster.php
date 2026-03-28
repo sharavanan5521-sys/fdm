@@ -1,38 +1,72 @@
 <?php
 session_start();
+require_once 'config.php';
+
+// --- Auth + Session Timeout ---
 if (!isset($_SESSION['admin_logged_in'])) {
     header('Location: login.php');
     exit;
 }
+if (isset($_SESSION['last_activity']) && time() - $_SESSION['last_activity'] > SESSION_TIMEOUT) {
+    session_destroy();
+    header('Location: login.php?msg=timeout');
+    exit;
+}
+$_SESSION['last_activity'] = time();
+
+// --- CSRF Check ---
+if (!hash_equals($_SESSION['csrf_token'] ?? '', $_POST['csrf_token'] ?? '')) {
+    header('Location: dashboard.php?err=Invalid+request.');
+    exit;
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['poster'])) {
-    $target_dir = "../assets/";
-    $file_extension = strtolower(pathinfo($_FILES["poster"]["name"], PATHINFO_EXTENSION));
-    $target_file = $target_dir . "promo-poster." . $file_extension;
 
-    // Validate image
-    $check = getimagesize($_FILES["poster"]["tmp_name"]);
-    if ($check === false) {
-        die("File is not an image.");
+    $file = $_FILES['poster'];
+
+    // Check for upload errors
+    if ($file['error'] !== UPLOAD_ERR_OK) {
+        header('Location: dashboard.php?err=Upload+error.+Please+try+again.');
+        exit;
     }
 
-    // Allow only JPG/PNG
-    if ($file_extension != "jpg" && $file_extension != "png" && $file_extension != "jpeg") {
-        die("Sorry, only JPG, JPEG, & PNG files are allowed.");
+    // Size check (2MB max)
+    if ($file['size'] > 2 * 1024 * 1024) {
+        header('Location: dashboard.php?err=File+too+large.+Maximum+size+is+2MB.');
+        exit;
     }
 
-    // Force rename to 'promo-poster.jpg' (or whatever ext)
-    // NOTE: To keep it consistent for frontend, we might want to force conversion or strict naming.
-    // For simplicity, we just save it. But frontend needs to know extension.
-    // BETTER FIX: Frontend should look for 'promo-poster.jpg' or we force save as jpg.
-    // Let's force save as 'promo-poster.jpg' if it's a jpeg.
+    // Verify it's actually an image using getimagesize
+    $image_info = getimagesize($file['tmp_name']);
+    if ($image_info === false) {
+        header('Location: dashboard.php?err=File+is+not+a+valid+image.');
+        exit;
+    }
 
-    $final_target = $target_dir . "promo-poster.jpg";
+    // Check MIME type against allowed list
+    $allowed_mime = ['image/jpeg', 'image/png'];
+    if (!in_array($image_info['mime'], $allowed_mime)) {
+        header('Location: dashboard.php?err=Only+JPG+and+PNG+files+are+allowed.');
+        exit;
+    }
 
-    if (move_uploaded_file($_FILES["poster"]["tmp_name"], $final_target)) {
-        header("Location: dashboard.php?msg=Poster Updated Successfully!");
+    // Check extension
+    $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    if (!in_array($ext, ['jpg', 'jpeg', 'png'])) {
+        header('Location: dashboard.php?err=Invalid+file+extension.');
+        exit;
+    }
+
+    // Always save as promo-poster.jpg for frontend consistency
+    $target = __DIR__ . '/../assets/promo-poster.jpg';
+
+    if (move_uploaded_file($file['tmp_name'], $target)) {
+        header('Location: dashboard.php?msg=Poster+updated+successfully.');
     } else {
-        echo "Sorry, there was an error uploading your file.";
+        header('Location: dashboard.php?err=Failed+to+save+poster.+Check+folder+permissions.');
     }
+    exit;
 }
-?>
+
+header('Location: dashboard.php');
+exit;
