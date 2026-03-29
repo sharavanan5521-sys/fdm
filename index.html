@@ -275,6 +275,23 @@
     <!-- Scroll to Top Button -->
     <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
+    <!-- === ANNOUNCEMENT WIDGET === -->
+    <div id="announcementWidget" class="ann-widget">
+        <button class="ann-tab" id="annTab" aria-label="Announcements">
+            <i class="fas fa-bullhorn"></i>
+            <span>Announcements</span>
+        </button>
+        <div class="ann-panel" id="annPanel" aria-hidden="true">
+            <div class="ann-panel-header">
+                <span><i class="fas fa-bullhorn"></i> Announcements</span>
+                <button class="ann-close" id="annClose" aria-label="Close announcements">&times;</button>
+            </div>
+            <div class="ann-panel-body" id="annPanelBody">
+                <!-- Populated by script.js -->
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

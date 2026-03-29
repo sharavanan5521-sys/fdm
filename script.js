@@ -94,6 +94,58 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
+    // --- Announcement Widget ---
+    const annWidget = document.getElementById('announcementWidget');
+    if (annWidget) {
+        const annTab    = document.getElementById('annTab');
+        const annPanel  = document.getElementById('annPanel');
+        const annClose  = document.getElementById('annClose');
+        const annBody   = document.getElementById('annPanelBody');
+
+        function openWidget() {
+            annPanel.classList.add('is-open');
+            annPanel.setAttribute('aria-hidden', 'false');
+        }
+        function closeWidget() {
+            annPanel.classList.remove('is-open');
+            annPanel.setAttribute('aria-hidden', 'true');
+        }
+
+        annTab.addEventListener('click', () => {
+            annPanel.classList.contains('is-open') ? closeWidget() : openWidget();
+        });
+        annClose.addEventListener('click', closeWidget);
+
+        // Fetch and render announcements
+        fetch('data/announcements.json')
+            .then(r => r.json())
+            .then(data => {
+                const active = data.filter(a => a.active);
+                if (active.length === 0) {
+                    annWidget.style.display = 'none';
+                    return;
+                }
+                annBody.innerHTML = active.map(a => `
+                    <div class="ann-item">
+                        <h4>${a.title}</h4>
+                        <p>${a.body}</p>
+                        <a href="${a.cta_link}" class="ann-item-cta">${a.cta_text} &rarr;</a>
+                    </div>
+                `).join('');
+
+                // Auto-open once per session
+                if (!sessionStorage.getItem('ann_seen')) {
+                    setTimeout(() => {
+                        openWidget();
+                        sessionStorage.setItem('ann_seen', '1');
+                    }, 4000);
+                }
+            })
+            .catch(() => {
+                annWidget.style.display = 'none';
+            });
+    }
+
     // --- Scroll Animation Observer ---
     const observerOptions = {
         threshold: 0.15, // Trigger when 15% of the element is visible

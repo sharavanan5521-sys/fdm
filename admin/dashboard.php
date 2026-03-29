@@ -26,6 +26,13 @@ if (!file_exists($json_file)) {
 }
 $events = json_decode(file_get_contents($json_file), true) ?? [];
 
+// --- Load Announcements ---
+$ann_file = '../data/announcements.json';
+if (!file_exists($ann_file)) {
+    file_put_contents($ann_file, '[]');
+}
+$announcements = json_decode(file_get_contents($ann_file), true) ?? [];
+
 // --- Check for current poster ---
 $poster_exists = file_exists('../assets/promo-poster.jpg');
 $poster_url = $poster_exists ? '../assets/promo-poster.jpg?v=' . filemtime('../assets/promo-poster.jpg') : '';
@@ -33,9 +40,13 @@ $poster_url = $poster_exists ? '../assets/promo-poster.jpg?v=' . filemtime('../a
 $msg = $_GET['msg'] ?? '';
 $err = $_GET['err'] ?? '';
 
-// --- Edit mode ---
+// --- Edit mode (events) ---
 $edit_index = isset($_GET['edit']) ? (int)$_GET['edit'] : -1;
 $edit_event = ($edit_index >= 0 && isset($events[$edit_index])) ? $events[$edit_index] : null;
+
+// --- Edit mode (announcements) ---
+$edit_ann_index = isset($_GET['edit_ann']) ? (int)$_GET['edit_ann'] : -1;
+$edit_ann = ($edit_ann_index >= 0 && isset($announcements[$edit_ann_index])) ? $announcements[$edit_ann_index] : null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -131,6 +142,7 @@ $edit_event = ($edit_index >= 0 && isset($events[$edit_index])) ? $events[$edit_
         <a href="../services.html" target="_blank"><i class="fas fa-cogs"></i> Services</a>
         <a href="../events.html" target="_blank"><i class="fas fa-calendar"></i> Events</a>
         <a href="../contact.html" target="_blank"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="#announcements"><i class="fas fa-bullhorn"></i> Announcements</a>
     </div>
 
     <!-- Alerts -->
@@ -160,6 +172,98 @@ $edit_event = ($edit_index >= 0 && isset($events[$edit_index])) ? $events[$edit_
             <input type="file" name="poster" accept="image/jpeg,image/png" required>
             <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Upload Poster</button>
         </form>
+    </div>
+
+    <!-- ======= ANNOUNCEMENTS SECTION ======= -->
+    <div class="card" id="announcements">
+        <h2><i class="fas fa-bullhorn"></i> Site Announcements <span style="font-size:0.85rem;font-weight:normal;color:#999;">(<?php echo count($announcements); ?> total)</span></h2>
+
+        <!-- Edit Announcement Form -->
+        <?php if ($edit_ann): ?>
+        <div class="edit-form" id="edit-ann-form">
+            <h3><i class="fas fa-edit"></i> Editing: <?php echo htmlspecialchars($edit_ann['title']); ?></h3>
+            <form action="update_announcements.php" method="POST">
+                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+                <input type="hidden" name="action" value="edit">
+                <input type="hidden" name="index" value="<?php echo $edit_ann_index; ?>">
+                <label>Title</label>
+                <input type="text" name="title" required value="<?php echo htmlspecialchars($edit_ann['title']); ?>">
+                <label>Body Text</label>
+                <textarea name="body" rows="3" required><?php echo htmlspecialchars($edit_ann['body']); ?></textarea>
+                <div class="form-row">
+                    <div>
+                        <label>Button Text</label>
+                        <input type="text" name="cta_text" value="<?php echo htmlspecialchars($edit_ann['cta_text']); ?>" placeholder="Enquire Now">
+                    </div>
+                    <div>
+                        <label>Button Link</label>
+                        <input type="text" name="cta_link" value="<?php echo htmlspecialchars($edit_ann['cta_link']); ?>" placeholder="contact.html">
+                    </div>
+                </div>
+                <label style="display:flex;align-items:center;gap:8px;font-weight:600;cursor:pointer;">
+                    <input type="checkbox" name="active" <?php echo $edit_ann['active'] ? 'checked' : ''; ?> style="width:auto;margin:0;">
+                    Active (show on website)
+                </label>
+                <div style="display:flex;gap:10px;margin-top:14px;">
+                    <button type="submit" class="btn btn-warning"><i class="fas fa-save"></i> Save Changes</button>
+                    <a href="dashboard.php#announcements" class="btn btn-secondary" style="text-decoration:none;display:inline-flex;align-items:center;gap:5px;"><i class="fas fa-times"></i> Cancel</a>
+                </div>
+            </form>
+        </div>
+        <?php endif; ?>
+
+        <!-- Add New Announcement -->
+        <form action="update_announcements.php" method="POST" style="margin-bottom:20px;">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+            <input type="hidden" name="action" value="add">
+            <label>Title</label>
+            <input type="text" name="title" required placeholder="e.g. Training Hall Available for Rent">
+            <label>Body Text</label>
+            <textarea name="body" rows="3" required placeholder="Brief announcement details..."></textarea>
+            <div class="form-row">
+                <div>
+                    <label>Button Text</label>
+                    <input type="text" name="cta_text" placeholder="Enquire Now">
+                </div>
+                <div>
+                    <label>Button Link</label>
+                    <input type="text" name="cta_link" placeholder="contact.html or https://wa.me/60124883300">
+                </div>
+            </div>
+            <label style="display:flex;align-items:center;gap:8px;font-weight:600;cursor:pointer;">
+                <input type="checkbox" name="active" checked style="width:auto;margin:0;">
+                Active (show on website)
+            </label>
+            <button type="submit" class="btn btn-primary" style="margin-top:14px;"><i class="fas fa-plus"></i> Add Announcement</button>
+        </form>
+
+        <!-- Existing Announcements List -->
+        <?php if (empty($announcements)): ?>
+            <div class="empty-state"><i class="fas fa-bullhorn" style="font-size:2rem;display:block;margin-bottom:8px;"></i>No announcements yet. Add one above.</div>
+        <?php else: ?>
+            <?php foreach ($announcements as $ai => $ann): ?>
+                <div class="event-item <?php echo ($edit_ann_index === $ai) ? 'editing' : ''; ?>" style="border-left-color:<?php echo $ann['active'] ? '#1ebe57' : '#aaa'; ?>">
+                    <div class="event-header">
+                        <div class="event-info">
+                            <strong><?php echo htmlspecialchars($ann['title']); ?></strong>
+                            <small><?php echo htmlspecialchars(substr($ann['body'], 0, 80)); ?>...</small>
+                            <small style="color:<?php echo $ann['active'] ? '#1ebe57' : '#aaa'; ?>;font-weight:600;">
+                                <?php echo $ann['active'] ? '● Active' : '○ Inactive'; ?>
+                            </small>
+                        </div>
+                        <div class="event-actions">
+                            <a href="dashboard.php?edit_ann=<?php echo $ai; ?>#edit-ann-form" class="btn btn-warning"><i class="fas fa-edit"></i> Edit</a>
+                            <form action="update_announcements.php" method="POST" onsubmit="return confirm('Delete this announcement?');" style="display:inline;">
+                                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="index" value="<?php echo $ai; ?>">
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 
     <!-- Edit Event Form (shown when editing) -->

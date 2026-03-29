@@ -209,6 +209,13 @@ ul {
     opacity: 0.9;
 }
 
+.hero-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* --- ANIMATIONS --- */
 @keyframes fadeInUp {
     from {
@@ -2269,6 +2276,73 @@ ul {
     .contact-form-wrapper {
         padding: 25px 20px;
     }
+
+    /* Page Header (inner pages) */
+    .page-header {
+        padding: 70px 0 40px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    /* Hero buttons — stack on mobile */
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* CTA Banner heading */
+    .cta-banner {
+        padding: 40px 0;
+    }
+
+    .cta-container h2,
+    .cta-content h2 {
+        font-size: 1.7rem;
+    }
+
+    /* Services trust bar — wrap and reduce gap */
+    .services-trust-grid {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .trust-item {
+        flex: 0 0 calc(50% - 20px);
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* New service alert — stack on mobile */
+    .alert-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Google Map — shorter on mobile */
+    .full-width-map {
+        height: 280px;
+    }
+
+    /* Contact cards grid — single column on narrow screens */
+    .contact-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Closure title */
+    .closure-title {
+        font-size: 1.5rem;
+    }
+
+    /* Footer grid: stack to single column */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 /* --- PROMO POPUP MODAL --- */
 .modal {
@@ -2336,6 +2410,177 @@ ul {
 @keyframes slideDown {
     from {transform: translateY(-50px); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
+}
+
+/* --- ANNOUNCEMENT WIDGET --- */
+/* The widget sits at right:0 mid-screen. The tab is the anchor;
+   the panel floats absolutely to the left of it so it never
+   pushes the tab away from the edge. */
+.ann-widget {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1500;
+}
+
+.ann-tab {
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    padding: 12px 10px;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: -3px 0 14px rgba(0, 51, 204, 0.3);
+    transition: background 0.2s;
+    min-width: 52px;
+}
+
+.ann-tab i {
+    font-size: 1.1rem;
+}
+
+.ann-tab span {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    line-height: 1;
+}
+
+.ann-tab:hover {
+    background: var(--accent-orange);
+}
+
+/* Panel floats to the LEFT of the tab — absolute so it takes no layout space */
+.ann-panel {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%) translateX(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    background: var(--white);
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ann-panel.is-open {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ann-panel-header {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.ann-panel-header i {
+    margin-right: 8px;
+    color: var(--accent-orange);
+}
+
+.ann-close {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.4rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 4px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.ann-close:hover {
+    opacity: 1;
+}
+
+.ann-panel-body {
+    overflow-y: auto;
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ann-item {
+    background: #f4f7fa;
+    border-radius: 8px;
+    padding: 16px;
+    border-left: 4px solid var(--accent-orange);
+}
+
+.ann-item h4 {
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ann-item p {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.ann-item-cta {
+    display: inline-block;
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.ann-item-cta:hover {
+    background: var(--accent-orange);
+}
+
+@media (max-width: 768px) {
+    .ann-widget {
+        top: auto;
+        bottom: 90px;
+        transform: none;
+    }
+
+    .ann-panel {
+        top: auto;
+        bottom: calc(100% + 10px);
+        right: 0;
+        transform: translateY(10px);
+        width: 270px;
+    }
+
+    .ann-panel.is-open {
+        transform: translateY(0);
+    }
 }
 
 /* --- ADMIN TRIGGER --- */
