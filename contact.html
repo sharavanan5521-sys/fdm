@@ -84,26 +84,52 @@
 
             </div>
 
-            <div class="text-center mt-50 animate-on-scroll">
-                <p style="margin-bottom: 20px; color: #666;">Connect with us on social media</p>
-                <div class="social-links-row">
-                    <a href="https://www.facebook.com/freediscovery"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/coachnan/"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/60124883300"><i class="fab fa-whatsapp"></i></a>
+            <div class="whatsapp-cta-block animate-on-scroll">
+                <div class="whatsapp-cta-inner">
+                    <div class="whatsapp-cta-text">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>Prefer to chat? Message us on WhatsApp</h4>
+                            <p>Get a response within minutes. Our consultants are ready to help.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/60124883300" class="btn-whatsapp-large" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
                 </div>
             </div>
 
-            <div class="contact-form-wrapper animate-on-scroll delay-200 mt-50"
-                style="max-width: 800px; margin: 50px auto 0;">
-                <h3 style="text-align: center; margin-bottom: 30px; color: var(--primary-blue);">Send Us a Message</h3>
+            <div class="text-center mt-50 animate-on-scroll">
+                <p class="social-connect-label">Connect with us on social media</p>
+                <div class="social-links-row">
+                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper animate-on-scroll delay-200 mt-50">
+                <h3 class="form-heading">Send Us a Message</h3>
                 <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" required placeholder="John Doe">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required">*</span></label>
+                            <input type="text" id="name" required placeholder="Ahmad bin Abdullah">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company / Organisation</label>
+                            <input type="text" id="company" placeholder="Your Company Sdn. Bhd.">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" required placeholder="john@example.com">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" required placeholder="you@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp</label>
+                            <input type="tel" id="phone" placeholder="012 345 6789">
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
@@ -115,8 +141,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" required placeholder="How can we help you?"></textarea>
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" rows="5" required placeholder="Tell us about your training needs or ask any question..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                 </form>
@@ -173,19 +199,19 @@
                 <p><i class="fas fa-phone"></i> 012 488 3300</p>
                 <p><i class="fas fa-envelope"></i> myfdm@yahoo.com</p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/freediscovery"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/coachnan/"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/60124883300"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="currentYear">2025</span> Freedom Discovery Management Sdn. Bhd. All Rights Reserved.</p>
+            <p>&copy; <span id="currentYear">2026</span> Freedom Discovery Management Sdn. Bhd. All Rights Reserved.</p>
         </div>
 
         <!-- === ADMIN ACCESS BUTTON (Floated in Footer) === -->
         <a href="admin/login.php" class="admin-trigger" title="Admin Login">
-            <i class="fas fa-robot"></i>
+            <i class="fas fa-lock"></i>
         </a>
     </footer>
 
