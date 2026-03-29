@@ -3,7 +3,7 @@
 //  ADMIN CONFIGURATION
 // =============================================
 define('ADMIN_USERNAME', 'admin');
-define('ADMIN_PASS', '$2y$10$rSzzyX7FNJjexh30BPA9seMY5upX/k0d5gFFU0pzV0PHNz0LcN1ia');
+define('ADMIN_PASS', '$2y$10$FqLEcfqw0gg2v9NnxnKaK.jThS5KSyKwdO.W44nDAESO3xQiqxvYm');
 
 // Session timeout in seconds (2 hours)
 define('SESSION_TIMEOUT', 7200);
