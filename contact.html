@@ -25,7 +25,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 
@@ -102,9 +102,9 @@
             <div class="text-center mt-50 animate-on-scroll">
                 <p class="social-connect-label">Connect with us on social media</p>
                 <div class="social-links-row">
-                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
 
@@ -114,26 +114,26 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Your Name <span class="required">*</span></label>
-                            <input type="text" id="name" required placeholder="Ahmad bin Abdullah">
+                            <input type="text" id="name" name="name" autocomplete="name" required placeholder="Ahmad bin Abdullah">
                         </div>
                         <div class="form-group">
                             <label for="company">Company / Organisation</label>
-                            <input type="text" id="company" placeholder="Your Company Sdn. Bhd.">
+                            <input type="text" id="company" name="company" autocomplete="organization" placeholder="Your Company Sdn. Bhd.">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Email Address <span class="required">*</span></label>
-                            <input type="email" id="email" required placeholder="you@company.com">
+                            <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@company.com">
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone / WhatsApp</label>
-                            <input type="tel" id="phone" placeholder="012 345 6789">
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="012 345 6789">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <select id="subject">
+                        <select id="subject" name="subject">
                             <option value="General Inquiry">General Inquiry</option>
                             <option value="Training Proposal">Request Training Proposal</option>
                             <option value="Consulting">Business Consulting</option>
@@ -142,7 +142,7 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message <span class="required">*</span></label>
-                        <textarea id="message" rows="5" required placeholder="Tell us about your training needs or ask any question..."></textarea>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your training needs or ask any question..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                 </form>
@@ -215,9 +215,9 @@
                 <p><i class="fas fa-phone"></i> 012 488 3300</p>
                 <p><i class="fas fa-envelope"></i> myfdm@yahoo.com</p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
