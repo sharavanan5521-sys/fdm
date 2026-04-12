@@ -67,26 +67,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Back to Top Button Logic ---
     const backToTopBtn = document.getElementById("backToTop");
 
-    window.onscroll = function () {
-        scrollFunction();
-    };
+    if (backToTopBtn) {
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
 
-    function scrollFunction() {
-        // Show button after scrolling down 300px
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
-        }
-    }
-
-    // Scroll to top when clicked
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Smooth scrolling animation
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-    });
+    }
 
     // --- Auto-Update Copyright Year ---
     const yearSpan = document.querySelector('#currentYear');
@@ -148,23 +141,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll Animation Observer ---
     const observerOptions = {
-        threshold: 0.15, // Trigger when 15% of the element is visible
-        rootMargin: "0px 0px -50px 0px" // Trigger slightly before the bottom
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                // Optional: Stop observing once animated (so it doesn't fade out again)
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+    let observer = null;
 
-    // Find all elements to animate
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    animatedElements.forEach((el) => observer.observe(el));
+    if ('IntersectionObserver' in window) {
+        observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+    } else {
+        // Older browsers: reveal all elements immediately so content is never invisible
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => el.classList.add('is-visible'));
+    }
 
     // --- Floating Contact Widget Injection ---
     const widgetDiv = document.createElement('div');
@@ -271,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     eventsList.appendChild(eventCard);
 
                     // Observe new element for scroll animation
-                    if (typeof observer !== 'undefined') {
+                    if (observer) {
                         observer.observe(eventCard);
                     }
                 });
