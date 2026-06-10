@@ -2567,8 +2567,8 @@ img {
     background-color: transparent;
     padding: 0;
     border: none;
-    width: 90%;
-    max-width: 600px;
+    max-width: 90vw;
+    max-height: 90vh;
     position: relative;
     text-align: center;
     box-shadow: 0 5px 30px rgba(0,0,0,0.5);
@@ -2577,10 +2577,12 @@ img {
 }
 
 .modal-body img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
     display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 8px;
 }
 
 .close-btn {
