@@ -1,0 +1,209 @@
+/* ════════════════════════════════════════════════════════════
+   Freedom Discovery — About page (extends home.css)
+   ════════════════════════════════════════════════════════════ */
+
+/* ─── Our Story ─── */
+.story-grid {
+  display: grid; grid-template-columns: 1.05fr 1fr;
+  gap: clamp(32px, 5vw, 64px); align-items: center;
+}
+.story-media { position: relative; }
+.story-media img {
+  width: 100%; height: 100%; max-height: 460px; object-fit: cover;
+  border-radius: 24px; box-shadow: 0 30px 70px rgba(8,26,77,0.18);
+}
+/* logo variant — show the brand mark on a soft panel instead of a cover photo */
+.story-media.logo-card {
+  display: grid; place-items: center; min-height: 340px; padding: clamp(36px, 6vw, 64px);
+  background: linear-gradient(150deg, #f5f7fc, #e9f0fb);
+  border: 1px solid var(--line); border-radius: 24px;
+  box-shadow: 0 30px 70px rgba(8,26,77,0.18);
+}
+.story-media.logo-card img {
+  width: auto; height: auto; max-width: 80%; max-height: 200px;
+  object-fit: contain; border-radius: 0; box-shadow: none;
+}
+.story-media .story-badge {
+  position: absolute; left: -18px; bottom: -18px;
+  background: var(--white); border: 1px solid var(--line); border-radius: 18px;
+  padding: 18px 22px; box-shadow: 0 20px 44px rgba(8,26,77,0.16); text-align: center;
+}
+.story-badge .sb-num { font-size: 34px; font-weight: 800; color: var(--blue); line-height: 1; }
+.story-badge .sb-lbl { font-size: 12px; font-weight: 600; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
+.story-text .section-eyebrow { display: inline-block; margin-bottom: 14px; }
+.story-text h2 {
+  font-size: clamp(25px, 3.6vw, 38px); font-weight: 800; color: var(--ink);
+  line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 18px;
+}
+.story-text p { color: var(--body); line-height: 1.85; margin-bottom: 16px; }
+.story-text p strong { color: var(--ink); }
+@media (max-width: 820px) {
+  .story-grid { grid-template-columns: 1fr; gap: 40px; }
+  .story-media .story-badge { left: 16px; bottom: -16px; }
+}
+
+/* ─── By the Numbers — 5-up override ─── */
+.about-numbers .stats-grid { grid-template-columns: repeat(5, 1fr); max-width: 1180px; }
+.about-numbers .stat-num { font-size: clamp(28px, 4vw, 46px); }
+@media (max-width: 860px) {
+  .about-numbers .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 22px 12px; }
+  .about-numbers .stat-item:nth-child(2)::after { display: none; }
+  .about-numbers .stat-item:nth-child(5) { grid-column: 1 / -1; }
+}
+
+/* ─── Coach Nan — Founder (centerpiece) ─── */
+.founder-grid {
+  display: grid; grid-template-columns: 340px 1fr;
+  gap: clamp(30px, 4vw, 56px); align-items: start;
+}
+.founder-photo-card {
+  position: relative; border-radius: 24px; overflow: hidden;
+  border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(8,26,77,0.18);
+  background: var(--blue-deep);
+}
+.founder-photo-card > img { width: 100%; display: block; }
+.founder-nametag {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 22px 18px;
+  background: linear-gradient(to top, rgba(8,26,77,0.92), transparent);
+  color: #fff;
+}
+.founder-nametag h3 { font-size: 22px; font-weight: 800; }
+.founder-nametag p { font-size: 12.5px; color: rgba(255,255,255,0.82); margin-top: 4px; line-height: 1.5; }
+.founder-cert-strip {
+  margin-top: 16px; padding: 16px; background: var(--soft);
+  border: 1px solid var(--line); border-radius: 16px; text-align: center;
+}
+.founder-cert-strip img { max-height: 64px; width: auto; margin: 0 auto; display: block; }
+
+.founder-label {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 10px;
+}
+.founder-bio h2 {
+  font-size: clamp(24px, 3.4vw, 36px); font-weight: 800; color: var(--ink);
+  line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+}
+.founder-bio p { color: var(--body); line-height: 1.85; margin-bottom: 16px; }
+.founder-bio p strong { color: var(--ink); font-weight: 600; }
+.founder-quote {
+  margin: 26px 0; padding: 24px 28px; border-radius: 18px;
+  background: linear-gradient(150deg, rgba(47,100,224,0.08), rgba(244,124,31,0.06));
+  border-left: 4px solid var(--orange); position: relative;
+}
+.founder-quote i { color: var(--orange); font-size: 20px; opacity: 0.6; }
+.founder-quote p {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: clamp(16px, 2vw, 19px); color: var(--ink); line-height: 1.6; margin: 8px 0 12px;
+}
+.founder-quote cite { font-style: normal; font-weight: 600; font-size: 13.5px; color: var(--muted); }
+
+/* credentials showcase */
+.cred-heading { margin-top: 40px; margin-bottom: 18px; font-size: 19px; font-weight: 800; color: var(--ink); }
+.cred-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.cred-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 18px;
+  padding: 26px 24px; position: relative; overflow: hidden;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.cred-card:hover { transform: translateY(-5px); box-shadow: 0 22px 50px rgba(8,26,77,0.12); }
+.cred-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.cred-card.c-blue::before { background: var(--blue-bright); }
+.cred-card.c-orange::before { background: var(--orange); }
+.cred-card.c-green::before { background: #16a34a; }
+.cred-card h4 {
+  display: flex; align-items: center; gap: 10px; font-size: 15.5px; font-weight: 700;
+  color: var(--ink); margin-bottom: 16px;
+}
+.cred-card.c-blue h4 i { color: var(--blue-bright); }
+.cred-card.c-orange h4 i { color: var(--orange); }
+.cred-card.c-green h4 i { color: #16a34a; }
+.cred-card ul { list-style: none; }
+.cred-card li {
+  position: relative; padding-left: 22px; font-size: 13.5px; color: var(--body);
+  line-height: 1.6; margin-bottom: 11px;
+}
+.cred-card li::before {
+  content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+  position: absolute; left: 0; top: 1px; font-size: 10px; color: var(--orange);
+}
+@media (max-width: 880px) {
+  .founder-grid { grid-template-columns: 1fr; }
+  .founder-photo-card { max-width: 380px; margin: 0 auto; }
+  .cred-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── How We Think — methodology ─── */
+.method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 44px; }
+.philosophy.philosophy-light { margin-top: 0; padding-top: 0; border-top: none; }
+.philosophy.philosophy-light .philosophy-step {
+  background: var(--soft); border-color: var(--line); color: var(--ink);
+}
+.philosophy.philosophy-light > i { color: var(--orange); }
+@media (max-width: 880px) { .method-grid { grid-template-columns: 1fr; } }
+
+/* ─── Mid-page CTA strip (matches the previous founder strip) ─── */
+.cta-strip { background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.cta-strip .container {
+  display: flex; align-items: center; justify-content: center; gap: clamp(18px, 3vw, 36px);
+  flex-wrap: wrap; text-align: center; padding-top: 34px; padding-bottom: 34px;
+}
+.cta-strip p { font-size: clamp(17px, 2.4vw, 23px); font-weight: 600; color: var(--ink); margin: 0; max-width: 640px; }
+
+/* ─── Our Specialisations (training areas) ─── */
+.spec-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.spec-card {
+  text-align: center; padding: 30px 16px;
+  background: var(--white); border: 1px solid var(--line); border-radius: 18px;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s ease;
+}
+.spec-card:hover {
+  transform: translateY(-5px); border-color: rgba(47,100,224,0.3);
+  box-shadow: 0 20px 44px rgba(8,26,77,0.12);
+}
+.spec-icon {
+  width: 58px; height: 58px; margin: 0 auto 16px; border-radius: 15px;
+  display: grid; place-items: center; font-size: 22px;
+  background: rgba(47,100,224,0.1); color: var(--blue);
+}
+.spec-card h3 { font-size: 14.5px; font-weight: 700; color: var(--ink); line-height: 1.4; }
+/* the four priority areas lead and carry an accent */
+.spec-card.featured .spec-icon { background: rgba(244,124,31,0.12); color: var(--orange); }
+@media (max-width: 1040px) { .spec-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 620px) { .spec-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ─── Who We Work With (dark) ─── */
+.industries { background: var(--blue-deep); padding: clamp(72px, 9vw, 120px) 0; }
+.industries .section-intro { color: rgba(255,255,255,0.7); }
+.industry-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 40px;
+}
+.industry-card {
+  display: flex; align-items: center; gap: 14px; padding: 18px 20px;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px;
+  transition: transform 0.25s var(--ease), background 0.25s ease;
+}
+.industry-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.09); }
+.industry-card i {
+  flex: none; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+  background: rgba(244,124,31,0.16); color: var(--orange); font-size: 18px;
+}
+.industry-card span { font-size: 14px; font-weight: 600; color: #fff; }
+.country-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.country-tags span {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13.5px; font-weight: 600; color: #fff;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);
+  padding: 9px 18px; border-radius: 999px;
+}
+.country-tags i { color: var(--orange); }
+@media (max-width: 860px) { .industry-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .industry-grid { grid-template-columns: 1fr; } }
+
+/* ─── Team teaser ─── */
+.team-teaser { text-align: center; }
+.team-teaser-img {
+  max-width: 760px; margin: 0 auto 34px; border-radius: 24px; overflow: hidden;
+  box-shadow: 0 30px 70px rgba(8,26,77,0.16); border: 1px solid var(--line);
+}
+.team-teaser-img img { width: 100%; display: block; }

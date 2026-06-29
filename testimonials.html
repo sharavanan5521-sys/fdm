@@ -4,315 +4,475 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials & Gallery - Freedom Discovery Management</title>
+    <title>Testimonials & Gallery | Freedom Discovery Management</title>
     <meta name="description"
-        content="See real stories of transformation. Watch video testimonials and browse our training gallery from successful workshops with top clients.">
+        content="Real stories of transformation. Read verified 5-star Google reviews from professionals who trained with Coach Nan, and browse our gallery of training and coaching moments.">
+    <meta name="keywords"
+        content="Freedom Discovery testimonials, Coach Nan reviews, HRD Corp training reviews, corporate training gallery Malaysia, Google reviews">
     <link rel="canonical" href="https://freedomdiscovery.net/testimonials.html">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://freedomdiscovery.net/testimonials.html">
-    <meta property="og:title" content="Testimonials & Gallery - Freedom Discovery Management">
+    <meta property="og:title" content="Testimonials & Gallery | Freedom Discovery Management">
     <meta property="og:description"
-        content="Moments of Impact. Real Stories. Real Results. See how we transform organizations.">
-    <meta property="og:image" content="https://freedomdiscovery.net/assets/logo.png">
+        content="Real Stories. Real Results. See verified Google reviews and moments of impact from our training and coaching.">
+    <meta property="og:image" content="https://freedomdiscovery.net/assets/group-photo.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Testimonials &amp; Gallery - Freedom Discovery Management">
-    <meta name="twitter:description" content="Moments of Impact. Real Stories. Real Results. See how we transform organizations.">
-    <meta name="twitter:image" content="https://freedomdiscovery.net/assets/logo.png">
+    <meta name="twitter:title" content="Testimonials & Gallery | Freedom Discovery Management">
+    <meta name="twitter:description" content="Real Stories. Real Results. Verified 5-star Google reviews and a gallery of training moments.">
+    <meta name="twitter:image" content="https://freedomdiscovery.net/assets/group-photo.jpg">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Freedom Discovery Management Sdn. Bhd.",
+      "url": "https://freedomdiscovery.net/testimonials.html",
+      "logo": "https://freedomdiscovery.net/assets/logo.png",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "ratingCount": "6"
+      }
+    }
+    </script>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="/"><img src="assets/logo.png" alt="Freedom Discovery Logo" class="logo-img"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="testimonials.html" class="active">Testimonials</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact Us</a></li>
-            </ul>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        </div>
-    </nav>
+    <!-- ════════ NAVBAR — Dynamic Island ════════ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="/" class="brand" aria-label="Freedom Discovery — Home">
+                <img src="assets/logo.png" alt="Freedom Discovery Management" class="brand-logo">
+            </a>
 
-    <header class="page-header">
-        <div class="container">
-            <h1 class="fade-in-up">Moments of Impact</h1>
-            <p class="fade-in-up delay-1">Real Stories. Real Results. Real Transformation.</p>
+            <nav class="nav-links" aria-label="Primary">
+                <a href="/">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Team</a>
+                <a href="events.html">Events</a>
+                <a href="testimonials.html" class="active">Testimonials</a>
+            </nav>
+
+            <a href="contact.html" class="nav-cta">Contact Us</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+            <a href="/">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="team.html">Team</a>
+            <a href="events.html">Events</a>
+            <a href="testimonials.html" class="active">Testimonials</a>
+            <a href="contact.html" class="mobile-cta">Contact Us</a>
+        </nav>
     </header>
 
-    <section class="section">
-        <div class="container">
-            <div class="section-header text-center animate-on-scroll">
-                <h4 class="section-subtitle">Verified Reviews</h4>
-                <h2 class="section-title">What Our Clients Say on Google</h2>
-                <p>Honest feedback from professionals who have trained with us across industries.</p>
+    <main>
+
+        <!-- ════════ PAGE HERO ════════ -->
+        <section class="page-hero">
+            <div class="orb orb-1" aria-hidden="true"></div>
+            <div class="orb orb-2" aria-hidden="true"></div>
+            <div class="hero-grid-lines" aria-hidden="true"></div>
+
+            <div class="hero-inner">
+                <span class="hero-kicker reveal">Verified Reviews · Real Results</span>
+                <h1 class="hero-headline" id="heroTitle" data-accent="Transformation">Real Stories of Real Transformation</h1>
+                <p class="hero-sub reveal">Don't just take our word for it. Hear from the professionals and organisations
+                who have trained with us — then see the moments of impact for yourself.</p>
+                <div class="hero-actions reveal">
+                    <a href="#reviews" class="btn-primary hero-cta">Read the Reviews</a>
+                    <a href="#gallery" class="btn-ghost">View the Gallery <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ GOOGLE REVIEWS ════════ -->
+        <section class="section" id="reviews">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Verified Reviews</span>
+                    <h2 class="section-title">What Our Clients Say on <span class="accent">Google</span></h2>
+                    <p class="section-intro">Honest, unedited feedback from professionals who have trained with us across
+                    industries — straight from our Google Business profile.</p>
+                </div>
+
+                <!-- Overall Google rating badge -->
+                <div class="gr-summary reveal">
+                    <div class="gr-summary-left">
+                        <span class="gr-summary-g"><i class="fab fa-google"></i></span>
+                        <span class="gr-summary-score">5.0</span>
+                        <div class="gr-summary-meta">
+                            <div class="gr-summary-stars">★★★★★</div>
+                            <p>Based on Google Reviews</p>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/search?q=freedom+discovery+management+sdn+bhd"
+                       class="gr-summary-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-google"></i> View All on Google
+                    </a>
+                </div>
+
+                <!-- Review cards -->
+                <div class="gr-grid reveal">
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#4285F4;">N</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Nurul Farahheliyana</span>
+                                <span class="gr-date">2 months ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Two days of training with Coach Nan were great. His presentation was very
+                        powerful, cheerful, and engaging, never boring at all. Coach Nan is a very experienced person with
+                        extraordinary knowledge, yet he is humble, which makes it very easy to learn and gain valuable
+                        insights from him."</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#EA4335;">R</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Raymond R Lawrence</span>
+                                <span class="gr-date">6 months ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Coach Nan has given a deeper understanding and meaning towards leadership,
+                        communication and coaching. With his lively presentation and explanation, it has made this
+                        experience very fruitful and fulfilling."</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#34A853;">L</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Ling Ling Beh</span>
+                                <span class="gr-date">7 months ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Thank you Coach Nan for his lively session — I have benefited greatly. I am now
+                        an HRD Corp certified trainer!"</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#FBBC05;color:#333;">J</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Joanna Loo</span>
+                                <span class="gr-date">5 months ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Had a great and fun 2-day training class with Coach Nan. He is knowledgeable,
+                        sharing a lot of real case examples and technique skills which can help us apply them in our daily
+                        work."</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#9C27B0;">M</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Margaret Kibat</span>
+                                <span class="gr-date">6 months ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"I am so grateful to be able to attend this TTT HRD Corp by Coach Nan. It opened
+                        my eyes and mind throughout the training. Thank you for the guidance &amp; sharing — very precious
+                        knowledge."</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#00897B;">J</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Jacy J Channel</span>
+                                <span class="gr-date">6 months ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Coach Nan is a very humble and supportive trainer. His explanation is very clear
+                        and easy to understand. I enjoy every session of his teaching and training activities."</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ GALLERY — moving marquee ════════ -->
+        <section class="section bg-soft" id="gallery">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Moments of Impact</span>
+                    <h2 class="section-title">Our Training &amp; Coaching <span class="accent">Gallery</span></h2>
+                    <p class="section-intro">A glimpse into the energy in our rooms — workshops, coaching sessions and
+                    breakthroughs captured across Asia. Hover to pause, tap any photo to enlarge.</p>
+                </div>
             </div>
 
-            <!-- Overall Google rating badge -->
-            <div class="gr-rating-badge animate-on-scroll">
-                <div class="gr-badge-left">
-                    <span class="gr-badge-score">5.0</span>
-                    <div class="gr-badge-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <!-- full-bleed so the marquee can flow edge to edge -->
+            <div class="gallery-marquee reveal" id="galleryMarquee">
+                <!-- Row 1 (scrolls left). Each set is duplicated for a seamless loop. -->
+                <div class="marquee-row">
+                    <div class="marquee-track">
+                        <div class="g-pic"><img src="assets/gallery/DSC_0001.JPG" alt="Training moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0016.JPG" alt="Training moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0052.JPG" alt="Training moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0054.JPG" alt="Training moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0056.JPG" alt="Training moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0078.JPG" alt="Training moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0119.jpg" alt="Training moment" loading="lazy"></div>
+                        <!-- duplicate -->
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0001.JPG" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0016.JPG" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0052.JPG" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0054.JPG" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0056.JPG" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0078.JPG" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0119.jpg" alt="" loading="lazy"></div>
                     </div>
-                    <span class="gr-badge-count">Google Reviews</span>
                 </div>
-                <a href="https://www.google.com/search?q=freedom+discovery+management+sdn+bhd&rlz=1C1OPNX_en-GBMY1155MY1155&oq=fre&gs_lcrp=EgZjaHJvbWUqDggCEEUYJxg7GIAEGIoFMgYIABBFGDwyBggBEEUYPDIOCAIQRRgnGDsYgAQYigUyBggDEEUYOTIOCAQQRRgnGDsYgAQYigUyBggFEEUYPDIGCAYQRRg8MgYIBxBFGEHSAQgyMjk5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" class="gr-badge-btn" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-google"></i> View All on Google
-                </a>
+                <!-- Row 2 (scrolls right). -->
+                <div class="marquee-row reverse">
+                    <div class="marquee-track">
+                        <div class="g-pic"><img src="assets/gallery/DSC_0135.jpg" alt="Coaching moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0142.jpg" alt="Coaching moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0162.JPG" alt="Coaching moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0183.JPG" alt="Coaching moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0212.JPG" alt="Coaching moment" loading="lazy"></div>
+                        <div class="g-pic"><img src="assets/gallery/DSC_0276.JPG" alt="Coaching moment" loading="lazy"></div>
+                        <!-- duplicate -->
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0135.jpg" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0142.jpg" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0162.JPG" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0183.JPG" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0212.JPG" alt="" loading="lazy"></div>
+                        <div class="g-pic" aria-hidden="true"><img src="assets/gallery/DSC_0276.JPG" alt="" loading="lazy"></div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Google Review Cards — replace placeholder content with real reviews -->
-            <div class="gr-cards-grid">
-
-                <div class="google-review-card animate-on-scroll delay-100">
-                    <div class="gr-card-top">
-                        <div class="gr-avatar" style="background: #4285F4;">A</div>
-                        <div class="gr-reviewer-info">
-                            <strong class="gr-name">Nurul Farahheliyana</strong>
-                            <span class="gr-date">2 months ago</span>
-                        </div>
-                        <i class="fab fa-google gr-google-icon"></i>
+        <!-- ════════ FINAL CTA ════════ -->
+        <section class="final-cta gradient-bg" id="cta-section">
+            <div class="container cta-inner reveal">
+                <h2>Ready to Write Your Own Success Story?</h2>
+                <p>Join the growing list of organisations and individuals who have elevated their teams and achieved
+                breakthrough performance with Freedom Discovery. Let's talk today.</p>
+                <div class="cta-actions">
+                    <div class="mag-wrap" id="magWrap">
+                        <a href="contact.html" class="btn-primary mag-btn" id="magBtn">Get in Touch</a>
                     </div>
-                    <div class="gr-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="gr-text">"Two days of training with Coach Nan were great. His presentation was very powerful, cheerful, and engaging, never boring at all. Coach Nan is a very experienced person with extraordinary knowledge, yet he is humble, which makes it very easy to learn and gain valuable insights from him."</p>
+                    <a href="https://wa.me/60124883300" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
                 </div>
-
-                <div class="google-review-card animate-on-scroll delay-200">
-                    <div class="gr-card-top">
-                        <div class="gr-avatar" style="background: #EA4335;">B</div>
-                        <div class="gr-reviewer-info">
-                            <strong class="gr-name">Raymond R Lawrence</strong>
-                            <span class="gr-date">6 months ago</span>
-                        </div>
-                        <i class="fab fa-google gr-google-icon"></i>
-                    </div>
-                    <div class="gr-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="gr-text">"Coach Nan has given a deeper understanding and meaning towards leadership, communication and coaching. With his lively presentation and explanation, it has made this experience very fruitful and fulfilling."</p>
+                <div class="cta-trust">
+                    <span><i class="fas fa-circle-check"></i> 5.0 Google Rating</span>
+                    <span><i class="fas fa-circle-check"></i> HRD Corp Accredited</span>
+                    <span><i class="fas fa-circle-check"></i> 450,000+ Trained</span>
+                    <span><i class="fas fa-circle-check"></i> Real, Verified Reviews</span>
                 </div>
-
-                <div class="google-review-card animate-on-scroll delay-300">
-                    <div class="gr-card-top">
-                        <div class="gr-avatar" style="background: #34A853;">C</div>
-                        <div class="gr-reviewer-info">
-                            <strong class="gr-name">Ling Ling Beh</strong>
-                            <span class="gr-date">7 months ago</span>
-                        </div>
-                        <i class="fab fa-google gr-google-icon"></i>
-                    </div>
-                    <div class="gr-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="gr-text">"Thank you coach Nan for his lively session and I have benefited from this session. I am now HRDCorp certified trainer."</p>
-                </div>
-
-                <div class="google-review-card animate-on-scroll delay-100">
-                    <div class="gr-card-top">
-                        <div class="gr-avatar" style="background: #FBBC05; color: #333;">D</div>
-                        <div class="gr-reviewer-info">
-                            <strong class="gr-name">joanna loo</strong>
-                            <span class="gr-date">5 months ago</span>
-                        </div>
-                        <i class="fab fa-google gr-google-icon"></i>
-                    </div>
-                    <div class="gr-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="gr-text">"Had a great and fun 2 days training class with coach Nan. He is knowledgeable, sharing alot of real case examples and technique skills which can help us to apply in our daily work."</p>
-                </div>
-
-                <div class="google-review-card animate-on-scroll delay-200">
-                    <div class="gr-card-top">
-                        <div class="gr-avatar" style="background: #9C27B0;">E</div>
-                        <div class="gr-reviewer-info">
-                            <strong class="gr-name">Margaret Kibat</strong>
-                            <span class="gr-date">6 months ago</span>
-                        </div>
-                        <i class="fab fa-google gr-google-icon"></i>
-                    </div>
-                    <div class="gr-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="gr-text">"I am so grateful to be able attend this time TTT Hrd Corp by coach Nan. Its open my eyes and mind on this training. Thank you for the guide & sharing, very precious knowledge."</p>
-                </div>
-
-                <div class="google-review-card animate-on-scroll delay-300">
-                    <div class="gr-card-top">
-                        <div class="gr-avatar" style="background: #00897B;">F</div>
-                        <div class="gr-reviewer-info">
-                            <strong class="gr-name">Jacy J Channel</strong>
-                            <span class="gr-date">6 months ago</span>
-                        </div>
-                        <i class="fab fa-google gr-google-icon"></i>
-                    </div>
-                    <div class="gr-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="gr-text">"Coach Nan is a very humble and supportive trainer. His explanation is very clear and easy to understand. I enjoy every session of his teaching and training activities."</p>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section bg-light">
-        <div class="container">
-            <div class="section-header text-center animate-on-scroll">
-                <h4 class="section-subtitle">Our Gallery</h4>
-                <h2 class="section-title">Transformation in Action</h2>
-                <p>Capturing real moments of learning, breakthrough, and measurable success.</p>
-            </div>
+    </main>
 
-            <div class="gallery-grid">
-
-                <div class="gallery-card animate-on-scroll delay-100">
-                    <div class="gallery-img">
-                        <img src="assets/g1.jpg"
-                            alt="Training Event" loading="lazy">
-                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
-                    </div>
-                    <div class="gallery-desc">
-                        <h4>Leadership Seminar 2023</h4>
-                        <p>University Staff Training.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card animate-on-scroll delay-200">
-                    <div class="gallery-img">
-                        <img src="assets/g2.jpg"
-                            alt="Workshop" loading="lazy">
-                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
-                    </div>
-                    <div class="gallery-desc">
-                        <h4>Safety Compliance Workshop</h4>
-                        <p>Hands-ontraining with manufacturing partners.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card animate-on-scroll delay-300">
-                    <div class="gallery-img">
-                        <img src="assets/g3.jpg"
-                            alt="Team Building" loading="lazy">
-                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
-                    </div>
-                    <div class="gallery-desc">
-                        <h4> Team Building</h4>
-                        <p>"Fantastic way to build trust among departments!"</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card animate-on-scroll delay-100">
-                    <div class="gallery-img">
-                        <img src="assets/g4.jpg"
-                            alt="Discussion" loading="lazy">
-                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
-                    </div>
-                    <div class="gallery-desc">
-                        <h4>Executive Coaching Session</h4>
-                        <p>One-on-one breakthrough session with Coach Nan.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card animate-on-scroll delay-200">
-                    <div class="gallery-img">
-                        <img src="assets/g5.jpg"
-                            alt="Presentation" loading="lazy">
-                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
-                    </div>
-                    <div class="gallery-desc">
-                        <h4>Public Speaking Masterclass</h4>
-                        <p>Helping future leaders find their voice.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-card animate-on-scroll delay-300">
-                    <div class="gallery-img">
-                        <img src="assets/g6.jpg"
-                            alt="Exam" loading="lazy">
-                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
-                    </div>
-                    <div class="gallery-desc">
-                        <h4>ISO Audit Preparation</h4>
-                        <p>Ensuring full compliance for our corporate clients.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-banner">
-        <div class="container cta-content">
-            <h2>Ready to experience a real transformation?</h2>
-            <p>Join the growing list of organisations that have elevated their teams and achieved breakthrough performance with Freedom Discovery.</p>
-            <a href="contact.html" class="btn btn-primary">Get in Touch Today</a>
-        </div>
-    </section>
-
+    <!-- ════════ FOOTER ════════ -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-about">
-                <h3>Freedom Discovery</h3>
-                <p>Empowering businesses and individuals with cutting-edge training solutions and strategic consulting.
-                </p>
+                <img src="assets/logo.png" alt="Freedom Discovery Management" class="footer-logo" loading="lazy" decoding="async">
+                <p>Empowering organisations and individuals through executive coaching, the Pro Innothinking Mindset,
+                and strategic consulting — since 2000.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/freediscovery" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/60124883300" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="team.html">Our Team</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
                 <h4>Contact Info</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Kedah, Malaysia</p>
+                <p><i class="fas fa-location-dot"></i> Kedah, Malaysia</p>
                 <p><i class="fas fa-phone"></i> 012 488 3300</p>
                 <p><i class="fas fa-envelope"></i> myfdm@yahoo.com</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; <span id="currentYear">2026</span> Freedom Discovery Management Sdn. Bhd. All Rights Reserved.</p>
         </div>
-
-        <!-- === ADMIN ACCESS BUTTON (Floated in Footer) === -->
-        <a href="admin/login.php" class="admin-trigger" title="Admin Login">
-            <i class="fas fa-lock"></i>
-        </a>
     </footer>
 
-    <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <!-- ════════ ANNOUNCEMENT — Dynamic Island Capsule ════════ -->
+    <div class="cap" id="cap" data-state="pill">
+        <button class="cap-pill" id="capPill" aria-label="Open announcements">
+            <span class="cap-pill-dot"></span>
+            <i class="fas fa-bullhorn"></i>
+            <span class="cap-pill-text">Latest Announcements</span>
+            <span class="cap-pill-cta">View</span>
+        </button>
 
-    <script src="script.js"></script>
+        <div class="cap-card" id="capCard" role="dialog" aria-modal="false" aria-label="Latest announcements">
+            <button class="cap-close" id="capClose" aria-label="Close announcements">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <div class="cap-deck">
+                <!-- Card 1 — EMSM promo poster -->
+                <div class="cap-slide">
+                    <button class="cap-poster-btn" id="capZoom" type="button" aria-label="Enlarge poster">
+                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — 29–30 June 2026, AC Hotel Penang" class="cap-poster" id="capPoster" loading="lazy" decoding="async">
+                        <span class="cap-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i> Tap to enlarge</span>
+                    </button>
+                    <a class="cap-action"
+                       href="https://wa.me/60124883300?text=EMSM"
+                       target="_blank" rel="noopener noreferrer">
+                        Register / Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Card 2 — Training hall for rent -->
+                <div class="cap-slide">
+                    <div class="cap-hall">
+                        <span class="cap-hall-tag">Now Available</span>
+                        <div class="cap-hall-icon"><i class="fas fa-chalkboard-user"></i></div>
+                        <h3>Training Hall for Rent</h3>
+                        <p>Our fully-equipped training hall in Kedah is now available for rental — ideal
+                        for workshops, seminars and corporate events. Flexible rates available.</p>
+                    </div>
+                    <a class="cap-action"
+                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20renting%20the%20FDM%20training%20hall."
+                       target="_blank" rel="noopener noreferrer">
+                        Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════ POSTER LIGHTBOX (capsule) ════════ -->
+    <div class="cap-lightbox" id="capLightbox" aria-hidden="true" role="dialog" aria-label="Poster preview">
+        <button class="cap-lightbox-close" id="capLbClose" aria-label="Close preview"><i class="fas fa-xmark"></i></button>
+        <img src="" alt="Essential Manager Skills Masterclass poster" id="capLbImg">
+    </div>
+
+    <!-- ════════ GALLERY LIGHTBOX ════════ -->
+    <div class="g-lightbox" id="gLightbox" aria-hidden="true" role="dialog" aria-label="Gallery image">
+        <button class="g-lb-close" id="gLbClose" aria-label="Close"><i class="fas fa-xmark"></i></button>
+        <button class="g-lb-nav g-lb-prev" id="gLbPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <img src="" alt="Gallery image enlarged" id="gLbImg">
+        <button class="g-lb-nav g-lb-next" id="gLbNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- ════════ WHATSAPP FAB ════════ -->
+    <a class="wa-btn" id="waBtn"
+       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Freedom%20Discovery."
+       target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"/>
+        </svg>
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <!-- ════════ BACK TO TOP ════════ -->
+    <button id="backToTop" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/home.js"></script>
+
+    <!-- ════════ GALLERY LIGHTBOX (self-contained) ════════ -->
+    <script>
+    (function () {
+        var marquee = document.getElementById('galleryMarquee');
+        var lb = document.getElementById('gLightbox');
+        if (!marquee || !lb) return;
+
+        var lbImg = document.getElementById('gLbImg');
+        var btnClose = document.getElementById('gLbClose');
+        var btnPrev = document.getElementById('gLbPrev');
+        var btnNext = document.getElementById('gLbNext');
+
+        // Build a unique, ordered list of real photos (skip the duplicated clones).
+        var sources = [];
+        marquee.querySelectorAll('.g-pic:not([aria-hidden="true"]) img').forEach(function (img) {
+            if (sources.indexOf(img.getAttribute('src')) === -1) sources.push(img.getAttribute('src'));
+        });
+        var current = 0;
+
+        function show(i) {
+            current = (i + sources.length) % sources.length;
+            lbImg.setAttribute('src', sources[current]);
+        }
+        function open(src) {
+            var i = sources.indexOf(src);
+            show(i === -1 ? 0 : i);
+            lb.classList.add('open');
+            lb.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+        function close() {
+            lb.classList.remove('open');
+            lb.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        marquee.addEventListener('click', function (e) {
+            var pic = e.target.closest('.g-pic');
+            if (!pic) return;
+            var img = pic.querySelector('img');
+            if (img) open(img.getAttribute('src'));
+        });
+        btnClose.addEventListener('click', close);
+        btnPrev.addEventListener('click', function () { show(current - 1); });
+        btnNext.addEventListener('click', function () { show(current + 1); });
+        lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+        document.addEventListener('keydown', function (e) {
+            if (!lb.classList.contains('open')) return;
+            if (e.key === 'Escape') close();
+            else if (e.key === 'ArrowLeft') show(current - 1);
+            else if (e.key === 'ArrowRight') show(current + 1);
+        });
+    })();
+    </script>
 </body>
 
 </html>

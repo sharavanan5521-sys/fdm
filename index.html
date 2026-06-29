@@ -4,29 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freedom Discovery Management - Corporate Training & Consulting</title>
+    <title>Pro Innothinking Mindset & Executive Coaching | Freedom Discovery</title>
     <meta name="description"
-        content="Freedom Discovery Management offers world-class corporate training, executive coaching, Innothinking skills, and strategic business consulting in Kedah, Malaysia. Elevate your workforce today.">
+        content="Freedom Discovery Management — Malaysia's pioneer in executive coaching, new-age futuristic leadership and the world's only Pro Innothinking Mindset training. HRD Corp claimable corporate training since 2000.">
+    <meta name="keywords"
+        content="Pro Innothinking Mindset, executive coaching Malaysia, new age futuristic leadership, brain management, corporate training, HRD Corp claimable, leadership development, Coach Nan">
     <link rel="canonical" href="https://freedomdiscovery.net/">
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://freedomdiscovery.net/">
-    <meta property="og:title" content="Freedom Discovery Management - Corporate Training & Consulting">
+    <meta property="og:title" content="Pro Innothinking Mindset & Executive Coaching | Freedom Discovery">
     <meta property="og:description"
-        content="Unlock human potential through Innothinking. Your trusted partner in corporate training and brain management since 2000.">
+        content="Unlock human potential through the Pro Innothinking Mindset. Your trusted partner in executive coaching, new-age leadership and brain management since 2000.">
     <meta property="og:image" content="https://freedomdiscovery.net/assets/logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Freedom Discovery Management - Corporate Training &amp; Consulting">
-    <meta name="twitter:description" content="Unlock human potential through Innothinking. Your trusted partner in corporate training and brain management since 2000.">
+    <meta name="twitter:title" content="Pro Innothinking Mindset & Executive Coaching | Freedom Discovery">
+    <meta name="twitter:description" content="Unlock human potential through the Pro Innothinking Mindset. Executive coaching, new-age leadership and brain management since 2000.">
     <meta name="twitter:image" content="https://freedomdiscovery.net/assets/logo.png">
 
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/home.css">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -36,17 +40,14 @@
       "name": "Freedom Discovery Management Sdn. Bhd.",
       "url": "https://freedomdiscovery.net",
       "logo": "https://freedomdiscovery.net/assets/logo.png",
-      "description": "Your trusted partner in corporate training, brain management, and strategic business consulting.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kedah",
-        "addressCountry": "MY"
-      },
+      "description": "Malaysia's pioneer in executive coaching, new-age futuristic leadership and the world's only Pro Innothinking Mindset training. HRD Corp claimable corporate training since 2000.",
+      "foundingDate": "2000",
+      "address": { "@type": "PostalAddress", "addressLocality": "Kedah", "addressCountry": "MY" },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+60-12-488-3300",
         "contactType": "customer service",
-        "email": "info@freedomdiscovery.net"
+        "email": "myfdm@yahoo.com"
       },
       "sameAs": [
         "https://www.facebook.com/freediscovery",
@@ -58,169 +59,425 @@
 
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="/"><img src="assets/logo.png" alt="Freedom Discovery Logo" class="logo-img"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact Us</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+    <!-- ════════ NAVBAR — Dynamic Island ════════ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="/" class="brand" aria-label="Freedom Discovery — Home">
+                <img src="assets/logo.png" alt="Freedom Discovery Management" class="brand-logo">
+            </a>
 
-    <header id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="fade-in-up">Unlocking Human Potential Through <span class="text-highlight">Innothinking</span>
-            </h1>
-            <p class="fade-in-up delay-1">Your trusted partner in corporate training, executive coaching, brain management, and strategic
-                business consulting since 2000.</p>
-            <div class="hero-btns fade-in-up delay-2">
-                <a href="services.html" class="btn btn-primary">Explore Services</a>
-                <a href="contact.html" class="btn btn-outline">Get a Quote</a>
-            </div>
+            <nav class="nav-links" aria-label="Primary">
+                <a href="/" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Team</a>
+                <a href="events.html">Events</a>
+                <a href="testimonials.html">Testimonials</a>
+            </nav>
+
+            <a href="contact.html" class="nav-cta">Contact Us</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
+
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+            <a href="/" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="team.html">Team</a>
+            <a href="events.html">Events</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html" class="mobile-cta">Contact Us</a>
+        </nav>
     </header>
 
-    <!-- STATS BAR -->
-    <section class="stats-bar">
-        <div class="container stats-grid">
-            <div class="stat-item">
-                <span class="stat-number">25+</span>
-                <span class="stat-label">Years of Experience</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">500+</span>
-                <span class="stat-label">Clients Served</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">50+</span>
-                <span class="stat-label">Training Modules</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">10,000+</span>
-                <span class="stat-label">Professionals Empowered</span>
-            </div>
-        </div>
-    </section>
+    <main>
 
-    <!-- NEW SERVICE ALERT SECTION -->
-    <section class="new-service-alert animate-on-scroll">
-        <div class="container alert-content">
-            <div class="alert-icon">
-                <i class="fas fa-robot"></i>
-            </div>
-            <div class="alert-text">
-                <h3>New: AI & Future Tech Training</h3>
-                <p>Equip your team with the latest in Generative AI and Machine Learning.</p>
-            </div>
-            <a href="services.html" class="btn btn-sm-primary">Learn More &rarr;</a>
-        </div>
-    </section>
+        <!-- ════════ HERO ════════ -->
+        <section class="hero" id="hero">
+            <div class="orb orb-1" aria-hidden="true"></div>
+            <div class="orb orb-2" aria-hidden="true"></div>
+            <div class="hero-grid-lines" aria-hidden="true"></div>
 
-    <section id="about" class="section">
-        <div class="container about-grid">
-            <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                    alt="Corporate Team" loading="lazy">
-            </div>
-            <div class="about-text">
-                <h4 class="section-subtitle">Who We Are</h4>
-                <h2 class="section-title">Leading the Way in Talent Empowerment & Professional Excellence</h2>
-                <p>Freedom Discovery Management Sdn. Bhd. is a dynamic, results-driven human capital development provider. We collaborate with local universities to develop proprietary course materials like "Brain Management" and remain the only provider in the world delivering "Innothinking" skills.</p>
-                <ul class="check-list">
-                    <li><i class="fas fa-check-circle"></i> Established since 2000</li>
-                    <li><i class="fas fa-check-circle"></i> Certified Coaches & Industry Experts</li>
-                    <li><i class="fas fa-check-circle"></i> Proven Coaching & Training Methodology</li>
-                </ul>
-                <a href="about.html" class="btn btn-text">Read More About Us &rarr;</a>
-            </div>
-        </div>
-    </section>
+            <div class="hero-inner">
+                <span class="hero-kicker reveal">Since 2000 · HRD Corp Claimable</span>
 
-    <section id="services" class="section bg-light">
-        <div class="container">
-            <div class="section-header text-center">
-                <h4 class="section-subtitle">What We Do</h4>
-                <h2 class="section-title">Our Core Services</h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card animate-on-scroll">
-                    <div class="icon-box">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Innothinking Training</h3>
-                    <p>Exclusive thinking skills training designed to sharpen strategic thinking, accelerate problem-solving, and cultivate peak performance in the workplace.</p>
-                    <a href="services.html#leadership" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h1 class="hero-headline" id="heroTitle" data-accent="Future-Ready High-Performing">We Build Future-Ready Leaders &amp; High-Performing Teams</h1>
+
+                <p class="hero-sub reveal">Executive coaching, corporate training, brain management and business
+                consulting — powered by our <strong>Pro Innothinking Mindset</strong>.</p>
+
+                <p class="hero-signature"><span class="tw-text" id="twEl"></span></p>
+
+                <div class="hero-actions reveal">
+                    <a href="services.html" class="btn-primary hero-cta">Explore Our Programmes</a>
+                    <a href="#why-fdm" class="btn-ghost">Why Choose Us <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card animate-on-scroll delay-100">
-                    <div class="icon-box">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Corporate Training</h3>
-                    <p>Customized training modules for leadership, team building, and productivity management.</p>
-                    <a href="services.html#leadership" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card animate-on-scroll delay-200">
-                    <div class="icon-box">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Business Consulting</h3>
-                    <p>Strategic consulting to accelerate organizational excellence, drive measurable outcomes, and unlock sustainable growth.</p>
-                    <a href="services.html#iso" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card animate-on-scroll delay-300">
-                    <div class="icon-box">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI & Future Tech</h3>
-                    <p>Future-proof your workforce with Generative AI and Machine Learning capabilities built for the modern enterprise.</p>
-                    <a href="services.html#ai" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+
+                <div class="hero-proof reveal">
+                    <span><i class="fas fa-circle-check"></i> 450,000+ professionals trained</span>
+                    <span class="dot"></span>
+                    <span><i class="fas fa-circle-check"></i> across 6 countries in Asia</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- TESTIMONIAL TEASER -->
-    <section class="section testimonial-teaser">
-        <div class="container text-center">
-            <h4 class="section-subtitle animate-on-scroll">What Our Clients Say</h4>
-            <h2 class="section-title animate-on-scroll delay-100">Trusted by Industry Leaders</h2>
-            <div class="teaser-quote animate-on-scroll delay-200">
-                <i class="fas fa-quote-left"></i>
-                <p>"Freedom Discovery's Innothinking programme transformed the way our team approaches problem-solving. A must-have for any organisation seeking real, measurable growth."</p>
+            <a href="#authority" class="scroll-cue" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
+        </section>
+
+        <!-- ════════ AUTHORITY STRIP ════════ -->
+        <section class="authority" id="authority" aria-label="Credentials and accreditation">
+            <div class="authority-inner">
+                <span class="authority-label">Accredited &amp; Trusted</span>
+                <div class="authority-logos">
+                    <div class="logo-item reveal"><img src="assets/hrdcorp1.png" alt="HRD Corp Registered Training Provider"></div>
+                    <div class="logo-divider" aria-hidden="true"></div>
+                    <div class="logo-item reveal"><img src="assets/iact_logo.png" alt="IACT accreditation"></div>
+                    <div class="logo-divider" aria-hidden="true"></div>
+                    <div class="logo-item reveal"><img src="assets/abnlplogo.jpg" alt="ABNLP accreditation"></div>
+                    <div class="logo-divider" aria-hidden="true"></div>
+                    <div class="logo-item reveal text-credential">ATD Master Trainer&reg;</div>
+                </div>
             </div>
-            <a href="testimonials.html" class="btn btn-primary animate-on-scroll delay-300">Read All Testimonials &rarr;</a>
-        </div>
-    </section>
+        </section>
 
-    <section class="cta-banner">
-        <div class="container cta-content">
-            <h2>Ready to transform your workforce?</h2>
-            <p>Join thousands of professionals who have been trained, coached, and transformed by Freedom Discovery.</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us Today</a>
-        </div>
-    </section>
+        <!-- ════════ WHAT WE DO ════════ -->
+        <section class="section" id="what-we-do">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">What We Do</span>
+                    <h2 class="section-title">One Partner for People &amp; Performance</h2>
+                    <p class="section-intro">Freedom Discovery helps Malaysian organisations build future-ready
+                    leaders and high-performing teams through four core capabilities.</p>
+                </div>
+                <div class="pillars-grid">
+                    <div class="pillar reveal">
+                        <div class="pillar-icon"><i class="fas fa-chalkboard-user"></i></div>
+                        <h3>Corporate Training</h3>
+                        <p>Communication &amp; presentation skills, leadership, emotional intelligence and
+                        productivity — practical programmes customised to your workforce.</p>
+                    </div>
+                    <div class="pillar reveal">
+                        <div class="pillar-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>Executive Coaching</h3>
+                        <p>One-to-one and team coaching that turns capable managers into confident leaders.</p>
+                    </div>
+                    <div class="pillar reveal">
+                        <div class="pillar-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Brain Management</h3>
+                        <p>The Pro Innothinking Mindset — neuroscience-based thinking skills for sharper decisions.</p>
+                    </div>
+                    <div class="pillar reveal">
+                        <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Business Consulting</h3>
+                        <p>Strategy, systems and performance frameworks that drive sustainable, measurable growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- ════════ SERVICES ════════ -->
+        <section class="section bg-soft" id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Our Programmes</span>
+                    <h2 class="section-title">Programmes That Reshape Leaders</h2>
+                </div>
+                <div class="services-grid">
+                    <article class="svc-card reveal tilt">
+                        <div class="svc-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Pro Innothinking Mindset</h3>
+                        <p>The world's exclusive thinking-skills programme — sharpening strategic thinking, accelerating
+                        decisions and building peak cognitive performance under pressure.</p>
+                        <a href="services.html#innothinking" class="svc-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="svc-card reveal tilt">
+                        <div class="svc-icon"><i class="fas fa-chalkboard-user"></i></div>
+                        <h3>Corporate Training</h3>
+                        <p>Modules in communication &amp; presentation skills, leadership development, team building,
+                        emotional intelligence and productivity — fully customised to your workforce.</p>
+                        <a href="services.html#corporate" class="svc-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="svc-card reveal tilt">
+                        <div class="svc-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Business Consulting</h3>
+                        <p>Strategic consulting for organisational excellence — ISO implementation, process improvement,
+                        KPI frameworks and performance systems that drive sustainable growth.</p>
+                        <a href="services.html#consulting" class="svc-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="svc-card reveal tilt">
+                        <div class="svc-icon"><i class="fas fa-robot"></i></div>
+                        <h3>AI &amp; Future Tech</h3>
+                        <p>Future-proof your team with Generative AI, Microsoft Copilot and machine-learning literacy —
+                        practical, hands-on, and built for the modern Malaysian enterprise.</p>
+                        <a href="services.html#ai" class="svc-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+                <div class="center-cta">
+                    <a href="services.html" class="btn-primary">View All Programmes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ WHY FDM ════════ -->
+        <section class="section" id="why-fdm">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Why Freedom Discovery</span>
+                    <h2 class="section-title">Empowering People &amp; Organisations<br>to Achieve Excellence with Clarity</h2>
+                </div>
+                <div class="why-grid">
+                    <article class="why-card reveal tilt">
+                        <div class="why-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Proprietary Pro Innothinking Mindset</h3>
+                        <p>A neuroscience-based proprietary thinking-skills methodology — Innothinking: TSKW™ — that
+                        sharpens strategic thinking, clarity in decision-making and the ability to innovate under pressure.</p>
+                    </article>
+                    <article class="why-card reveal tilt">
+                        <span class="why-flag"><i class="fas fa-check-circle"></i> Zero Out-of-Pocket</span>
+                        <div class="why-icon"><i class="fas fa-certificate"></i></div>
+                        <h3>HRD Corp Claimable Training</h3>
+                        <p>Every corporate programme is HRD Corp registered and fully claimable under the Human Resources
+                        Development Fund — measurable transformation at zero net cost for qualifying employers.</p>
+                    </article>
+                    <article class="why-card reveal tilt">
+                        <div class="why-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>28+ Years of Proven Results</h3>
+                        <p>Since 2000 we've delivered measurable performance gains across six Asian markets, empowering
+                        more than 450,000 professionals to lead, innovate and excel.</p>
+                    </article>
+                    <article class="why-card reveal tilt">
+                        <div class="why-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>Certified Executive Coaches</h3>
+                        <p>Our facilitators are internationally certified coaches and practitioners — led by an
+                        ATD Master Trainer&reg; and Master Life Coach — not academics reading from slides.</p>
+                    </article>
+                    <article class="why-card reveal tilt">
+                        <div class="why-icon"><i class="fas fa-sliders"></i></div>
+                        <h3>Fully Customised Programmes</h3>
+                        <p>Every module is engineered around your industry, culture and workforce goals. No off-the-shelf
+                        decks — only targeted, results-driven design built for your team.</p>
+                    </article>
+                    <article class="why-card reveal tilt">
+                        <div class="why-icon"><i class="fas fa-earth-asia"></i></div>
+                        <h3>Trusted Across the Region</h3>
+                        <p>We've developed and supported organisations across Malaysia, Singapore, Indonesia, India,
+                        Brunei and Cambodia — from SMEs and MNCs to government bodies and educational institutions.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ PROCESS — Timeline ════════ -->
+        <section class="timeline-section" id="process">
+            <div class="timeline-inner">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Our Approach</span>
+                    <h2 class="section-title light">How We Work With You</h2>
+                </div>
+                <div class="timeline-track">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-step">Step 01</div>
+                            <h3>Contact Us</h3>
+                            <p>Tell us your goals. We listen, understand your team and culture, and identify the
+                            capability gaps worth closing — no obligation, no hard sell.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-step">Step 02</div>
+                            <h3>Programme Design</h3>
+                            <p>Our specialists craft a fully customised curriculum built around your industry, culture
+                            and objectives — structured for measurable, lasting results.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-step">Step 03</div>
+                            <h3>Training Delivery</h3>
+                            <p>Engaging, interactive sessions delivered on-site or virtually by certified coaches and
+                            practitioners with real-world industry experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ STATS ════════ -->
+        <section class="stats" aria-label="Our impact in numbers">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="cnt" data-n="28">0</span><span class="sfx">+</span></div>
+                    <div class="stat-lbl">Years of Experience</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="cnt" data-n="450000">0</span><span class="sfx">+</span></div>
+                    <div class="stat-lbl">Participants Trained</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="cnt" data-n="6000">0</span><span class="sfx">+</span></div>
+                    <div class="stat-lbl">Coaching Hours</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="cnt" data-n="50">0</span><span class="sfx">+</span></div>
+                    <div class="stat-lbl">Training Modules</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ REVIEWS ════════ -->
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Client Stories</span>
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <div class="reviews-rating">
+                        <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+                        <span class="reviews-rating-text">Rated <strong>5.0</strong> on <i class="fab fa-google"></i> Google Reviews</span>
+                    </div>
+                </div>
+                <div class="reviews-grid">
+                    <article class="review-card reveal">
+                        <div class="review-top">
+                            <div class="review-avatar" style="background:#1a4ec8">N</div>
+                            <div class="review-id">
+                                <div class="review-name">Nurul Farahheliyana</div>
+                                <div class="review-meta">via Google &middot; 2 months ago</div>
+                            </div>
+                            <i class="fab fa-google review-g" aria-hidden="true"></i>
+                        </div>
+                        <span class="stars" aria-label="5 out of 5">★★★★★</span>
+                        <p>Two days of training with Coach Nan were great. His presentation was very powerful, cheerful and
+                        engaging, never boring at all. He is experienced with extraordinary knowledge, yet humble — making
+                        it very easy to learn from him.</p>
+                    </article>
+                    <article class="review-card reveal">
+                        <div class="review-top">
+                            <div class="review-avatar" style="background:#f47c1f">L</div>
+                            <div class="review-id">
+                                <div class="review-name">Ling Ling Beh</div>
+                                <div class="review-meta">via Google &middot; 7 months ago</div>
+                            </div>
+                            <i class="fab fa-google review-g" aria-hidden="true"></i>
+                        </div>
+                        <span class="stars" aria-label="5 out of 5">★★★★★</span>
+                        <p>Thank you Coach Nan for his lively session — I have benefited greatly. I am now an HRD Corp
+                        certified trainer!</p>
+                    </article>
+                    <article class="review-card reveal">
+                        <div class="review-top">
+                            <div class="review-avatar" style="background:#0f2a6b">J</div>
+                            <div class="review-id">
+                                <div class="review-name">Joanna Loo</div>
+                                <div class="review-meta">via Google &middot; 5 months ago</div>
+                            </div>
+                            <i class="fab fa-google review-g" aria-hidden="true"></i>
+                        </div>
+                        <span class="stars" aria-label="5 out of 5">★★★★★</span>
+                        <p>Had a great and fun 2-day training class with Coach Nan. He is knowledgeable, sharing a lot of
+                        real case examples and technique skills which we can apply in our daily work.</p>
+                    </article>
+                </div>
+                <div class="center-cta">
+                    <a href="testimonials.html" class="btn-primary">Read All Reviews</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ VISION & MISSION ════════ -->
+        <section class="purpose" id="purpose">
+            <div class="purpose-inner">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Our Purpose</span>
+                    <h2 class="section-title light">Transformation Begins From Within</h2>
+                </div>
+                <div class="purpose-grid">
+                    <article class="purpose-card reveal">
+                        <div class="purpose-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Our Vision</h3>
+                        <p>To train and develop ordinary people into extraordinary individuals — empowering
+                        each person to achieve what they truly want in life.</p>
+                    </article>
+                    <article class="purpose-card reveal">
+                        <div class="purpose-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Our Mission</h3>
+                        <p>To encourage and support our associates in building and securing their future through
+                        the most unique training, coaching and development tools.</p>
+                    </article>
+                </div>
+                <div class="charter reveal">
+                    <p class="charter-lead">We look beyond today. If you grow, we grow. If you achieve
+                    results, so do we. We know our business — and we'll learn yours.</p>
+                    <p class="charter-punch">A trusted partner, <span>not just a vendor.</span></p>
+                    <div class="charter-points">
+                        <div class="charter-point">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <strong>Our Objective</strong>
+                                <span>To help every associate achieve their objectives and be successful.</span>
+                            </div>
+                        </div>
+                        <div class="charter-point">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <strong>Quality Policy</strong>
+                                <span>Creative training solutions, designed to meet real business needs.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="philosophy reveal">
+                    <span class="philosophy-step">Unlearn</span>
+                    <i class="fas fa-arrow-right-long"></i>
+                    <span class="philosophy-step">Relearn</span>
+                    <i class="fas fa-arrow-right-long"></i>
+                    <span class="philosophy-step">Continuous Learning</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ FINAL CTA ════════ -->
+        <section class="final-cta gradient-bg" id="cta-section">
+            <div class="container cta-inner reveal">
+                <h2>Ready to Build Future-Ready Leaders?</h2>
+                <p>Join 450,000+ professionals across Asia who have been trained, coached and transformed by
+                Freedom Discovery. Let's talk today.</p>
+                <div class="cta-actions">
+                    <div class="mag-wrap" id="magWrap">
+                        <a href="contact.html" class="btn-primary mag-btn" id="magBtn">Contact Us</a>
+                    </div>
+                    <a href="https://wa.me/60124883300" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                <div class="cta-trust">
+                    <span><i class="fas fa-circle-check"></i> HRD Corp Claimable</span>
+                    <span><i class="fas fa-circle-check"></i> Custom Programmes</span>
+                    <span><i class="fas fa-circle-check"></i> Certified Coaches</span>
+                    <span><i class="fas fa-circle-check"></i> 28+ Years Experience</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ════════ FOOTER ════════ -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-about">
-                <h3>Freedom Discovery</h3>
-                <p>Empowering businesses and individuals through expert coaching, cutting-edge training solutions, and strategic consulting.
-                </p>
+                <img src="assets/logo.png" alt="Freedom Discovery Management" class="footer-logo" loading="lazy" decoding="async">
+                <p>Empowering organisations and individuals through executive coaching, the Pro Innothinking Mindset,
+                and strategic consulting — since 2000.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/freediscovery" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/60124883300" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
@@ -236,59 +493,81 @@
             </div>
             <div class="footer-contact">
                 <h4>Contact Info</h4>
-                <p><i class="fas fa-map-marker-alt"></i>Kedah, Malaysia</p>
+                <p><i class="fas fa-location-dot"></i> Kedah, Malaysia</p>
                 <p><i class="fas fa-phone"></i> 012 488 3300</p>
                 <p><i class="fas fa-envelope"></i> myfdm@yahoo.com</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; <span id="currentYear">2026</span> Freedom Discovery Management Sdn. Bhd. All Rights Reserved.</p>
         </div>
-
-        <!-- === ADMIN ACCESS BUTTON (Floated in Footer) === -->
-        <a href="admin/login.php" class="admin-trigger" title="Admin Login">
-            <i class="fas fa-lock"></i>
-        </a>
     </footer>
 
-    <!-- === PROMO POPUP MODAL === -->
-    <div id="promoModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="modal-body">
-                <img id="promoImage" src="" alt="New Programme">
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- Scroll to Top Button -->
-    <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
-
-    <!-- === ANNOUNCEMENT WIDGET === -->
-    <div id="announcementWidget" class="ann-widget">
-        <button class="ann-tab" id="annTab" aria-label="Announcements">
+    <!-- ════════ ANNOUNCEMENT — Dynamic Island Capsule ════════ -->
+    <div class="cap" id="cap" data-state="pill">
+        <button class="cap-pill" id="capPill" aria-label="Open announcements">
+            <span class="cap-pill-dot"></span>
             <i class="fas fa-bullhorn"></i>
-            <span>Announcements</span>
+            <span class="cap-pill-text">Latest Announcements</span>
+            <span class="cap-pill-cta">View</span>
         </button>
-        <div class="ann-panel" id="annPanel" aria-hidden="true">
-            <div class="ann-panel-header">
-                <span><i class="fas fa-bullhorn"></i> Announcements</span>
-                <button class="ann-close" id="annClose" aria-label="Close announcements">&times;</button>
-            </div>
-            <div class="ann-panel-body" id="annPanelBody">
-                <!-- Populated by script.js -->
+
+        <div class="cap-card" id="capCard" role="dialog" aria-modal="false" aria-label="Latest announcements">
+            <button class="cap-close" id="capClose" aria-label="Close announcements">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <div class="cap-deck">
+                <!-- Card 1 — EMSM promo poster -->
+                <div class="cap-slide">
+                    <button class="cap-poster-btn" id="capZoom" type="button" aria-label="Enlarge poster">
+                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — 29–30 June 2026, AC Hotel Penang" class="cap-poster" id="capPoster" loading="lazy" decoding="async">
+                        <span class="cap-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i> Tap to enlarge</span>
+                    </button>
+                    <a class="cap-action"
+                       href="https://wa.me/60124883300?text=EMSM"
+                       target="_blank" rel="noopener noreferrer">
+                        Register / Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Card 2 — Training hall for rent -->
+                <div class="cap-slide">
+                    <div class="cap-hall">
+                        <span class="cap-hall-tag">Now Available</span>
+                        <div class="cap-hall-icon"><i class="fas fa-chalkboard-user"></i></div>
+                        <h3>Training Hall for Rent</h3>
+                        <p>Our fully-equipped training hall in Kedah is now available for rental — ideal
+                        for workshops, seminars and corporate events. Flexible rates available.</p>
+                    </div>
+                    <a class="cap-action"
+                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20renting%20the%20FDM%20training%20hall."
+                       target="_blank" rel="noopener noreferrer">
+                        Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- ════════ POSTER LIGHTBOX ════════ -->
+    <div class="cap-lightbox" id="capLightbox" aria-hidden="true" role="dialog" aria-label="Poster preview">
+        <button class="cap-lightbox-close" id="capLbClose" aria-label="Close preview"><i class="fas fa-xmark"></i></button>
+        <img src="" alt="Essential Manager Skills Masterclass poster" id="capLbImg">
+    </div>
+
+    <!-- ════════ WHATSAPP FAB ════════ -->
+    <a class="wa-btn" id="waBtn"
+       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20coaching%20and%20training%20programmes."
+       target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"/>
+        </svg>
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <!-- ════════ BACK TO TOP ════════ -->
+    <button id="backToTop" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/home.js"></script>
 </body>
 
 </html>

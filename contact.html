@@ -4,235 +4,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Freedom Discovery Management</title>
+    <title>Contact Us | Freedom Discovery Management</title>
     <meta name="description"
-        content="Get in touch with Freedom Discovery Management. Call us at 012 488 3300 or visit our HQ in Kedah. Ready to transform your workforce?">
+        content="Get in touch with Freedom Discovery Management. Call 012 488 3300, WhatsApp us, or send a message for a training proposal. Based in Kulim, Kedah, Malaysia.">
+    <meta name="keywords"
+        content="contact Freedom Discovery, Coach Nan contact, HRD Corp training proposal, corporate training Kedah, training enquiry Malaysia">
     <link rel="canonical" href="https://freedomdiscovery.net/contact.html">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://freedomdiscovery.net/contact.html">
-    <meta property="og:title" content="Contact Us - Freedom Discovery Management">
+    <meta property="og:title" content="Contact Us | Freedom Discovery Management">
     <meta property="og:description"
-        content="Start your transformation journey with us. Contact our consultants for a proposal today.">
+        content="Start your transformation journey. Call, WhatsApp, or message our consultants for a proposal today.">
     <meta property="og:image" content="https://freedomdiscovery.net/assets/logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Us - Freedom Discovery Management">
-    <meta name="twitter:description" content="Start your transformation journey with us. Contact our consultants for a proposal today.">
+    <meta name="twitter:title" content="Contact Us | Freedom Discovery Management">
+    <meta name="twitter:description" content="Start your transformation journey. Reach our consultants for a proposal today.">
     <meta name="twitter:image" content="https://freedomdiscovery.net/assets/logo.png">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Freedom Discovery Management Sdn. Bhd.",
+      "url": "https://freedomdiscovery.net/contact.html",
+      "logo": "https://freedomdiscovery.net/assets/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+60-12-488-3300",
+        "contactType": "customer service",
+        "areaServed": "MY",
+        "availableLanguage": ["en", "ms"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kulim",
+        "addressRegion": "Kedah",
+        "addressCountry": "MY"
+      }
+    }
+    </script>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="/"><img src="assets/logo.png" alt="Freedom Discovery Logo" class="logo-img"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html" class="btn-nav active">Contact Us</a></li>
-            </ul>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        </div>
-    </nav>
+    <!-- ════════ NAVBAR — Dynamic Island ════════ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="/" class="brand" aria-label="Freedom Discovery — Home">
+                <img src="assets/logo.png" alt="Freedom Discovery Management" class="brand-logo">
+            </a>
 
-    <header class="page-header">
-        <div class="container">
-            <h1 class="fade-in-up">Start Your Transformation</h1>
-            <p class="fade-in-up delay-1">Ready to upgrade your team? We are just one call away.</p>
+            <nav class="nav-links" aria-label="Primary">
+                <a href="/">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Team</a>
+                <a href="events.html">Events</a>
+                <a href="testimonials.html">Testimonials</a>
+            </nav>
+
+            <a href="contact.html" class="nav-cta active">Contact Us</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+            <a href="/">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="team.html">Team</a>
+            <a href="events.html">Events</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html" class="mobile-cta active">Contact Us</a>
+        </nav>
     </header>
 
-    <section class="section">
-        <div class="container">
-            <div class="contact-cards-grid">
+    <main>
 
-                <div class="contact-card animate-on-scroll delay-100">
-                    <div class="icon-circle-large"><i class="fas fa-phone-alt"></i></div>
-                    <h3>Talk to Us</h3>
-                    <p>Speak directly with our consultants.</p>
-                    <a href="tel:+60124883300" class="contact-link">012 488 3300</a>
-                </div>
+        <!-- ════════ PAGE HERO ════════ -->
+        <section class="page-hero">
+            <div class="orb orb-1" aria-hidden="true"></div>
+            <div class="orb orb-2" aria-hidden="true"></div>
+            <div class="hero-grid-lines" aria-hidden="true"></div>
 
-                <div class="contact-card animate-on-scroll delay-200">
-                    <div class="icon-circle-large"><i class="fas fa-envelope"></i></div>
-                    <h3>Email Us</h3>
-                    <p>Request a proposal or course outline.</p>
-                    <a href="mailto:myfdm@yahoo.com" class="contact-link">myfdm@yahoo.com</a>
-                </div>
-
-                <div class="contact-card animate-on-scroll delay-300">
-                    <div class="icon-circle-large"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>Visit HQ</h3>
-                    <p>Freedom Discovery Management</p>
-                    <span class="contact-text">Kulim, Kedah, Malaysia</span>
-                </div>
-
-            </div>
-
-            <div class="whatsapp-cta-block animate-on-scroll">
-                <div class="whatsapp-cta-inner">
-                    <div class="whatsapp-cta-text">
-                        <i class="fab fa-whatsapp"></i>
-                        <div>
-                            <h4>Prefer to chat? Message us on WhatsApp</h4>
-                            <p>Get a response within minutes. Our consultants are ready to help.</p>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/60124883300" class="btn-whatsapp-large" target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
+            <div class="hero-inner">
+                <span class="hero-kicker reveal">Get In Touch · We Reply Fast</span>
+                <h1 class="hero-headline" id="heroTitle" data-accent="Transformation">Let's Start Your Transformation</h1>
+                <p class="hero-sub reveal">Ready to upgrade your team, or just have a question? We're one message away —
+                pick whichever way is easiest for you.</p>
+                <div class="hero-actions reveal">
+                    <a href="tel:+60124883300" class="btn-primary hero-cta"><i class="fas fa-phone"></i> Call 012 488 3300</a>
+                    <a href="#get-in-touch" class="btn-ghost">Send a Message <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
+        </section>
 
-            <div class="text-center mt-50 animate-on-scroll">
-                <p class="social-connect-label">Connect with us on social media</p>
-                <div class="social-links-row">
-                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+        <!-- ════════ CONTACT — info + form ════════ -->
+        <section class="section" id="get-in-touch">
+            <div class="container">
+                <div class="contact-layout">
+
+                    <!-- Info aside -->
+                    <aside class="contact-aside reveal">
+                        <div class="ca-eyebrow">Reach Us Directly</div>
+                        <h2>We'd Love to Hear From You</h2>
+                        <p class="ca-intro">Speak with our consultants about a training proposal, a course outline, or any
+                        question at all. Choose the channel that suits you best.</p>
+
+                        <div class="ci-list">
+                            <div class="ci-item">
+                                <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="ci-body">
+                                    <div class="ci-label">Call Us</div>
+                                    <a href="tel:+60124883300">012 488 3300</a>
+                                </div>
+                            </div>
+                            <div class="ci-item">
+                                <div class="ci-icon orange"><i class="fas fa-envelope"></i></div>
+                                <div class="ci-body">
+                                    <div class="ci-label">Email Us</div>
+                                    <a href="mailto:myfdm@yahoo.com">myfdm@yahoo.com</a>
+                                </div>
+                            </div>
+                            <div class="ci-item">
+                                <div class="ci-icon deep"><i class="fas fa-location-dot"></i></div>
+                                <div class="ci-body">
+                                    <div class="ci-label">Visit HQ</div>
+                                    <span>Kulim, Kedah, Malaysia</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ca-whatsapp">
+                            <div class="caw-text">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <h4>Prefer to chat?</h4>
+                                    <p>Get a reply within minutes.</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/60124883300" class="caw-btn" target="_blank" rel="noopener noreferrer">Chat Now</a>
+                        </div>
+
+                        <div class="ca-socials">
+                            <span>Follow us</span>
+                            <a href="https://www.facebook.com/freediscovery" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/coachnan/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wa.me/60124883300" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </aside>
+
+                    <!-- Form card -->
+                    <div class="contact-form-card reveal">
+                        <h3>Send Us a Message</h3>
+                        <p class="cf-sub">Fill in the details below — it opens WhatsApp with your message ready to send.</p>
+                        <form id="contactForm">
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="name">Your Name <span class="req">*</span></label>
+                                    <input type="text" id="name" name="name" autocomplete="name" required placeholder="Ahmad bin Abdullah">
+                                </div>
+                                <div class="field">
+                                    <label for="company">Company / Organisation</label>
+                                    <input type="text" id="company" name="company" autocomplete="organization" placeholder="Your Company Sdn. Bhd.">
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="email">Email Address <span class="req">*</span></label>
+                                    <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@company.com">
+                                </div>
+                                <div class="field">
+                                    <label for="phone">Phone / WhatsApp</label>
+                                    <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="012 345 6789">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject">
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Training Proposal">Request Training Proposal</option>
+                                    <option value="Consulting">Business Consulting</option>
+                                    <option value="Training Hall Rental">Training Hall Rental</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="message">Message <span class="req">*</span></label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your training needs or ask any question..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                            </button>
+                            <p class="cf-note">By sending, WhatsApp opens with your message pre-filled — just hit send.
+                            Prefer email? Write to <a href="mailto:myfdm@yahoo.com">myfdm@yahoo.com</a>.</p>
+                        </form>
+                    </div>
+
                 </div>
             </div>
+        </section>
 
-            <div class="contact-form-wrapper animate-on-scroll delay-200 mt-50">
-                <h3 class="form-heading">Send Us a Message</h3>
-                <form id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Your Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" autocomplete="name" required placeholder="Ahmad bin Abdullah">
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company / Organisation</label>
-                            <input type="text" id="company" name="company" autocomplete="organization" placeholder="Your Company Sdn. Bhd.">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@company.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone / WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="012 345 6789">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject">
-                            <option value="General Inquiry">General Inquiry</option>
-                            <option value="Training Proposal">Request Training Proposal</option>
-                            <option value="Consulting">Business Consulting</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message <span class="required">*</span></label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your training needs or ask any question..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+        <!-- ════════ MAP ════════ -->
+        <section class="contact-map" aria-label="Our location on the map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254194.20967353234!2d100.17757905872166!3d5.353865660682243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac23a31c3b179%3A0x678736e4f9b2d8d8!2sKedah%2C%20Malaysia!5e0!3m2!1sen!2smy!4v1700000000000!5m2!1sen!2smy"
+                title="Freedom Discovery Management location — Kedah, Malaysia"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
 
-    <section class="full-width-map animate-on-scroll">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254194.20967353234!2d100.17757905872166!3d5.353865660682243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac23a31c3b179%3A0x678736e4f9b2d8d8!2sKedah%2C%20Malaysia!5e0!3m2!1sen!2smy!4v1700000000000!5m2!1sen!2smy"
-            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
+        <!-- ════════ CLOSING QUOTE ════════ -->
+        <section class="section bg-soft">
+            <div class="container">
+                <div class="closing reveal">
+                    <img src="assets/logo.png" alt="Freedom Discovery Management">
+                    <h2>"The Journey to Excellence Never Ends"</h2>
+                    <p>True freedom comes from the ability to learn, unlearn, and relearn. At Freedom Discovery, we don't
+                    just provide training; we provide the <strong>roadmap to your potential</strong>. Whether you're an
+                    individual seeking growth or an organisation chasing a breakthrough, we're the partners who will walk
+                    that path with you.</p>
+                    <div class="closing-divider"></div>
+                    <p class="closing-sign">Freedom Discovery Management Sdn. Bhd.</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="section bg-light text-center">
-        <div class="container animate-on-scroll">
-            <div class="closure-content">
-                <img src="assets/logo.png" alt="Freedom Discovery Logo" class="closure-logo">
-                <h2 class="closure-title">"The Journey to Excellence Never Ends"</h2>
-                <p class="closure-text">
-                    True freedom comes from the ability to learn, unlearn, and relearn. <br>
-                    At Freedom Discovery, we don't just provide training; we provide the <strong>roadmap to your
-                        potential</strong>.
-                    Whether you are an individual seeking growth or an organization chasing a breakthrough,
-                    we are the partners who will walk that path with you.
-                </p>
-                <div class="closure-divider"></div>
-                <p class="closure-sign">Freedom Discovery Management Sdn. Bhd.</p>
-            </div>
-        </div>
-        <!-- === ANNOUNCEMENT WIDGET === -->
-    <div id="announcementWidget" class="ann-widget">
-        <button class="ann-tab" id="annTab" aria-label="Announcements">
-            <i class="fas fa-bullhorn"></i>
-            <span>Announcements</span>
-        </button>
-        <div class="ann-panel" id="annPanel" aria-hidden="true">
-            <div class="ann-panel-header">
-                <span><i class="fas fa-bullhorn"></i> Announcements</span>
-                <button class="ann-close" id="annClose" aria-label="Close announcements">&times;</button>
-            </div>
-            <div class="ann-panel-body" id="annPanelBody">
-                <!-- Populated by script.js -->
-            </div>
-        </div>
-    </div>
-    </section>
+    </main>
 
+    <!-- ════════ FOOTER ════════ -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-about">
-                <h3>Freedom Discovery</h3>
-                <p>Empowering businesses and individuals with cutting-edge training solutions and strategic consulting.
-                </p>
+                <img src="assets/logo.png" alt="Freedom Discovery Management" class="footer-logo" loading="lazy" decoding="async">
+                <p>Empowering organisations and individuals through executive coaching, the Pro Innothinking Mindset,
+                and strategic consulting — since 2000.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/freediscovery" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/60124883300" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="team.html">Our Team</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
                 <h4>Contact Info</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Kedah, Malaysia</p>
+                <p><i class="fas fa-location-dot"></i> Kulim, Kedah, Malaysia</p>
                 <p><i class="fas fa-phone"></i> 012 488 3300</p>
                 <p><i class="fas fa-envelope"></i> myfdm@yahoo.com</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; <span id="currentYear">2026</span> Freedom Discovery Management Sdn. Bhd. All Rights Reserved.</p>
         </div>
-
-        <!-- === ADMIN ACCESS BUTTON (Floated in Footer) === -->
-        <a href="admin/login.php" class="admin-trigger" title="Admin Login">
-            <i class="fas fa-lock"></i>
-        </a>
     </footer>
 
-    <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <!-- ════════ ANNOUNCEMENT — Dynamic Island Capsule ════════ -->
+    <div class="cap" id="cap" data-state="pill">
+        <button class="cap-pill" id="capPill" aria-label="Open announcements">
+            <span class="cap-pill-dot"></span>
+            <i class="fas fa-bullhorn"></i>
+            <span class="cap-pill-text">Latest Announcements</span>
+            <span class="cap-pill-cta">View</span>
+        </button>
 
-    <script src="script.js"></script>
+        <div class="cap-card" id="capCard" role="dialog" aria-modal="false" aria-label="Latest announcements">
+            <button class="cap-close" id="capClose" aria-label="Close announcements">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <div class="cap-deck">
+                <!-- Card 1 — EMSM promo poster -->
+                <div class="cap-slide">
+                    <button class="cap-poster-btn" id="capZoom" type="button" aria-label="Enlarge poster">
+                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — 29–30 June 2026, AC Hotel Penang" class="cap-poster" id="capPoster" loading="lazy" decoding="async">
+                        <span class="cap-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i> Tap to enlarge</span>
+                    </button>
+                    <a class="cap-action"
+                       href="https://wa.me/60124883300?text=EMSM"
+                       target="_blank" rel="noopener noreferrer">
+                        Register / Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Card 2 — Training hall for rent -->
+                <div class="cap-slide">
+                    <div class="cap-hall">
+                        <span class="cap-hall-tag">Now Available</span>
+                        <div class="cap-hall-icon"><i class="fas fa-chalkboard-user"></i></div>
+                        <h3>Training Hall for Rent</h3>
+                        <p>Our fully-equipped training hall in Kedah is now available for rental — ideal
+                        for workshops, seminars and corporate events. Flexible rates available.</p>
+                    </div>
+                    <a class="cap-action"
+                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20renting%20the%20FDM%20training%20hall."
+                       target="_blank" rel="noopener noreferrer">
+                        Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════ POSTER LIGHTBOX (capsule) ════════ -->
+    <div class="cap-lightbox" id="capLightbox" aria-hidden="true" role="dialog" aria-label="Poster preview">
+        <button class="cap-lightbox-close" id="capLbClose" aria-label="Close preview"><i class="fas fa-xmark"></i></button>
+        <img src="" alt="Essential Manager Skills Masterclass poster" id="capLbImg">
+    </div>
+
+    <!-- ════════ WHATSAPP FAB ════════ -->
+    <a class="wa-btn" id="waBtn"
+       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Freedom%20Discovery."
+       target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"/>
+        </svg>
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <!-- ════════ BACK TO TOP ════════ -->
+    <button id="backToTop" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/home.js"></script>
+
+    <!-- ════════ CONTACT FORM → WhatsApp (self-contained) ════════ -->
+    <script>
+    (function () {
+        var form = document.getElementById('contactForm');
+        if (!form) return;
+        var PHONE = '60124883300';
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!form.reportValidity()) return;
+            var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+            var lines = [
+                '*New enquiry from freedomdiscovery.net*',
+                '',
+                'Name: ' + v('name'),
+                v('company') ? 'Company: ' + v('company') : '',
+                'Email: ' + v('email'),
+                v('phone') ? 'Phone: ' + v('phone') : '',
+                'Subject: ' + v('subject'),
+                '',
+                'Message:',
+                v('message')
+            ].filter(function (l) { return l !== ''; });
+            var url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(lines.join('\n'));
+            window.open(url, '_blank', 'noopener');
+        });
+    })();
+    </script>
 </body>
 
 </html>
