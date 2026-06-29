@@ -4,327 +4,430 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team & Partners - Freedom Discovery Management</title>
+    <title>Our Team & Trainers | Freedom Discovery Management</title>
     <meta name="description"
-        content="Meet the industry experts, master life coaches, and certified trainers behind Freedom Discovery. We also partner with top universities and corporations in Asia.">
+        content="Meet the certified faculty behind Freedom Discovery — led by ATD Master Trainer® Coach Nan. A pool of HRD Corp-accredited coaches, consultants and technical trainers across leadership, business, AI, safety, quality and IT.">
+    <meta name="keywords"
+        content="Freedom Discovery trainers, Coach Nan, HRD Corp trainers Malaysia, executive coaches, corporate trainers, ISO consultant, safety trainer, cyber security trainer, AI trainer Malaysia">
     <link rel="canonical" href="https://freedomdiscovery.net/team.html">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://freedomdiscovery.net/team.html">
-    <meta property="og:title" content="Our Team & Partners - Freedom Discovery Management">
+    <meta property="og:title" content="Our Team & Trainers | Freedom Discovery Management">
     <meta property="og:description"
-        content="A diverse pool of certified professionals dedicated to your growth in business, safety, IT, and personal mastery.">
+        content="A diverse pool of certified professionals dedicated to your growth — leadership, coaching, business, AI, safety, quality and IT.">
     <meta property="og:image" content="https://freedomdiscovery.net/assets/group-photo.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Our Team &amp; Partners - Freedom Discovery Management">
-    <meta name="twitter:description" content="A diverse pool of certified professionals dedicated to your growth in business, safety, IT, and personal mastery.">
+    <meta name="twitter:title" content="Our Team & Trainers | Freedom Discovery Management">
+    <meta name="twitter:description" content="Certified faculty led by ATD Master Trainer® Coach Nan, delivering world-class learning across Asia.">
     <meta name="twitter:image" content="https://freedomdiscovery.net/assets/group-photo.jpg">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/team.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Freedom Discovery Management Sdn. Bhd.",
+      "url": "https://freedomdiscovery.net/team.html",
+      "logo": "https://freedomdiscovery.net/assets/logo.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Pathmanatan V E Govindasamy",
+        "alternateName": "Coach Nan",
+        "jobTitle": "Principal Consultant & Founder, ATD Master Trainer®"
+      }
+    }
+    </script>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="/"><img src="assets/logo.png" alt="Freedom Discovery Logo" class="logo-img"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="team.html" class="active">Our Team</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact Us</a></li>
-            </ul>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        </div>
-    </nav>
+    <!-- ════════ NAVBAR — Dynamic Island ════════ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="/" class="brand" aria-label="Freedom Discovery — Home">
+                <img src="assets/logo.png" alt="Freedom Discovery Management" class="brand-logo">
+            </a>
 
-    <header class="page-header">
-        <div class="container">
-            <h1 class="fade-in-up">The People Behind The Vision</h1>
-            <p class="fade-in-up delay-1">World-class Trainers & Strategic Partners</p>
+            <nav class="nav-links" aria-label="Primary">
+                <a href="/">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html" class="active">Team</a>
+                <a href="events.html">Events</a>
+                <a href="testimonials.html">Testimonials</a>
+            </nav>
+
+            <a href="contact.html" class="nav-cta">Contact Us</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+            <a href="/">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="team.html" class="active">Team</a>
+            <a href="events.html">Events</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html" class="mobile-cta">Contact Us</a>
+        </nav>
     </header>
 
-    <section class="section">
-        <div class="container">
-            <div class="section-header text-center animate-on-scroll">
-                <h4 class="section-subtitle">Our Faculty</h4>
-                <h2 class="section-title">Meet Our Trainers</h2>
-                <p>Certified professionals with decades of real-world industry experience, dedicated to your growth.</p>
+    <main>
+
+        <!-- ════════ PAGE HERO ════════ -->
+        <section class="page-hero">
+            <div class="orb orb-1" aria-hidden="true"></div>
+            <div class="orb orb-2" aria-hidden="true"></div>
+            <div class="hero-grid-lines" aria-hidden="true"></div>
+
+            <div class="hero-inner">
+                <span class="hero-kicker reveal">Certified Faculty · HRD Corp Accredited</span>
+                <h1 class="hero-headline" id="heroTitle" data-accent="Practitioners">The Practitioners Behind Your Transformation</h1>
+                <p class="hero-sub reveal">Behind Coach Nan stands a faculty of certified coaches, consultants and
+                technical trainers — practitioners with real industry experience across <strong>leadership, business,
+                AI, safety, quality and IT</strong>.</p>
+                <div class="hero-actions reveal">
+                    <a href="#faculty" class="btn-primary hero-cta">Meet the Faculty</a>
+                    <a href="services.html" class="btn-ghost">Our Programmes <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
+        </section>
 
-            <!-- Trainer photos: place assets/team-sairam.jpg and assets/team-azahari.jpg to activate frames -->
-            <div class="trainer-profiles-list">
-
-                <!-- Trainer 0: Coach Nan -->
-                <div class="trainer-profile-card animate-on-scroll delay-100">
-                    <div class="trainer-photo-frame">
-                        <img src="assets/coachnan.png" alt="Pathmanatan V E Govindasamy @ Coach Nan" loading="lazy"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="trainer-placeholder">
-                            <i class="fas fa-user-tie"></i>
+        <!-- ════════ LEAD TRAINER — Coach Nan ════════ -->
+        <section class="section" id="lead">
+            <div class="container">
+                <div class="lead-grid">
+                    <div class="reveal">
+                        <div class="lead-photo-card">
+                            <img src="assets/coachnan.png" alt="Coach Nan">
+                            <div class="lead-nametag">
+                                <h3>Coach Nan</h3>
+                                <p>Founder &amp; Principal Consultant</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="trainer-profile-content">
-                        <div class="trainer-profile-header">
-                            <h3>Pathmanatan V E Govindasamy <span style="font-weight:400;">@ Coach Nan</span></h3>
-                            <span class="trainer-role-label">Master Life Coach | ATD Master Trainer&reg; &amp; Leadership Strategist</span>
+                    <div class="lead-bio reveal">
+                        <div class="lead-label">Lead Trainer &amp; Founder</div>
+                        <h2>ATD Master Trainer® &amp; Master Life Coach</h2>
+                        <p>Coach Nan is an <strong>ATD Master Trainer® (ATD USA)</strong> and corporate trainer with over
+                        28 years in consulting, business strategy, training, motivation and transformational coaching. His
+                        programmes span Leadership &amp; Management, NLP-based psychological communication, Emotional
+                        Intelligence, and his signature <strong>Brain Management &amp; Innothinking</strong> methodology.</p>
+                        <p>He has trained more than <strong>450,000 participants across Asia</strong> — government bodies,
+                        manufacturing, banking, insurance and education — accumulating over <strong>6,000 professional
+                        coaching hours</strong> and 21+ years as a business strategist across Malaysia, Singapore,
+                        Indonesia, India, Brunei and Cambodia.</p>
+                        <div class="lead-stats">
+                            <div class="ls-item"><div class="ls-num">28+</div><div class="ls-lbl">Years Experience</div></div>
+                            <div class="ls-item"><div class="ls-num">450,000+</div><div class="ls-lbl">Participants Trained</div></div>
+                            <div class="ls-item"><div class="ls-num">6,000+</div><div class="ls-lbl">Coaching Hours</div></div>
                         </div>
-                        <div class="trainer-stats-row">
-                            <div class="t-stat"><span class="t-num">28+</span><span class="t-lbl">Years Experience</span></div>
-                            <div class="t-stat"><span class="t-num">450,000+</span><span class="t-lbl">Participants Trained</span></div>
-                            <div class="t-stat"><span class="t-num">6,000+</span><span class="t-lbl">Coaching Hours</span></div>
-                        </div>
-                        <p class="trainer-bio">Coach Nan is a highly accomplished ATD Master Trainer&reg; by ATD USA and Corporate Trainer with over 28 years of experience in Consulting, Business Strategy Development, Training, Motivation, and Transformational Coaching. He has designed and facilitated a wide range of programs — from Leadership and Management, NLP-based Psychological Communication, and Emotional Intelligence, to Brain Management and Innothinking. He has trained more than <strong>450,000 participants across Asia</strong> — spanning government bodies, manufacturing, banking, insurance, and educational institutions — and accumulated over <strong>6,000 professional coaching hours</strong> supporting leaders, entrepreneurs, and teams in breaking limitations and accelerating results. He also brings over <strong>21 years as a Business Strategist and Consultant</strong> across Malaysia, Singapore, Indonesia, India, Brunei, and Cambodia.</p>
-                        <ul class="trainer-expertise">
-                            <li><i class="fas fa-check"></i> Leadership &amp; Management Development</li>
-                            <li><i class="fas fa-check"></i> Coaching Skills &amp; Transformational Coaching</li>
-                            <li><i class="fas fa-check"></i> NLP, Emotional &amp; Social Intelligence</li>
-                            <li><i class="fas fa-check"></i> Innothinking: Brain Management (TSKWTM&trade;)</li>
-                            <li><i class="fas fa-check"></i> Train-the-Trainer (TTT) Certification</li>
-                            <li><i class="fas fa-check"></i> Business Strategy &amp; Network Marketing Consulting</li>
-                        </ul>
-                        <div class="trainer-tag-row">
-                            <span class="tag">ATD Master Trainer&reg;</span>
-                            <span class="tag">Master Life Coach</span>
-                            <span class="tag">NLP Master Practitioner</span>
-                            <span class="tag">HRD Corp Accredited</span>
-                            <span class="tag">Brain Management</span>
-                            <span class="tag">TTT Lead Trainer</span>
+                        <div class="lead-tags">
+                            <span>ATD Master Trainer®</span>
+                            <span>Master Life Coach</span>
+                            <span>NLP Master Practitioner</span>
+                            <span>HRD Corp Accredited</span>
+                            <span>Brain Management</span>
+                            <span>TTT Lead Trainer</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Trainer 1: Sairam Sinniah -->
-                <div class="trainer-profile-card animate-on-scroll delay-100">
-                    <div class="trainer-photo-frame">
-                        <img src="assets/team-sairam.png" alt="Sairam Sinniah" loading="lazy"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="trainer-placeholder">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                    </div>
-                    <div class="trainer-profile-content">
-                        <div class="trainer-profile-header">
-                            <h3>Sairam Sinniah</h3>
-                            <span class="trainer-role-label">Senior Accredited Trainer &amp; Training Designer</span>
-                        </div>
-                        <div class="trainer-stats-row">
-                            <div class="t-stat"><span class="t-num">600+</span><span class="t-lbl">Classes Conducted</span></div>
-                            <div class="t-stat"><span class="t-num">20,000+</span><span class="t-lbl">Professionals Trained</span></div>
-                            <div class="t-stat"><span class="t-num">9+</span><span class="t-lbl">Years in Safety</span></div>
-                        </div>
-                        <p class="trainer-bio">Mr. Sairam Sinniah has been in the Safety Industry — especially in Fire Safety and Personal Development — since 2015. He has trained people across Public, Government, and Private sectors, and is the creator of the <strong>"1 Home 2 Aider Programme"</strong> (CPR education for homeowners) and the <strong>Defensive Forklift Driving</strong> training module. He works closely with Akademi Bomba dan Penyelamat Malaysia and attends international safety conferences to stay current.</p>
-                        <ul class="trainer-expertise">
-                            <li><i class="fas fa-check"></i> Fire Safety Awareness &amp; Mock Fire Drills</li>
-                            <li><i class="fas fa-check"></i> Occupational First Aid &amp; CPR</li>
-                            <li><i class="fas fa-check"></i> Forklift Safe Handling &amp; Defensive Driving</li>
-                            <li><i class="fas fa-check"></i> Team Building Facilitation (8+ years)</li>
-                            <li><i class="fas fa-check"></i> HIRARC &amp; Risk Assessment</li>
-                            <li><i class="fas fa-check"></i> ISO 14001 End-to-End Consultancy</li>
-                        </ul>
-                        <div class="trainer-tag-row">
-                            <span class="tag">Fire Safety</span>
-                            <span class="tag">First Aid &amp; CPR</span>
-                            <span class="tag">Forklift Training</span>
-                            <span class="tag">Team Building</span>
-                            <span class="tag">ISO 14001</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trainer 2: Tuan Haji Azahari Bin Muhammad -->
-                <div class="trainer-profile-card animate-on-scroll delay-200">
-                    <div class="trainer-photo-frame">
-                        <img src="assets/team-azahari.jpeg" alt="Tuan Haji Azahari Bin Muhammad" loading="lazy"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="trainer-placeholder">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                    </div>
-                    <div class="trainer-profile-content">
-                        <div class="trainer-profile-header">
-                            <h3>Tuan Haji Azahari Bin Muhammad</h3>
-                            <span class="trainer-role-label">Senior Training &amp; Development Consultant</span>
-                        </div>
-                        <div class="trainer-stats-row">
-                            <div class="t-stat"><span class="t-num">30+</span><span class="t-lbl">Years Experience</span></div>
-                            <div class="t-stat"><span class="t-num">Multi</span><span class="t-lbl">Industry Sectors</span></div>
-                            <div class="t-stat"><span class="t-num">Asia</span><span class="t-lbl">Wide Reach</span></div>
-                        </div>
-                        <p class="trainer-bio">A University of Arizona graduate (Bachelor's in Landscape Architecture), Tuan Haji Azahari discovered his true calling in human potential development. Over 30+ years, he has trained and consulted across government agencies, MNCs, manufacturing, education, and MLM organisations in Malaysia, Indonesia, and across Asia. A certified HRDCorp trainer, his practitioner-led approach transforms mindsets, builds unshakeable confidence, and unlocks peak performance potential in every individual he works with.</p>
-                        <ul class="trainer-expertise">
-                            <li><i class="fas fa-check"></i> Team Building &amp; Organisational Cohesion</li>
-                            <li><i class="fas fa-check"></i> Leadership Coaching &amp; Personal Development</li>
-                            <li><i class="fas fa-check"></i> Mentoring &amp; Character Building</li>
-                            <li><i class="fas fa-check"></i> Motivation &amp; Performance Enhancement</li>
-                            <li><i class="fas fa-check"></i> Cross-Industry &amp; International Consulting</li>
-                            <li><i class="fas fa-check"></i> Structured &amp; Experience-Based Learning</li>
-                        </ul>
-                        <div class="trainer-tag-row">
-                            <span class="tag">HRDCorp Certified</span>
-                            <span class="tag">Leadership</span>
-                            <span class="tag">Team Building</span>
-                            <span class="tag">Mentoring</span>
-                            <span class="tag">Malaysia &amp; Indonesia</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section bg-light">
-        <div class="container">
-            <div class="section-header text-center animate-on-scroll">
-                <h4 class="section-subtitle">Our Ecosystem</h4>
-                <h2 class="section-title">Trusted Associates</h2>
-                <p>We partner with leading institutions and industry trailblazers across Asia to deliver world-class learning experiences.</p>
-            </div>
-
-            <div class="associates-grid">
-
-                <div class="associate-box animate-on-scroll">
-                    <div class="box-header">
-                        <i class="fas fa-university"></i>
-                        <h3>Education & Universities</h3>
-                    </div>
-                    <div class="box-content">
-                        <span class="tag">Universiti Sains Malaysia (USM)</span>
-                        <span class="tag">Universiti Teknologi Malaysia (UTM)</span>
-                        <span class="tag">Universiti Malaysia Pahang (UMP)</span>
-                        <span class="tag">Multimedia University (MMU)</span>
-                        <span class="tag">Curtin University</span>
-                        <span class="tag">UNITEN</span>
-                        <span class="tag">INTI International</span>
-                        <span class="tag">UniSZA</span>
-                        <span class="tag">Politeknik Sultan Haji Ahmad Shah</span>
-                    </div>
+        <!-- ════════ FACULTY ════════ -->
+        <section class="section bg-soft" id="faculty">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Our Faculty</span>
+                    <h2 class="section-title">Certified Trainers &amp; <span class="accent">Coaches</span></h2>
+                    <p class="section-intro">A multidisciplinary pool of accredited practitioners — so every programme is
+                    led by someone who has lived the work, not just taught it.</p>
                 </div>
 
-                <div class="associate-box animate-on-scroll delay-100">
-                    <div class="box-header">
-                        <i class="fas fa-building"></i>
-                        <h3>Corporate & Manufacturing</h3>
-                    </div>
-                    <div class="box-content">
-                        <span class="tag">AirAsia</span>
-                        <span class="tag">Zurich Insurance</span>
-                        <span class="tag">Dell</span>
-                        <span class="tag">Giant</span>
-                        <span class="tag">Sanyo</span>
-                        <span class="tag">First Solar</span>
-                        <span class="tag">Analog Devices</span>
-                        <span class="tag">Toray</span>
-                        <span class="tag">Kobay Technology</span>
-                        <span class="tag">Tessolve</span>
-                        <span class="tag">Modenas</span>
-                    </div>
-                </div>
+                <div class="faculty-grid reveal">
 
-                <div class="associate-box animate-on-scroll delay-200">
-                    <div class="box-header">
-                        <i class="fas fa-landmark"></i>
-                        <h3>Government & Agencies</h3>
-                    </div>
-                    <div class="box-content">
-                        <span class="tag">MIDA</span>
-                        <span class="tag">Talent Corp</span>
-                        <span class="tag">JKR</span>
-                        <span class="tag">MARA</span>
-                        <span class="tag">RISDA</span>
-                        <span class="tag">Yayasan Pahang</span>
-                        <span class="tag">FAMA</span>
-                        <span class="tag">Malaysian Employers Federation (MEF)</span>
-                    </div>
-                </div>
+                        <div class="faculty-card">
+                            <div class="fac-top">
+                                <div class="fac-avatar"><img src="assets/trainners/team-azahari.jpeg" alt="Tuan Haji Azahari Bin Muhammad" loading="lazy" decoding="async"></div>
+                                <div class="fac-id">
+                                    <h4>Tuan Haji Azahari Bin Muhammad</h4>
+                                    <div class="fac-role">Senior Training &amp; Development Consultant</div>
+                                </div>
+                            </div>
+                            <p class="fac-bio">With 30+ years in human-potential development, Tuan Haji Azahari has trained
+                            and consulted across government, MNCs, manufacturing, education and MLM organisations in
+                            Malaysia, Indonesia and beyond — transforming mindsets and unlocking peak performance.</p>
+                            <div class="fac-tags">
+                                <span>Leadership</span><span>Team Building</span><span>Mentoring</span><span>HRD Corp</span>
+                            </div>
+                        </div>
 
-                <div class="associate-box animate-on-scroll delay-300">
-                    <div class="box-header">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Network Marketing</h3>
+                        <div class="faculty-card">
+                            <div class="fac-top">
+                                <div class="fac-avatar"><img src="assets/trainners/coach-sham.png" alt="Shamani Paramanathan @ Coach Sham" loading="lazy" decoding="async"></div>
+                                <div class="fac-id">
+                                    <h4>Shamani Paramanathan @ Coach Sham</h4>
+                                    <div class="fac-role">Master Life Coach, Trainer &amp; Mentor</div>
+                                </div>
+                            </div>
+                            <p class="fac-bio">A Certified Master Life Coach (Transformation Academy) and HRDF-certified
+                            trainer with 300+ coaching hours and 32 years of corporate in-house training. She helps people
+                            gain clarity through goal-setting, change management and transformational coaching.</p>
+                            <div class="fac-tags">
+                                <span>Master Life Coach</span><span>Change Management</span><span>HRDF Certified</span>
+                            </div>
+                        </div>
+
+                        <div class="faculty-card">
+                            <div class="fac-top">
+                                <div class="fac-avatar"><img src="assets/trainners/loo-ai-rene.png" alt="Loo Ai Rene" loading="lazy" decoding="async"></div>
+                                <div class="fac-id">
+                                    <h4>Loo Ai Rene</h4>
+                                    <div class="fac-role">Life &amp; Executive Coach (CPC)</div>
+                                </div>
+                            </div>
+                            <p class="fac-bio">A Certified Professional Coach and Treasurer of the Malaysia Association of
+                            Certified Coaches (MACC). A former corporate finance &amp; real-estate advisor, she now empowers
+                            individuals through mindset-shifting and strengths identification.</p>
+                            <div class="fac-tags">
+                                <span>Executive Coaching</span><span>Mindset Shifting</span><span>Multilingual</span>
+                            </div>
+                        </div>
+
+                        <div class="faculty-card">
+                            <div class="fac-top">
+                                <div class="fac-avatar"><img src="assets/trainners/param.png" alt="Paramasivam Mutusamy @ Param" loading="lazy" decoding="async"></div>
+                                <div class="fac-id">
+                                    <h4>Paramasivam Mutusamy @ Param</h4>
+                                    <div class="fac-role">AI Transformation Strategist &amp; Digital Marketing Consultant</div>
+                                </div>
+                            </div>
+                            <p class="fac-bio">An HRDC-certified corporate trainer with nearly two decades of industry
+                            experience, Param specialises in generative AI, business automation, digital marketing and
+                            entrepreneurship — bridging traditional business with the AI-driven future.</p>
+                            <div class="fac-tags">
+                                <span>AI &amp; Automation</span><span>Digital Marketing</span><span>Entrepreneurship</span><span>HRDC Certified</span>
+                            </div>
+                        </div>
+
+                        <div class="faculty-card">
+                            <div class="fac-top">
+                                <div class="fac-avatar"><img src="assets/trainners/team-sairam.jpg" alt="Sairam Sinniah" loading="lazy" decoding="async"></div>
+                                <div class="fac-id">
+                                    <h4>Sairam Sinniah</h4>
+                                    <div class="fac-role">Senior Accredited Trainer — Fire Safety &amp; First Aid</div>
+                                </div>
+                            </div>
+                            <p class="fac-bio">In the safety industry since 2015, Sairam created the "1 Home 2 Aider" CPR
+                            programme and a Defensive Forklift Driving module, training public, government and private
+                            sectors alongside Akademi Bomba dan Penyelamat Malaysia.</p>
+                            <div class="fac-tags">
+                                <span>Fire Safety</span><span>First Aid &amp; CPR</span><span>Forklift</span><span>ISO 14001</span>
+                            </div>
+                        </div>
+
+                        <div class="faculty-card">
+                            <div class="fac-top">
+                                <div class="fac-avatar"><img src="assets/trainners/razak.png" alt="Razak Bin Majid" loading="lazy" decoding="async"></div>
+                                <div class="fac-id">
+                                    <h4>Razak Bin Majid</h4>
+                                    <div class="fac-role">Safety, Health &amp; Environmental Specialist</div>
+                                </div>
+                            </div>
+                            <p class="fac-bio">Holder of an Executive Master in Safety, Health &amp; Environmental, En. Razak
+                            is a Lead Auditor for ISO 45001 and certified Safety &amp; Health Officer with deep OSH, HSEQ and
+                            Train-the-Trainer expertise built over a Royal Malaysian Navy career.</p>
+                            <div class="fac-tags">
+                                <span>OSH / HSEQ</span><span>ISO 45001</span><span>Train-the-Trainer</span>
+                            </div>
+                        </div>
+
+                        <div class="faculty-card">
+                            <div class="fac-top">
+                                <div class="fac-avatar"><img src="assets/trainners/nitya.png" alt="Nittiya Priya Vasuthevan" loading="lazy" decoding="async"></div>
+                                <div class="fac-id">
+                                    <h4>Nittiya Priya Vasuthevan</h4>
+                                    <div class="fac-role">Cyber Security &amp; IT Trainer</div>
+                                </div>
+                            </div>
+                            <p class="fac-bio">A CISSP-certified, HRDC-accredited trainer with 16 years in IT education,
+                            Nittiya delivers public and in-house programmes in cyber security, people management, employee
+                            engagement and leadership skills.</p>
+                            <div class="fac-tags">
+                                <span>Cyber Security</span><span>CISSP</span><span>Leadership</span>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="box-content">
-                        <span class="tag">Zhulian</span>
-                        <span class="tag">Cosway</span>
-                        <span class="tag">CNI</span>
-                        <span class="tag">Herbalife</span>
-                        <span class="tag">Nu Skin</span>
-                        <span class="tag">Volten International</span>
-                        <span class="tag">DXN</span>
-                        <span class="tag">Elken</span>
-                    </div>
-                </div>
 
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA BANNER -->
-    <section class="cta-banner">
-        <div class="container cta-content">
-            <h2>Ready to work with our expert practitioners?</h2>
-            <p>Contact us to discuss a bespoke programme crafted and delivered by our certified facilitators and trainers.</p>
-            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-        </div>
-    </section>
+        <!-- ════════ TRUSTED BY — client logo wall ════════ -->
+        <section class="section" id="clients">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Our Ecosystem</span>
+                    <h2 class="section-title">Trusted By Organisations <span class="accent">Across Asia</span></h2>
+                    <p class="section-intro">From universities and government agencies to MNCs and manufacturers — we've
+                    partnered with leading institutions to deliver world-class learning.</p>
+                </div>
 
+                <div class="partner-grid reveal">
+                    <div class="partner-tile"><img src="assets/partners/partner-1.png" alt="Partner organisations we've trained" loading="lazy"></div>
+                    <div class="partner-tile"><img src="assets/partners/partner-2.png" alt="Partner organisations we've trained" loading="lazy"></div>
+                    <div class="partner-tile"><img src="assets/partners/partner-3.png" alt="Partner organisations we've trained" loading="lazy"></div>
+                    <div class="partner-tile"><img src="assets/partners/partner-4.png" alt="Partner organisations we've trained" loading="lazy"></div>
+                    <div class="partner-tile"><img src="assets/partners/partner-5.png" alt="Partner organisations we've trained" loading="lazy"></div>
+                    <div class="partner-tile"><img src="assets/partners/partner-6.png" alt="Partner organisations we've trained" loading="lazy"></div>
+                    <div class="partner-tile partner-wide"><img src="assets/partners/partner-7.png" alt="Partner organisations we've trained" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ FINAL CTA ════════ -->
+        <section class="final-cta gradient-bg" id="cta-section">
+            <div class="container cta-inner reveal">
+                <h2>Work With Our Expert Practitioners</h2>
+                <p>Partner with Coach Nan and the Freedom Discovery faculty to design a bespoke programme — crafted and
+                delivered by certified trainers who have lived the work. Let's talk today.</p>
+                <div class="cta-actions">
+                    <div class="mag-wrap" id="magWrap">
+                        <a href="contact.html" class="btn-primary mag-btn" id="magBtn">Get in Touch</a>
+                    </div>
+                    <a href="https://wa.me/60124883300" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                <div class="cta-trust">
+                    <span><i class="fas fa-circle-check"></i> Certified Faculty</span>
+                    <span><i class="fas fa-circle-check"></i> HRD Corp Accredited</span>
+                    <span><i class="fas fa-circle-check"></i> 6 Countries Served</span>
+                    <span><i class="fas fa-circle-check"></i> Multidisciplinary Expertise</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ════════ FOOTER ════════ -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-about">
-                <h3>Freedom Discovery</h3>
-                <p>Empowering businesses and individuals with cutting-edge training solutions and strategic consulting.
-                </p>
+                <img src="assets/logo.png" alt="Freedom Discovery Management" class="footer-logo" loading="lazy" decoding="async">
+                <p>Empowering organisations and individuals through executive coaching, the Pro Innothinking Mindset,
+                and strategic consulting — since 2000.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/freediscovery" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/60124883300" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="team.html">Our Team</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
                 <h4>Contact Info</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Kedah, Malaysia</p>
+                <p><i class="fas fa-location-dot"></i> Kedah, Malaysia</p>
                 <p><i class="fas fa-phone"></i> 012 488 3300</p>
                 <p><i class="fas fa-envelope"></i> myfdm@yahoo.com</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; <span id="currentYear">2026</span> Freedom Discovery Management Sdn. Bhd. All Rights Reserved.</p>
         </div>
-
-        <!-- === ADMIN ACCESS BUTTON (Floated in Footer) === -->
-        <a href="admin/login.php" class="admin-trigger" title="Admin Login">
-            <i class="fas fa-lock"></i>
-        </a>
     </footer>
 
-    <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <!-- ════════ ANNOUNCEMENT — Dynamic Island Capsule ════════ -->
+    <div class="cap" id="cap" data-state="pill">
+        <button class="cap-pill" id="capPill" aria-label="Open announcements">
+            <span class="cap-pill-dot"></span>
+            <i class="fas fa-bullhorn"></i>
+            <span class="cap-pill-text">Latest Announcements</span>
+            <span class="cap-pill-cta">View</span>
+        </button>
 
-    <script src="script.js"></script>
+        <div class="cap-card" id="capCard" role="dialog" aria-modal="false" aria-label="Latest announcements">
+            <button class="cap-close" id="capClose" aria-label="Close announcements">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <div class="cap-deck">
+                <!-- Card 1 — EMSM promo poster -->
+                <div class="cap-slide">
+                    <button class="cap-poster-btn" id="capZoom" type="button" aria-label="Enlarge poster">
+                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — 29–30 June 2026, AC Hotel Penang" class="cap-poster" id="capPoster" loading="lazy" decoding="async">
+                        <span class="cap-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i> Tap to enlarge</span>
+                    </button>
+                    <a class="cap-action"
+                       href="https://wa.me/60124883300?text=EMSM"
+                       target="_blank" rel="noopener noreferrer">
+                        Register / Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Card 2 — Training hall for rent -->
+                <div class="cap-slide">
+                    <div class="cap-hall">
+                        <span class="cap-hall-tag">Now Available</span>
+                        <div class="cap-hall-icon"><i class="fas fa-chalkboard-user"></i></div>
+                        <h3>Training Hall for Rent</h3>
+                        <p>Our fully-equipped training hall in Kedah is now available for rental — ideal
+                        for workshops, seminars and corporate events. Flexible rates available.</p>
+                    </div>
+                    <a class="cap-action"
+                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20renting%20the%20FDM%20training%20hall."
+                       target="_blank" rel="noopener noreferrer">
+                        Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════ POSTER LIGHTBOX ════════ -->
+    <div class="cap-lightbox" id="capLightbox" aria-hidden="true" role="dialog" aria-label="Poster preview">
+        <button class="cap-lightbox-close" id="capLbClose" aria-label="Close preview"><i class="fas fa-xmark"></i></button>
+        <img src="" alt="Essential Manager Skills Masterclass poster" id="capLbImg">
+    </div>
+
+    <!-- ════════ WHATSAPP FAB ════════ -->
+    <a class="wa-btn" id="waBtn"
+       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Freedom%20Discovery."
+       target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"/>
+        </svg>
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <!-- ════════ BACK TO TOP ════════ -->
+    <button id="backToTop" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/home.js"></script>
 </body>
 
 </html>

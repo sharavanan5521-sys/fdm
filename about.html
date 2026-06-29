@@ -4,368 +4,498 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Freedom Discovery Management</title>
+    <title>About Coach Nan & Freedom Discovery | Executive Coaching Malaysia</title>
     <meta name="description"
-        content="Learn about Freedom Discovery Management, a pioneer in Brain Management and Innothinking training since 2000. Meet our founder Coach Nan and certified industry experts.">
+        content="Meet Coach Nan — ATD Master Trainer® and Master Life Coach — and Freedom Discovery Management, a team of learning artisans transforming people and organisations across Asia since 2000.">
+    <meta name="keywords"
+        content="Coach Nan, Pathmanatan Govindasamy, Freedom Discovery, executive coaching Malaysia, ATD Master Trainer, Pro Innothinking Mindset, brain management, NLP coach, about Freedom Discovery">
     <link rel="canonical" href="https://freedomdiscovery.net/about.html">
+
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://freedomdiscovery.net/about.html">
-    <meta property="og:title" content="About Us - Freedom Discovery Management">
-    <meta property="og:description" content="Leading the way in professional development since 2000.">
+    <meta property="og:title" content="About Coach Nan & Freedom Discovery | Executive Coaching Malaysia">
+    <meta property="og:description"
+        content="Transforming people and organisations across Asia since 2000 — led by ATD Master Trainer® Coach Nan and the Pro Innothinking Mindset.">
     <meta property="og:image" content="https://freedomdiscovery.net/assets/logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Us - Freedom Discovery Management">
-    <meta name="twitter:description" content="Leading the way in professional development since 2000.">
+    <meta name="twitter:title" content="About Coach Nan & Freedom Discovery">
+    <meta name="twitter:description" content="ATD Master Trainer® Coach Nan and the team transforming people and organisations across Asia since 2000.">
     <meta name="twitter:image" content="https://freedomdiscovery.net/assets/logo.png">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pathmanatan V E Govindasamy",
+      "alternateName": "Coach Nan",
+      "jobTitle": "Principal Consultant & Founder, ATD Master Trainer®",
+      "worksFor": { "@type": "Organization", "name": "Freedom Discovery Management Sdn. Bhd." },
+      "url": "https://freedomdiscovery.net/about.html",
+      "image": "https://freedomdiscovery.net/assets/coachnan.png",
+      "sameAs": [ "https://www.linkedin.com/in/coachnan/" ]
+    }
+    </script>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="/"><img src="assets/logo.png" alt="Freedom Discovery Logo" class="logo-img"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact Us</a></li>
-            </ul>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        </div>
-    </nav>
+    <!-- ════════ NAVBAR — Dynamic Island ════════ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="/" class="brand" aria-label="Freedom Discovery — Home">
+                <img src="assets/logo.png" alt="Freedom Discovery Management" class="brand-logo">
+            </a>
 
-    <header class="page-header">
-        <div class="container">
-            <h1 class="fade-in-up">About Freedom Discovery</h1>
-            <p class="fade-in-up delay-1">Pioneering Talent Transformation & Human Excellence since 2000</p>
+            <nav class="nav-links" aria-label="Primary">
+                <a href="/">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Team</a>
+                <a href="events.html">Events</a>
+                <a href="testimonials.html">Testimonials</a>
+            </nav>
+
+            <a href="contact.html" class="nav-cta">Contact Us</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+            <a href="/">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="team.html">Team</a>
+            <a href="events.html">Events</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact.html" class="mobile-cta">Contact Us</a>
+        </nav>
     </header>
 
-    <!-- ===== WHO WE ARE ===== -->
-    <section class="section wwa-section">
-        <div class="container">
-            <div class="wwa-grid">
+    <main>
 
-                <!-- Image Card -->
-                <div class="wwa-card wwa-img-card animate-on-scroll">
-                    <img src="assets/group-photo.jpg" alt="Freedom Discovery Team">
-                    <div class="wwa-year-badge">
-                        <span>Est.</span>
-                        <strong>2000</strong>
-                    </div>
+        <!-- ════════ PAGE HERO ════════ -->
+        <section class="page-hero">
+            <div class="orb orb-1" aria-hidden="true"></div>
+            <div class="orb orb-2" aria-hidden="true"></div>
+            <div class="hero-grid-lines" aria-hidden="true"></div>
+
+            <div class="hero-inner">
+                <span class="hero-kicker reveal">Established 2000 · Malaysia</span>
+                <h1 class="hero-headline" id="heroTitle" data-accent="People Organisations">Transforming People &amp; Organisations Since 2000</h1>
+                <p class="hero-sub reveal">Freedom Discovery is a team of learning artisans helping leaders and
+                teams think sharper, lead better and grow — through coaching, training and the
+                <strong>Pro Innothinking Mindset</strong>.</p>
+                <div class="hero-actions reveal">
+                    <a href="#founder" class="btn-primary hero-cta">Meet Our Founder</a>
+                    <a href="services.html" class="btn-ghost">Our Programmes <i class="fas fa-arrow-right"></i></a>
                 </div>
+            </div>
+        </section>
 
-                <!-- Intro Text Card -->
-                <div class="wwa-card wwa-text-card animate-on-scroll delay-100">
-                    <h4 class="wwa-subtitle">Who We Are</h4>
-                    <h2 class="wwa-title">A Trusted Partner in Human Capital Development</h2>
-                    <span class="accred-badge" style="margin-bottom:16px;display:inline-flex;"><i class="fas fa-check-circle"></i> HRD Corp Accredited Training Provider</span>
-                    <p>Freedom Discovery Management Sdn Bhd was established in 2000 as a professional training solution provider and Business Development Consulting partner, registered with HRD Corp as an accredited Training provider. For over 25 years, we have remained committed to empowering individuals and organisations through structured learning systems, strategic thinking frameworks, and performance-driven consulting solutions — with a clear mission to unlock human potential, strengthen leadership capability, and drive sustainable business growth.</p>
-                </div>
-
-                <!-- Feature Card 1 -->
-                <div class="wwa-card wwa-feat-card wwa-f1 animate-on-scroll delay-200">
-                    <div class="wfc-icon"><i class="fas fa-award"></i></div>
-                    <strong>25+ Years of Excellence</strong>
-                    <p>Delivering structured learning systems and transformational, performance-driven consulting since 2000.</p>
-                </div>
-
-                <!-- Feature Card 2 -->
-                <div class="wwa-card wwa-feat-card wwa-f2 animate-on-scroll delay-300">
-                    <div class="wfc-icon"><i class="fas fa-globe-asia"></i></div>
-                    <strong>6-Country Regional Presence</strong>
-                    <p>Serving organizations across Malaysia, Singapore, Indonesia, India, Brunei &amp; Cambodia.</p>
-                </div>
-
-                <!-- Feature Card 3 -->
-                <div class="wwa-card wwa-feat-card wwa-f3 animate-on-scroll">
-                    <div class="wfc-icon"><i class="fas fa-users"></i></div>
-                    <strong>450,000+ Participants Trained</strong>
-                    <p>TTT, Coaching, Leadership Mastery, AI &amp; Future Tech, and Business Development programs.</p>
-                </div>
-
-                <!-- Mission Card -->
-                <div class="wwa-card wwa-mission-card animate-on-scroll delay-100">
-                    <div class="wwa-mission-inner">
-                        <i class="fas fa-infinity wwa-inf-icon"></i>
-                        <div>
-                            <strong>Unlearn – Relearn – Continuous Learning</strong>
-                            <p>Freedom Discovery fosters an open-ended learning environment where growth is continuous. We embrace the principle of Unlearn – Relearn – Continuous Learning, ensuring individuals and organisations adapt effectively to evolving industry demands. While we establish the structures and systems for learning, we position ourselves as guides — empowering participants to take full ownership of their development journey.</p>
+        <!-- ════════ OUR STORY ════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-media logo-card reveal">
+                        <img src="assets/logo.png" alt="Freedom Discovery Management logo">
+                        <div class="story-badge">
+                            <div class="sb-num">2000</div>
+                            <div class="sb-lbl">Year Founded</div>
                         </div>
                     </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== MILESTONES ===== -->
-    <section class="section bg-light">
-        <div class="container">
-            <div class="section-header text-center animate-on-scroll">
-                <h4 class="section-subtitle">The Journey</h4>
-                <h2 class="section-title">A Legacy Built Over Decades</h2>
-            </div>
-            <div style="max-width:750px; margin:0 auto;">
-                <div class="milestone-timeline">
-                    <div class="milestone-item animate-on-scroll">
-                        <h4><i class="fas fa-flag" style="color:var(--accent-orange);margin-right:8px"></i>1990 —
-                            Management Beginnings</h4>
-                        <p>Began career in management roles, building the foundational experience to design and implement
-                            customized business and training solutions for employees at all levels.</p>
-                    </div>
-                    <div class="milestone-item animate-on-scroll delay-100">
-                        <h4><i class="fas fa-building" style="color:var(--accent-orange);margin-right:8px"></i>2000 —
-                            Freedom Discovery Founded</h4>
-                        <p>Established Freedom Discovery Management Sdn Bhd as a HRD Corp registered training solution
-                            provider and Business Development Consulting partner in Kedah, Malaysia.</p>
-                    </div>
-                    <div class="milestone-item animate-on-scroll delay-200">
-                        <h4><i class="fas fa-globe-asia"
-                                style="color:var(--accent-orange);margin-right:8px"></i>2000s–2010s — Asian Expansion
-                        </h4>
-                        <p>Over 21 years as a Business Strategist and Consultant, mentoring and guiding organizations across Malaysia, Singapore, Indonesia, India, Brunei, and Cambodia in Network Marketing and Service Industries.</p>
-                    </div>
-                    <div class="milestone-item animate-on-scroll delay-300">
-                        <h4><i class="fas fa-medal" style="color:var(--accent-orange);margin-right:8px"></i>2018 —
-                            National Service Completion</h4>
-                        <p>Completed service with distinction as a member of the Voluntary Territorial Army under the
-                            Ministry of Defence — instilling the discipline and leadership values that define our
-                            training culture.</p>
-                    </div>
-                    <div class="milestone-item animate-on-scroll delay-100">
-                        <h4><i class="fas fa-robot" style="color:var(--accent-orange);margin-right:8px"></i>2024 — AI
-                            &amp; Future Tech Division</h4>
-                        <p>Launched dedicated AI and Future Tech training programs, equipping Malaysian organizations
-                            with Generative AI and Machine Learning skills to stay ahead in a rapidly evolving world.
-                        </p>
+                    <div class="story-text reveal">
+                        <span class="section-eyebrow">Who We Are</span>
+                        <h2>A Training &amp; Consulting Partner Since 2000</h2>
+                        <p>Established in <strong>Kedah, Malaysia in 2000</strong>, Freedom Discovery Management is a
+                        professional training and Business Development Consulting partner, registered with HRD Corp.
+                        From the start we've empowered people and organisations through <strong>structured learning
+                        systems, strategic thinking frameworks and performance-driven consulting</strong>.</p>
+                        <p>We're known for proprietary methodologies that blend <strong>neuroscience-based thinking
+                        models, coaching psychology and practical business strategy</strong> — designed to bridge
+                        capability gaps, lift productivity and produce measurable results.</p>
+                        <p>Our mission is simple: to <strong>unlock human potential, strengthen leadership capability
+                        and drive sustainable business growth</strong>.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== THREE PILLARS ===== -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header text-center animate-on-scroll">
-                <h4 class="section-subtitle">Our Strengths</h4>
-                <h2 class="section-title">What Sets Us Apart</h2>
-                <p>We develop proprietary training methodologies that combine neuroscience-based thinking models,
-                    coaching psychology, and practical business strategy.</p>
-            </div>
-            <div class="pillars-grid">
-                <div class="pillar-card animate-on-scroll delay-100">
-                    <span class="pillar-num">01</span>
-                    <div class="pillar-icon-wrap"><i class="fas fa-brain"></i></div>
-                    <h3>Innothinking: TSKWTM&trade; Methodology</h3>
-                    <p>Our proprietary Thinking Skills Training — a structured cognitive framework that enhances strategic thinking, clarity in decision-making, and the ability to innovate. Through our <strong>Brain Management</strong> training programs, participants learn how to manage their thinking processes effectively, enabling them to perform at higher levels both professionally and personally.</p>
+        <!-- ════════ BY THE NUMBERS ════════ -->
+        <section class="stats about-numbers" aria-label="Our impact in numbers">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="cnt" data-n="28">0</span><span class="sfx">+</span></div>
+                    <div class="stat-lbl">Years of Experience</div>
                 </div>
-                <div class="pillar-card animate-on-scroll delay-200">
-                    <span class="pillar-num">02</span>
-                    <div class="pillar-icon-wrap"><i class="fas fa-seedling"></i></div>
-                    <h3>Inner-Self Discovery Model</h3>
-                    <p>At the core of our philosophy is the belief that transformation begins from within. Our Inner-Self Discovery, Recovery, Victory &amp; Freedom model enables individuals to recognise their potential, overcome internal limitations, and achieve sustainable performance growth. We integrate coaching techniques and structured facilitation tools to ensure that learning translates into practical application and meaningful behavioural change.</p>
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="cnt" data-n="450000">0</span><span class="sfx">+</span></div>
+                    <div class="stat-lbl">Participants Trained</div>
                 </div>
-                <div class="pillar-card animate-on-scroll delay-300">
-                    <span class="pillar-num">03</span>
-                    <div class="pillar-icon-wrap"><i class="fas fa-globe-asia"></i></div>
-                    <h3>Asian Market Expertise</h3>
-                    <p>Over 25 years, Freedom Discovery has successfully supported organisations across Malaysia, Singapore, Indonesia, India, Brunei, and Cambodia. Our expertise has benefited Educational Institutions, Manufacturing industries, Service organisations, MLM companies, MNCs, SMEs, and corporate enterprises — through Business Development Consultation, Mentoring, Coaching, and specialised training programs that consistently help organisations elevate performance standards and achieve strategic objectives.</p>
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="cnt" data-n="6000">0</span><span class="sfx">+</span></div>
+                    <div class="stat-lbl">Coaching Hours</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="cnt" data-n="50">0</span><span class="sfx">+</span></div>
+                    <div class="stat-lbl">Training Modules</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="cnt" data-n="6">0</span></div>
+                    <div class="stat-lbl">Countries Served</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== SPECIALISATIONS ===== -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header text-center animate-on-scroll">
-                <h4 class="section-subtitle">Training Areas</h4>
-                <h2 class="section-title">Our Specialisations</h2>
-                <p>Comprehensive programmes designed to bridge competency gaps, elevate workforce performance, and produce measurable, lasting results.</p>
-            </div>
-            <div class="spec-cards-grid animate-on-scroll">
-                <div class="spec-card">
-                    <div class="spec-card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <span>Train-the-Trainer (TTT)</span>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-card-icon"><i class="fas fa-heart"></i></div>
-                    <span>Coaching Skills Development</span>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-card-icon"><i class="fas fa-star"></i></div>
-                    <span>Life Skills Training</span>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-card-icon"><i class="fas fa-users"></i></div>
-                    <span>HR &amp; Talent Development</span>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-card-icon"><i class="fas fa-robot"></i></div>
-                    <span>AI &amp; Future Tech Training</span>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-card-icon"><i class="fas fa-chart-line"></i></div>
-                    <span>Business &amp; Leadership</span>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-card-icon"><i class="fas fa-bullhorn"></i></div>
-                    <span>Sales &amp; Marketing</span>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-card-icon"><i class="fas fa-brain"></i></div>
-                    <span>Brain Management</span>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-card-icon"><i class="fas fa-handshake"></i></div>
-                    <span>Business Development Consulting</span>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-card-icon"><i class="fas fa-user"></i></div>
-                    <span>Personal Development</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOUNDER ===== -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header text-center animate-on-scroll" style="margin-bottom:50px;">
-                <h4 class="section-subtitle">Meet the Founder</h4>
-                <h2 class="section-title">The Vision Behind Freedom Discovery</h2>
-            </div>
-
-            <div class="founder-key-facts animate-on-scroll">
-                <div class="key-fact">
-                    <span class="kf-num">28+</span>
-                    <span class="kf-label">Years of Experience</span>
-                </div>
-                <div class="key-fact-divider"></div>
-                <div class="key-fact">
-                    <span class="kf-num">450k+</span>
-                    <span class="kf-label">Participants Trained</span>
-                </div>
-                <div class="key-fact-divider"></div>
-                <div class="key-fact">
-                    <span class="kf-num">6,000+</span>
-                    <span class="kf-label">Coaching Hours</span>
-                </div>
-                <div class="key-fact-divider"></div>
-                <div class="key-fact">
-                    <span class="kf-num">6</span>
-                    <span class="kf-label">Countries Served</span>
-                </div>
-            </div>
-
-            <div class="founder-wrapper">
-                <div class="founder-photo-card animate-on-scroll">
-                    <img src="assets/coachnan.png" alt="Coach Nan - Pathmanatan V E Govindasamy">
-                    <div class="founder-name-tag">
-                        <h3>Pathmanatan V E Govindasamy</h3>
-                        <p>@ Coach Nan</p>
-                        <p class="coach-title">Master Life Coach, ATD Master Trainer&reg; &amp; Leadership Strategist</p>
-                    </div>
-                    <div class="cert-logos">
-                        <img src="assets/Coaching2.png" alt="Coacing Certifications">
-                        <!-- <img src="assets/hrdcorp1.png" alt="HRD Corp"> -->
-                    </div>
+        <!-- ════════ COACH NAN — FOUNDER ════════ -->
+        <section class="section" id="founder">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Meet the Founder</span>
+                    <h2 class="section-title">The Mind Behind Freedom Discovery</h2>
                 </div>
 
-                <div class="founder-bio animate-on-scroll delay-100">
-                    <h4 class="founder-section-label">Principal Consultant &amp; Founder</h4>
-                    <h2>Driven. Versatile. Transformative.</h2>
-
-                    <p>Coach Nan is a highly accomplished <strong>ATD Master Trainer&reg; by ATD USA</strong> and Corporate Trainer with over <strong>28 years of experience</strong> in Consulting, Business Strategy Development, Training, Motivation, and Transformational Coaching. With a major in Business Management and Development, he is well recognised for delivering practical, innovative, and impactful solutions that drive both personal and organisational success.</p>
-
-                    <p>Throughout his career, he has designed and conducted a wide variety of developmental programs including Leadership and Management, Motivation and Personal Development, Sales and Marketing, Psychological Communication using NLP, Time and Change Management, Conflict Management, Emotional and Social Intelligence, Pro-Inno Thinking Mindset, <strong>New Age and Reality Leadership with Coaching</strong>, Train the Trainer, Customer Service, and Team Building — all tailored to corporate goals and performance outcomes.</p>
-
-                    <p>With a reputation for excellence, he has trained more than <strong>450,000 participants across Asia</strong>, representing government bodies, manufacturing and service sectors, insurance and banking industries, and educational institutions. As a coach, he has accumulated over <strong>6,000 professional coaching hours</strong>, supporting leaders, entrepreneurs, and teams in breaking limitations and accelerating results.</p>
-
-                    <p>A respected figure in the Malaysian coaching community, he served as the elected <strong>Director of Membership for the Malaysian Association of Certified Coaches (MACC)</strong> from 2020 to 2022, and contributed to national service as a member of the Voluntary Territorial Army under the Ministry of Defence until 2018. Beyond training, he brings over <strong>21 years of experience as a Business Strategist and Consultant</strong> for Network Marketing and service organisations across Malaysia, Singapore, Indonesia, Brunei, India, Cambodia, and beyond.</p>
-
-                    <p>Driven by a strong passion for transformation and continuous improvement, Coach Nan is committed to empowering individuals and organisations to achieve excellence. His innovative mindset, exceptional facilitation skills, and deep understanding of human behaviour have positioned him as a trusted partner in the development of high-performing leaders and effective organisations throughout Asia.</p>
-
-                    <div class="founder-quote">
-                        <i class="fas fa-quote-left"></i>
-                        <p>"Transformation begins from within. My mission is to equip every individual with the thinking tools, coaching skills, and strategic clarity to achieve freedom — personally and professionally."</p>
-                        <cite>— Pathmanatan V E Govindasamy @ Coach Nan</cite>
-                    </div>
-
-                    <h4 class="founder-cert-heading">Certifications &amp; Credentials</h4>
-                    <div class="cert-grid">
-                        <div class="cert-card cert-card--blue">
-                            <h4><i class="fas fa-chalkboard-teacher"></i> Coaching Certifications</h4>
-                            <ul>
-                                <li>ATD USA — Certified Master Trainer&reg;</li>
-                                <li>Corporate Coach Academy — Certified Professional Coach (CPC)</li>
-                                <li>AUNLP USA — Certified Master Life Coach</li>
-                                <li>Get Results Coach Academy UK — Certified Motivational Coach</li>
-                                <li>MACC — Director of Membership (2020–2022)</li>
-                            </ul>
+                <div class="founder-grid">
+                    <div class="founder-photo reveal">
+                        <div class="founder-photo-card">
+                            <img src="assets/coachnan.png" alt="Coach Nan" loading="lazy" decoding="async">
+                            <div class="founder-nametag">
+                                <h3>Coach Nan</h3>
+                                <p>Master Life Coach · ATD Master Trainer® · Leadership Strategist</p>
+                            </div>
                         </div>
-                        <div class="cert-card cert-card--orange">
-                            <h4><i class="fas fa-brain"></i> Psychology &amp; NLP</h4>
-                            <ul>
-                                <li>ABNLP &amp; TLT USA — Certified Master Practitioner in NLP &amp; Time Line Therapy</li>
-                                <li>Certified Master NLP Coach</li>
-                                <li>ABNLP &amp; IACT USA — Master Hypnotherapist</li>
-                                <li>TC-India — Certified Master Emotional Intelligence Practitioner</li>
-                                <li>Certified Social Intelligence Practitioner</li>
-                            </ul>
+                        <div class="founder-cert-strip">
+                            <img src="assets/Coaching2.png" alt="Coaching certifications" loading="lazy" decoding="async">
                         </div>
-                        <div class="cert-card cert-card--green">
-                            <h4><i class="fas fa-certificate"></i> Training &amp; Service</h4>
-                            <ul>
-                                <li>HRD Corp — Certified &amp; Accredited Trainer</li>
-                                <li>HRD Corp Appointed Lead Trainer for TTT Certification</li>
-                                <li>Certified Virtual Learn Caster Trainer</li>
-                                <li>Voluntary Territorial Army, Ministry of Defence (until 2018)</li>
-                            </ul>
+                    </div>
+
+                    <div class="founder-bio reveal">
+                        <div class="founder-label">Principal Consultant &amp; Founder</div>
+                        <h2>Driven. Versatile. Transformative.</h2>
+
+                        <p>Coach Nan is an <strong>ATD Master
+                        Trainer® (ATD USA)</strong> and Certified Master Life Coach with over <strong>28 years</strong>
+                        across consulting, business strategy, training and transformational coaching. He's known for
+                        practical, innovative solutions that drive both personal and organisational success.</p>
+
+                        <p>He has personally trained more than <strong>450,000 participants across Asia</strong> —
+                        from government bodies and MNCs to banks, manufacturers and educational institutions — and
+                        accumulated over <strong>6,000 professional coaching hours</strong> guiding leaders,
+                        entrepreneurs and teams to break limitations and accelerate results.</p>
+
+                        <p>A respected figure in the Malaysian coaching community, he served as elected <strong>Director
+                        of Membership for the Malaysian Association of Certified Coaches (MACC, 2020–2022)</strong>, and
+                        brings 21+ years as a business strategist across Malaysia, Singapore, Indonesia, India, Brunei
+                        and Cambodia. His mastery of NLP, hypnotherapy and emotional intelligence underpins the
+                        <strong>Pro Innothinking Mindset</strong> at the heart of Freedom Discovery.</p>
+
+                        <div class="founder-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Transformation begins from within. My mission is to equip every individual with the
+                            thinking tools, coaching skills and strategic clarity to achieve freedom — personally and
+                            professionally.</p>
+                            <cite>— Coach Nan</cite>
+                        </div>
+
+                        <h4 class="cred-heading">Certifications &amp; Credentials</h4>
+                        <div class="cred-grid">
+                            <div class="cred-card c-blue reveal">
+                                <h4><i class="fas fa-chalkboard-teacher"></i> Coaching</h4>
+                                <ul>
+                                    <li>ATD USA — Certified Master Trainer®</li>
+                                    <li>Corporate Coach Academy — Certified Professional Coach</li>
+                                    <li>AUNLP USA — Certified Master Life Coach</li>
+                                    <li>Get Results Coach Academy UK — Motivational Coach</li>
+                                    <li>MACC — Director of Membership (2020–2022)</li>
+                                </ul>
+                            </div>
+                            <div class="cred-card c-orange reveal">
+                                <h4><i class="fas fa-brain"></i> Psychology &amp; NLP</h4>
+                                <ul>
+                                    <li>ABNLP &amp; TLT USA — Master Practitioner, NLP &amp; Time Line Therapy</li>
+                                    <li>Certified Master NLP Coach</li>
+                                    <li>ABNLP &amp; IACT USA — Master Hypnotherapist</li>
+                                    <li>TC-India — Master Emotional Intelligence Practitioner</li>
+                                    <li>Certified Social Intelligence Practitioner</li>
+                                </ul>
+                            </div>
+                            <div class="cred-card c-green reveal">
+                                <h4><i class="fas fa-certificate"></i> Training &amp; Service</h4>
+                                <ul>
+                                    <li>HRD Corp — Certified &amp; Accredited Trainer</li>
+                                    <li>HRD Corp Appointed Lead Trainer for TTT Certification</li>
+                                    <li>Certified Virtual Learn Caster Trainer</li>
+                                    <li>Voluntary Territorial Army, Ministry of Defence (until 2018)</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== FOUNDER CTA ===== -->
-    <div class="founder-cta-strip animate-on-scroll">
-        <div class="container">
-            <p>Ready to accelerate your growth with Coach Nan and the Freedom Discovery team?</p>
-            <a href="contact.html" class="btn btn-primary">Get in Touch &rarr;</a>
-        </div>
-    </div>
+        <!-- ════════ CTA STRIP ════════ -->
+        <section class="cta-strip reveal">
+            <div class="container">
+                <p>Ready to begin your transformation with Coach Nan and the Freedom Discovery team?</p>
+                <a href="contact.html" class="btn-primary">Get in Touch <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
 
-    <!-- ===== MEET THE TEAM TEASER ===== -->
-    <div class="founder-cta-strip team-teaser-strip animate-on-scroll">
-        <div class="container">
-            <p>Want to meet the people behind our programmes?</p>
-            <a href="team.html" class="btn btn-primary">Meet Our Team &rarr;</a>
-        </div>
-    </div>
+        <!-- ════════ OUR JOURNEY — Timeline ════════ -->
+        <section class="timeline-section">
+            <div class="timeline-inner">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">The Journey</span>
+                    <h2 class="section-title light">A Legacy Built Since 2000</h2>
+                </div>
+                <div class="timeline-track">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-step">2000</div>
+                            <h3>Freedom Discovery Founded</h3>
+                            <p>Established in Kedah, Malaysia as an HRD Corp–registered training and business
+                            consulting partner.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-step">2000s–2010s</div>
+                            <h3>Regional Expansion</h3>
+                            <p>Mentored and guided organisations across Malaysia, Singapore, Indonesia, India, Brunei
+                            and Cambodia.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-step">2010s</div>
+                            <h3>Pro Innothinking Mindset</h3>
+                            <p>Developed our proprietary Innothinking: TSKW™ brain-management methodology — a structured
+                            thinking-skills framework.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-step">2020–2022</div>
+                            <h3>National Coaching Leadership</h3>
+                            <p>Coach Nan elected Director of Membership for the Malaysian Association of Certified
+                            Coaches (MACC).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-step">2024</div>
+                            <h3>AI &amp; Future Tech Division</h3>
+                            <p>Launched a dedicated AI &amp; Future Tech division — Generative AI and machine-learning
+                            skills for Malaysian organisations.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-step">Today</div>
+                            <h3>450,000+ Lives Changed</h3>
+                            <p>450,000+ professionals trained, 6,000+ coaching hours, and a growing legacy across six
+                            countries — and counting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- ════════ HOW WE THINK — Methodology ════════ -->
+        <section class="section bg-soft">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Our Methodology</span>
+                    <h2 class="section-title">How We Think</h2>
+                    <p class="section-intro">Proprietary frameworks that combine neuroscience-based thinking,
+                    coaching psychology and practical business strategy.</p>
+                </div>
+                <div class="method-grid">
+                    <div class="pillar reveal">
+                        <div class="pillar-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Innothinking: TSKW™</h3>
+                        <p>Our proprietary Thinking Skills training — a structured Brain Management framework that
+                        sharpens strategic thinking, clarity in decision-making and the ability to innovate.</p>
+                    </div>
+                    <div class="pillar reveal">
+                        <div class="pillar-icon"><i class="fas fa-seedling"></i></div>
+                        <h3>Inner-Self Discovery</h3>
+                        <p>Discovery, Recovery, Victory &amp; Freedom — a model that helps people recognise their
+                        potential, overcome internal limits and turn learning into lasting behaviour change.</p>
+                    </div>
+                    <div class="pillar reveal">
+                        <div class="pillar-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Coaching &amp; NLP Psychology</h3>
+                        <p>NLP, emotional intelligence and hypnotherapy techniques woven into every programme — so
+                        insight becomes habit and habit becomes performance.</p>
+                    </div>
+                </div>
+                <div class="philosophy philosophy-light reveal">
+                    <span class="philosophy-step">Unlearn</span>
+                    <i class="fas fa-arrow-right-long"></i>
+                    <span class="philosophy-step">Relearn</span>
+                    <i class="fas fa-arrow-right-long"></i>
+                    <span class="philosophy-step">Continuous Learning</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ OUR SPECIALISATIONS ════════ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Training Areas</span>
+                    <h2 class="section-title">Our Specialisations</h2>
+                    <p class="section-intro">Comprehensive programmes designed to bridge capability gaps, elevate
+                    workforce performance and produce measurable, lasting results.</p>
+                </div>
+                <div class="spec-grid">
+                    <div class="spec-card featured reveal">
+                        <div class="spec-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Coaching Skills Development</h3>
+                    </div>
+                    <div class="spec-card featured reveal">
+                        <div class="spec-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Business &amp; Leadership</h3>
+                    </div>
+                    <div class="spec-card featured reveal">
+                        <div class="spec-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Business Development Consulting</h3>
+                    </div>
+                    <div class="spec-card featured reveal">
+                        <div class="spec-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3>Sales &amp; Marketing</h3>
+                    </div>
+                    
+                    <div class="spec-card reveal">
+                        <div class="spec-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Brain Management</h3>
+                    </div>
+                    <div class="spec-card reveal">
+                        <div class="spec-icon"><i class="fas fa-users"></i></div>
+                        <h3>HR &amp; Talent Development</h3>
+                    </div>
+                    <div class="spec-card reveal">
+                        <div class="spec-icon"><i class="fas fa-star"></i></div>
+                        <h3>Life Skills Training</h3>
+                    </div>
+                    <div class="spec-card reveal">
+                        <div class="spec-icon"><i class="fas fa-robot"></i></div>
+                        <h3>AI &amp; Future Tech Training</h3>
+                    </div>
+                    <div class="spec-card reveal">
+                        <div class="spec-icon"><i class="fas fa-user"></i></div>
+                        <h3>Personal Development</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ WHO WE WORK WITH ════════ -->
+        <section class="industries">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Our Reach</span>
+                    <h2 class="section-title light">Trusted Across Industries &amp; Borders</h2>
+                    <p class="section-intro">For over two decades we've developed and supported organisations across
+                    six countries — from SMEs and MNCs to government bodies and educational institutions.</p>
+                </div>
+                <div class="industry-grid">
+                    <div class="industry-card reveal"><i class="fas fa-graduation-cap"></i><span>Educational Institutions</span></div>
+                    <div class="industry-card reveal"><i class="fas fa-industry"></i><span>Manufacturing</span></div>
+                    <div class="industry-card reveal"><i class="fas fa-concierge-bell"></i><span>Service Organisations</span></div>
+                    <div class="industry-card reveal"><i class="fas fa-sitemap"></i><span>Multi-Level Marketing</span></div>
+                    <div class="industry-card reveal"><i class="fas fa-building"></i><span>Multinational Companies</span></div>
+                    <div class="industry-card reveal"><i class="fas fa-store"></i><span>SMEs</span></div>
+                    <div class="industry-card reveal"><i class="fas fa-landmark"></i><span>Government Bodies</span></div>
+                    <div class="industry-card reveal"><i class="fas fa-briefcase"></i><span>Corporate Enterprises</span></div>
+                </div>
+                <div class="country-tags reveal">
+                    <span><i class="fas fa-location-dot"></i> Malaysia</span>
+                    <span><i class="fas fa-location-dot"></i> Singapore</span>
+                    <span><i class="fas fa-location-dot"></i> Indonesia</span>
+                    <span><i class="fas fa-location-dot"></i> India</span>
+                    <span><i class="fas fa-location-dot"></i> Brunei</span>
+                    <span><i class="fas fa-location-dot"></i> Cambodia</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ TEAM TEASER ════════ -->
+        <section class="section">
+            <div class="container team-teaser">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">The People</span>
+                    <h2 class="section-title">More Than One Coach</h2>
+                    <p class="section-intro">Behind Coach Nan is a team of certified facilitators, coaches and
+                    consultants who bring every programme to life.</p>
+                </div>
+                <div class="team-teaser-img reveal">
+                    <img src="assets/group-photo.jpg" alt="The Freedom Discovery team" loading="lazy" decoding="async">
+                </div>
+                <div class="center-cta reveal">
+                    <a href="team.html" class="btn-primary">Meet the Team</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ FINAL CTA ════════ -->
+        <section class="final-cta gradient-bg" id="cta-section">
+            <div class="container cta-inner reveal">
+                <h2>Achieve Excellence — With Confidence &amp; Clarity</h2>
+                <p>Partner with Coach Nan and the Freedom Discovery team to build future-ready leaders and
+                high-performing teams. Let's talk today.</p>
+                <div class="cta-actions">
+                    <div class="mag-wrap" id="magWrap">
+                        <a href="contact.html" class="btn-primary mag-btn" id="magBtn">Get in Touch</a>
+                    </div>
+                    <a href="https://wa.me/60124883300" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                <div class="cta-trust">
+                    <span><i class="fas fa-circle-check"></i> ATD Master Trainer®</span>
+                    <span><i class="fas fa-circle-check"></i> 28+ Years Experience</span>
+                    <span><i class="fas fa-circle-check"></i> 6 Countries Served</span>
+                    <span><i class="fas fa-circle-check"></i> HRD Corp Claimable</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ════════ FOOTER ════════ -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-about">
-                <h3>Freedom Discovery</h3>
-                <p>Empowering businesses and individuals through expert coaching, cutting-edge training solutions, and strategic consulting.
-                </p>
+                <img src="assets/logo.png" alt="Freedom Discovery Management" class="footer-logo" loading="lazy" decoding="async">
+                <p>Empowering organisations and individuals through executive coaching, the Pro Innothinking Mindset,
+                and strategic consulting — since 2000.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/freediscovery" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/60124883300" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
@@ -381,28 +511,81 @@
             </div>
             <div class="footer-contact">
                 <h4>Contact Info</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Kedah, Malaysia</p>
+                <p><i class="fas fa-location-dot"></i> Kedah, Malaysia</p>
                 <p><i class="fas fa-phone"></i> 012 488 3300</p>
                 <p><i class="fas fa-envelope"></i> myfdm@yahoo.com</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/freediscovery" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/coachnan/" aria-label="Connect on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/60124883300" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; <span id="currentYear">2026</span> Freedom Discovery Management Sdn. Bhd. All Rights Reserved.</p>
         </div>
-
-        <!-- === ADMIN ACCESS BUTTON (Floated in Footer) === -->
-        <a href="admin/login.php" class="admin-trigger" title="Admin Login">
-            <i class="fas fa-lock"></i>
-        </a>
     </footer>
 
-    <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
-    <script src="script.js"></script>
+    <!-- ════════ ANNOUNCEMENT — Dynamic Island Capsule ════════ -->
+    <div class="cap" id="cap" data-state="pill">
+        <button class="cap-pill" id="capPill" aria-label="Open announcements">
+            <span class="cap-pill-dot"></span>
+            <i class="fas fa-bullhorn"></i>
+            <span class="cap-pill-text">Latest Announcements</span>
+            <span class="cap-pill-cta">View</span>
+        </button>
+
+        <div class="cap-card" id="capCard" role="dialog" aria-modal="false" aria-label="Latest announcements">
+            <button class="cap-close" id="capClose" aria-label="Close announcements">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <div class="cap-deck">
+                <!-- Card 1 — EMSM promo poster -->
+                <div class="cap-slide">
+                    <button class="cap-poster-btn" id="capZoom" type="button" aria-label="Enlarge poster">
+                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — 29–30 June 2026, AC Hotel Penang" class="cap-poster" id="capPoster" loading="lazy" decoding="async">
+                        <span class="cap-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i> Tap to enlarge</span>
+                    </button>
+                    <a class="cap-action"
+                       href="https://wa.me/60124883300?text=EMSM"
+                       target="_blank" rel="noopener noreferrer">
+                        Register / Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Card 2 — Training hall for rent -->
+                <div class="cap-slide">
+                    <div class="cap-hall">
+                        <span class="cap-hall-tag">Now Available</span>
+                        <div class="cap-hall-icon"><i class="fas fa-chalkboard-user"></i></div>
+                        <h3>Training Hall for Rent</h3>
+                        <p>Our fully-equipped training hall in Kedah is now available for rental — ideal
+                        for workshops, seminars and corporate events. Flexible rates available.</p>
+                    </div>
+                    <a class="cap-action"
+                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20renting%20the%20FDM%20training%20hall."
+                       target="_blank" rel="noopener noreferrer">
+                        Enquire Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════ POSTER LIGHTBOX ════════ -->
+    <div class="cap-lightbox" id="capLightbox" aria-hidden="true" role="dialog" aria-label="Poster preview">
+        <button class="cap-lightbox-close" id="capLbClose" aria-label="Close preview"><i class="fas fa-xmark"></i></button>
+        <img src="" alt="Essential Manager Skills Masterclass poster" id="capLbImg">
+    </div>
+
+    <!-- ════════ WHATSAPP FAB ════════ -->
+    <a class="wa-btn" id="waBtn"
+       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Freedom%20Discovery."
+       target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"/>
+        </svg>
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <!-- ════════ BACK TO TOP ════════ -->
+    <button id="backToTop" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/home.js"></script>
 </body>
 
 </html>

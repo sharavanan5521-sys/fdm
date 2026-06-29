@@ -1,0 +1,57 @@
+/* ════════════════════════════════════════════════════════════
+   Freedom Discovery — Events page (extends home.css)
+   ════════════════════════════════════════════════════════════ */
+
+.event-feature {
+  display: grid; grid-template-columns: minmax(0, 440px) 1fr;
+  gap: clamp(30px, 5vw, 64px); align-items: center;
+  max-width: 1040px; margin: 0 auto;
+}
+
+/* poster */
+.event-poster {
+  position: relative; border-radius: 22px; overflow: hidden;
+  border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(8,26,77,0.18);
+  background: var(--soft);
+}
+.event-poster img { width: 100%; display: block; }
+.event-poster .event-flag {
+  position: absolute; top: 16px; left: 16px;
+  background: var(--orange); color: #fff; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 7px 15px; border-radius: 999px; box-shadow: 0 8px 20px rgba(244,124,31,0.35);
+}
+
+/* details */
+.event-label {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 12px;
+}
+.event-detail h2 {
+  font-size: clamp(24px, 3.6vw, 38px); font-weight: 800; color: var(--ink);
+  line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 22px;
+}
+.event-meta { list-style: none; margin-bottom: 26px; }
+.event-meta li {
+  display: flex; align-items: center; gap: 14px;
+  font-size: 15px; color: var(--body); padding: 11px 0; border-bottom: 1px solid var(--line);
+}
+.event-meta li:last-child { border-bottom: none; }
+.event-meta li i {
+  flex: none; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center;
+  font-size: 17px; color: var(--blue);
+  background: rgba(47,100,224,0.1);
+}
+.event-meta li strong { color: var(--ink); font-weight: 600; }
+.event-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+@media (max-width: 820px) {
+  .event-feature { grid-template-columns: 1fr; gap: 36px; }
+  .event-poster { max-width: 420px; margin: 0 auto; }
+  .event-detail { text-align: center; }
+  .event-meta li { justify-content: flex-start; text-align: left; }
+  .event-actions { justify-content: center; }
+}
+
+/* empty-state note for when no events are scheduled */
+.events-note { text-align: center; color: var(--muted); margin-top: 48px; font-size: 14.5px; }
