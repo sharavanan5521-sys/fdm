@@ -169,10 +169,10 @@
     var lbClose = document.getElementById('capLbClose');
     if (!cap) return;
 
-    /* Poster lightbox — tap/click the poster to see it full-screen (works on mobile too) */
-    function lbOpen() {
+    /* Poster lightbox — tap/click any poster to see it full-screen (works on mobile too) */
+    function lbOpen(src) {
       if (!lb) return;
-      lbImg.src = poster.src;
+      lbImg.src = src || poster.src;
       lb.classList.add('open');
       lb.setAttribute('aria-hidden', 'false');
     }
@@ -182,7 +182,14 @@
       lb.classList.remove('open');
       lb.setAttribute('aria-hidden', 'true');
     }
-    if (zoomBtn) zoomBtn.addEventListener('click', function (e) { e.stopPropagation(); lbOpen(); });
+    /* bind every poster slide by class, so adding a poster needs no new JS */
+    Array.prototype.forEach.call(cap.querySelectorAll('.cap-poster-btn'), function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var img = btn.querySelector('img');
+        lbOpen(img && img.src);
+      });
+    });
     if (lbClose) lbClose.addEventListener('click', closeLb);
     if (lb) lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
 
@@ -194,8 +201,11 @@
         ? poster.naturalWidth / poster.naturalHeight
         : 0.706; // fallback portrait ratio
       var twoUp = window.innerWidth > 760; // cards sit side by side
+      var slides = card.querySelectorAll('.cap-slide').length || 1;
       var maxH = Math.min(window.innerHeight * (twoUp ? 0.68 : 0.42), twoUp ? 560 : 460);
-      var maxW = twoUp ? 300 : Math.min(window.innerWidth - 32, 360);
+      var maxW = twoUp
+        ? Math.min(300, (window.innerWidth - 64 - 14 * (slides - 1)) / slides)
+        : Math.min(window.innerWidth - 32, 360);
       var w = maxW, h = w / ratio;
       if (h > maxH) { h = maxH; w = h * ratio; }
       cap.style.setProperty('--cap-w', Math.round(w) + 'px');
@@ -269,6 +279,43 @@
     window.addEventListener('resize', function () {
       if (cap.getAttribute('data-state') === 'card') sizeCard();
     }, { passive: true });
+  })();
+
+  /* ─── Programme videos — click-to-play facades ───
+     Each .video-facade is just a poster + play button; the real player is
+     injected only on click, so pages stay light. data-video-src plays a
+     self-hosted MP4 with the clean native player (no YouTube branding);
+     data-video-id falls back to a YouTube embed. */
+  (function () {
+    var facades = document.querySelectorAll('.video-facade[data-video-src], .video-facade[data-video-id]');
+    if (!facades.length) return;
+    Array.prototype.forEach.call(facades, function (btn) {
+      btn.addEventListener('click', function () {
+        var frame = document.createElement('div');
+        frame.className = 'video-facade';
+        var src = btn.getAttribute('data-video-src');
+        if (src) {
+          /* pause any other programme video already playing */
+          Array.prototype.forEach.call(document.querySelectorAll('.video-facade video'), function (v) { v.pause(); });
+          var video = document.createElement('video');
+          video.src = src;
+          video.controls = true;
+          video.autoplay = true;
+          video.playsInline = true;
+          video.setAttribute('controlslist', 'nodownload');
+          video.setAttribute('aria-label', btn.getAttribute('aria-label') || 'Programme video');
+          frame.appendChild(video);
+        } else {
+          var iframe = document.createElement('iframe');
+          iframe.src = 'https://www.youtube-nocookie.com/embed/' + btn.getAttribute('data-video-id') + '?autoplay=1&rel=0';
+          iframe.title = btn.getAttribute('aria-label') || 'Programme video';
+          iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+          iframe.setAttribute('allowfullscreen', '');
+          frame.appendChild(iframe);
+        }
+        btn.parentNode.replaceChild(frame, btn);
+      });
+    });
   })();
 
 })();

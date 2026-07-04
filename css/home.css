@@ -741,6 +741,49 @@ main { padding-top: var(--nav-h); }
   .cap-pill-text { font-size: 12.5px; }
 }
 
+/* ════════ PROGRAMME VIDEOS — click-to-play YouTube facades ════════
+   The iframe player is injected by home.js only when a thumbnail is
+   clicked, so pages never pay the YouTube-player cost up front.
+   The section is a dark branded band so it reads as a promo strip. */
+.video-section { position: relative; overflow: hidden; background: var(--blue-deep); }
+.video-section .container { position: relative; z-index: 1; }
+.video-section .section-intro { color: rgba(255,255,255,0.72); }
+.video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.video-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 20px; overflow: hidden;
+  box-shadow: 0 14px 40px rgba(8,26,77,0.08);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 22px 54px rgba(8,26,77,0.14); }
+.video-facade {
+  position: relative; display: block; width: 100%; aspect-ratio: 16 / 9;
+  padding: 0; border: none; background: var(--blue-deep); cursor: pointer; overflow: hidden;
+}
+.video-facade img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.4s var(--ease);
+}
+.video-facade:hover img { transform: scale(1.05); }
+.video-play {
+  position: absolute; inset: 0; margin: auto; width: 62px; height: 62px;
+  display: grid; place-items: center; border-radius: 50%;
+  background: rgba(8,26,77,0.72); color: #fff; font-size: 20px;
+  border: 2px solid rgba(255,255,255,0.65); backdrop-filter: blur(4px);
+  transition: transform 0.25s var(--ease), background 0.25s ease;
+  pointer-events: none;
+}
+.video-play i { margin-left: 3px; } /* optically centre the triangle */
+.video-facade:hover .video-play { transform: scale(1.1); background: var(--orange); }
+.video-facade iframe,
+.video-facade video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+.video-facade video { object-fit: contain; }
+.video-info { padding: 18px 20px 22px; }
+.video-info h3 { font-size: 17px; color: var(--ink); margin-bottom: 6px; }
+.video-info p { font-size: 13.5px; color: var(--body); line-height: 1.6; }
+@media (max-width: 900px) {
+  .video-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+}
+
 /* ════════ WHATSAPP FAB ════════ */
 .wa-btn {
   position: fixed; bottom: 26px; right: 26px; z-index: 1800;

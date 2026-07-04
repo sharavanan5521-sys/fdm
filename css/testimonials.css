@@ -67,9 +67,9 @@
 .marquee-track {
   display: flex; gap: 20px; flex: none;
   width: max-content; padding-right: 20px; /* keeps gap consistent at the seam */
-  animation: marquee-left 48s linear infinite;
+  animation: marquee-left 78s linear infinite;
 }
-.marquee-row.reverse .marquee-track { animation: marquee-right 56s linear infinite; }
+.marquee-row.reverse .marquee-track { animation: marquee-right 108s linear infinite; }
 .gallery-marquee:hover .marquee-track { animation-play-state: paused; }
 
 @keyframes marquee-left  { to { transform: translateX(-50%); } }
