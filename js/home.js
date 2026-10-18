@@ -4,6 +4,14 @@
 (function () {
   'use strict';
 
+  /* ─── Non-render-blocking icon CSS ───
+     Font Awesome is linked with media="print" so it never blocks first paint;
+     switch it on here. (Replaces the old inline onload="…" handler, which the
+     Content-Security-Policy forbids.) */
+  Array.prototype.forEach.call(document.querySelectorAll('link[data-async-css]'), function (l) {
+    l.media = 'all';
+  });
+
   /* ─── Auto-expire dated content ───
      Anything marked data-expires="YYYY-MM-DD" (the LAST day of an event) is
      removed from the page once that day has passed, in the visitor's local
@@ -59,11 +67,16 @@
     });
     var words = title.textContent.trim().split(/\s+/);
     var step = words.length > 8 ? 0.05 : 0.09;
-    title.innerHTML = words.map(function (w, i) {
-      var key = w.toLowerCase().replace(/[^a-z0-9]/g, '');
-      var accent = accentSet[key] ? ' accent' : '';
-      return '<span class="word' + accent + '" style="animation-delay:' + (i * step) + 's">' + w + '</span>';
-    }).join(' ');
+    /* built with DOM nodes (not innerHTML) so text is never parsed as markup */
+    title.textContent = '';
+    words.forEach(function (w, i) {
+      var span = document.createElement('span');
+      span.className = 'word' + (accentSet[w.toLowerCase().replace(/[^a-z0-9]/g, '')] ? ' accent' : '');
+      span.style.animationDelay = (i * step) + 's';
+      span.textContent = w;
+      if (i) title.appendChild(document.createTextNode(' '));
+      title.appendChild(span);
+    });
   }
 
   /* ─── Hero: typewriter sub (types once, then stops) ─── */
