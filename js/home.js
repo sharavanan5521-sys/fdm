@@ -4,34 +4,51 @@
 (function () {
   'use strict';
 
+  /* ─── Auto-expire dated content ───
+     Anything marked data-expires="YYYY-MM-DD" (the LAST day of an event) is
+     removed from the page once that day has passed, in the visitor's local
+     time — so finished events and their posters drop off without an edit. */
+  (function () {
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    Array.prototype.forEach.call(document.querySelectorAll('[data-expires]'), function (el) {
+      var d = (el.getAttribute('data-expires') || '').split('-');
+      var last = new Date(+d[0], d[1] - 1, +d[2]);
+      if (!isNaN(last) && last < today) el.parentNode.removeChild(el);
+    });
+  })();
+
   /* ─── Current year ─── */
   var yr = document.getElementById('currentYear');
   if (yr) yr.textContent = new Date().getFullYear();
 
   /* ─── Navbar: dynamic island shrink + mobile menu ─── */
   var navbar = document.getElementById('navbar');
-  var SHRINK_AT = 60, EXPAND_AT = 10, ticking = false;
-
-  function updateNav() {
-    var y = window.scrollY;
-    if (!navbar.classList.contains('shrunk') && y > SHRINK_AT) navbar.classList.add('shrunk');
-    else if (navbar.classList.contains('shrunk') && y < EXPAND_AT) navbar.classList.remove('shrunk');
-    ticking = false;
-  }
-  window.addEventListener('scroll', function () {
-    if (!ticking) { ticking = true; requestAnimationFrame(updateNav); }
-  }, { passive: true });
-  updateNav();
-
   var hamburger = document.getElementById('hamburger');
   var mobileMenu = document.getElementById('mobileMenu');
-  function setMenu(open) {
-    navbar.classList.toggle('menu-open', open);
-    hamburger.setAttribute('aria-expanded', open);
+  if (navbar) {
+    var SHRINK_AT = 60, EXPAND_AT = 10, ticking = false;
+
+    var updateNav = function () {
+      var y = window.scrollY;
+      if (!navbar.classList.contains('shrunk') && y > SHRINK_AT) navbar.classList.add('shrunk');
+      else if (navbar.classList.contains('shrunk') && y < EXPAND_AT) navbar.classList.remove('shrunk');
+      ticking = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(updateNav); }
+    }, { passive: true });
+    updateNav();
+
+    if (hamburger && mobileMenu) {
+      var setMenu = function (open) {
+        navbar.classList.toggle('menu-open', open);
+        hamburger.setAttribute('aria-expanded', open);
+      };
+      hamburger.addEventListener('click', function () { setMenu(!navbar.classList.contains('menu-open')); });
+      mobileMenu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setMenu(false); });
+      document.addEventListener('click', function (e) { if (!navbar.contains(e.target)) setMenu(false); });
+    }
   }
-  hamburger.addEventListener('click', function () { setMenu(!navbar.classList.contains('menu-open')); });
-  mobileMenu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setMenu(false); });
-  document.addEventListener('click', function (e) { if (!navbar.contains(e.target)) setMenu(false); });
 
   /* ─── Hero: word-stagger headline ─── */
   var title = document.getElementById('heroTitle');
@@ -161,18 +178,19 @@
     var cap = document.getElementById('cap');
     var pill = document.getElementById('capPill');
     var card = document.getElementById('capCard');
-    var poster = document.getElementById('capPoster');
     var closeBtn = document.getElementById('capClose');
-    var zoomBtn = document.getElementById('capZoom');
     var lb = document.getElementById('capLightbox');
     var lbImg = document.getElementById('capLbImg');
     var lbClose = document.getElementById('capLbClose');
-    if (!cap) return;
+    if (!cap || !pill || !card) return;
+    /* first poster still on the page (expired slides were removed above) */
+    var poster = cap.querySelector('.cap-poster');
 
     /* Poster lightbox — tap/click any poster to see it full-screen (works on mobile too) */
-    function lbOpen(src) {
-      if (!lb) return;
-      lbImg.src = src || poster.src;
+    function lbOpen(img) {
+      if (!lb || !img) return;
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
       lb.classList.add('open');
       lb.setAttribute('aria-hidden', 'false');
     }
@@ -186,8 +204,7 @@
     Array.prototype.forEach.call(cap.querySelectorAll('.cap-poster-btn'), function (btn) {
       btn.addEventListener('click', function (e) {
         e.stopPropagation();
-        var img = btn.querySelector('img');
-        lbOpen(img && img.src);
+        lbOpen(btn.querySelector('img'));
       });
     });
     if (lbClose) lbClose.addEventListener('click', closeLb);
@@ -195,16 +212,17 @@
 
     var pinned = false; // true after user taps pill open / on touch
 
-    /* Size each card from poster aspect ratio + viewport (narrower per-card when side by side) */
+    /* Size each card from poster aspect ratio + viewport (narrower per-card when side by side).
+       Landscape posters get wider cards so their small print stays legible. */
     function sizeCard() {
-      var ratio = (poster.naturalWidth && poster.naturalHeight)
+      var ratio = (poster && poster.naturalWidth && poster.naturalHeight)
         ? poster.naturalWidth / poster.naturalHeight
-        : 0.706; // fallback portrait ratio
+        : 1; // not loaded yet — neutral guess; resized again on load below
       var twoUp = window.innerWidth > 760; // cards sit side by side
       var slides = card.querySelectorAll('.cap-slide').length || 1;
       var maxH = Math.min(window.innerHeight * (twoUp ? 0.68 : 0.42), twoUp ? 560 : 460);
       var maxW = twoUp
-        ? Math.min(300, (window.innerWidth - 64 - 14 * (slides - 1)) / slides)
+        ? Math.min(ratio > 1 ? 400 : 300, (window.innerWidth - 64 - 14 * (slides - 1)) / slides)
         : Math.min(window.innerWidth - 32, 360);
       var w = maxW, h = w / ratio;
       if (h > maxH) { h = maxH; w = h * ratio; }
@@ -242,12 +260,16 @@
       sizeCard();
       if (!isHome) return;       // other pages: keep collapsed, hover/tap still opens
       setState('card', false);   // homepage: show the poster on load/refresh
-      setTimeout(function () { collapse(true); }, 3200); // then collapse to the capsule
+      // then collapse to the capsule — unless the visitor has tapped it open meanwhile
+      setTimeout(function () { if (!pinned) collapse(true); }, 3200);
     }
-    if (poster.complete && poster.naturalWidth) init();
+    if (!poster || (poster.complete && poster.naturalWidth)) init();
     else poster.addEventListener('load', init);
     // safety: run regardless if the image is slow/broken
     setTimeout(init, 1200);
+    // posters are lazy, so they may only load once the card is shown —
+    // re-size then, now that the real aspect ratio is known
+    if (poster) poster.addEventListener('load', sizeCard);
 
     /* Hover to expand (desktop) */
     if (!isTouch) {
@@ -259,7 +281,7 @@
     pill.addEventListener('click', function () { pinned = true; expand(true); });
 
     /* Close controls */
-    closeBtn.addEventListener('click', function (e) { e.stopPropagation(); dismiss(); });
+    if (closeBtn) closeBtn.addEventListener('click', function (e) { e.stopPropagation(); dismiss(); });
 
     /* Esc closes — the lightbox first, then the capsule */
     document.addEventListener('keydown', function (e) {

@@ -70,9 +70,6 @@
   letter-spacing: 0.02em; box-shadow: 0 10px 24px rgba(8,26,77,0.18);
 }
 .fac-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-.fac-avatar.av-blue   { background: linear-gradient(150deg, var(--blue-bright), var(--blue)); }
-.fac-avatar.av-orange { background: linear-gradient(150deg, #f9a04a, var(--orange)); }
-.fac-avatar.av-deep   { background: linear-gradient(150deg, var(--blue), var(--blue-deep)); }
 .fac-id h4 { font-size: 17px; font-weight: 800; color: var(--ink); line-height: 1.25; }
 .fac-id .fac-role { font-size: 12.5px; color: var(--orange); font-weight: 600; margin-top: 5px; line-height: 1.45; }
 .fac-bio { font-size: 13.5px; color: var(--body); line-height: 1.7; margin-bottom: 18px; }

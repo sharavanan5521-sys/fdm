@@ -8,6 +8,7 @@
     <meta name="description"
         content="See Freedom Discovery's upcoming workshops and masterclasses. HRD Corp claimable. Register now or enquire on WhatsApp.">
     <link rel="canonical" href="https://freedomdiscovery.net/events.html">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
     <!-- Open Graph / Social Media — preview shown when the page is shared on
          Facebook, WhatsApp, LinkedIn, etc. The og:image / twitter:image below
@@ -35,82 +36,109 @@
 
     <!-- ════════════════════════════════════════════════════════════════════
          Schema.org JSON-LD — structured data for Google's "Events" rich result.
-         WHEN ADDING/CHANGING AN EVENT, keep this in sync with the visible
-         "FEATURED EVENT" section in the <body> below. Update:
+         One block per session. WHEN ADDING/CHANGING AN EVENT, keep it in sync
+         with its visible block in "UPCOMING EVENTS" in the <body> below. Update:
+           - data-expires .. the session's last day (YYYY-MM-DD) — the block is
+                             removed automatically after that, like the visible one
            - "name" ........ event title
-           - "startDate"/"endDate" ... format YYYY-MM-DD
+           - "startDate"/"endDate" ... YYYY-MM-DDTHH:MM:SS+08:00 (Malaysia time)
            - "location" .... venue name + city
            - "image" ....... full URL of the promo poster
            - "description" . one-line summary
          Dates MUST be valid or the rich result will be rejected by Google.
          ════════════════════════════════════════════════════════════════════ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Essential Manager Skills Masterclass — Batu Pahat",
-      "startDate": "2026-08-26",
-      "endDate": "2026-08-27",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "Place",
-        "name": "The Landmark Hotel",
-        "address": { "@type": "PostalAddress", "addressLocality": "Batu Pahat", "addressRegion": "Johor", "addressCountry": "MY" }
-      },
-      "image": "https://freedomdiscovery.net/assets/promo-poster.jpg",
-      "description": "A 2-day HRD Corp-claimable masterclass on essential management and leadership skills, delivered by Freedom Discovery Management.",
-      "organizer": {
-        "@type": "Organization",
-        "name": "Freedom Discovery Management Sdn. Bhd.",
-        "url": "https://freedomdiscovery.net"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Essential Manager Skills Masterclass — Kuching",
-      "startDate": "2026-09-02",
-      "endDate": "2026-09-03",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "Place",
-        "name": "Grand Margherita Hotel",
-        "address": { "@type": "PostalAddress", "addressLocality": "Kuching", "addressRegion": "Sarawak", "addressCountry": "MY" }
-      },
-      "image": "https://freedomdiscovery.net/assets/promo-poster.jpg",
-      "description": "A 2-day HRD Corp-claimable masterclass on essential management and leadership skills, delivered by Freedom Discovery Management.",
-      "organizer": {
-        "@type": "Organization",
-        "name": "Freedom Discovery Management Sdn. Bhd.",
-        "url": "https://freedomdiscovery.net"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-expires="2026-11-03">
     {
       "@context": "https://schema.org",
       "@type": "Event",
       "name": "Essential Manager Skills Masterclass — Petaling Jaya",
-      "startDate": "2026-09-07",
-      "endDate": "2026-09-08",
+      "startDate": "2026-11-02T09:00:00+08:00",
+      "endDate": "2026-11-03T17:00:00+08:00",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "location": {
         "@type": "Place",
         "name": "Armada Hotel",
-        "address": { "@type": "PostalAddress", "addressLocality": "Petaling Jaya", "addressRegion": "Selangor", "addressCountry": "MY" }
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Petaling Jaya",
+          "addressRegion": "Selangor",
+          "addressCountry": "MY"
+        }
       },
       "image": "https://freedomdiscovery.net/assets/promo-poster.jpg",
-      "description": "A 2-day HRD Corp-claimable masterclass on essential management and leadership skills, delivered by Freedom Discovery Management.",
+      "description": "A 2-day HRD Corp-claimable masterclass with Coach Nan on leading with confidence in the AI era through leadership, coaching, communication, emotional intelligence and critical thinking.",
+      "url": "https://freedomdiscovery.net/events.html",
+      "performer": {
+        "@type": "Person",
+        "@id": "https://freedomdiscovery.net/about.html#coachnan",
+        "name": "Coach Nan (Pathmanatan V E Govindasamy)"
+      },
       "organizer": {
         "@type": "Organization",
+        "@id": "https://freedomdiscovery.net/#organization",
         "name": "Freedom Discovery Management Sdn. Bhd.",
-        "url": "https://freedomdiscovery.net"
+        "url": "https://freedomdiscovery.net/"
       }
+    }
+    </script>
+    <script type="application/ld+json" data-expires="2026-11-24">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Essential Manager Skills Masterclass — Kota Kinabalu",
+      "startDate": "2026-11-23T09:00:00+08:00",
+      "endDate": "2026-11-24T17:00:00+08:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Horizon Hotel",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kota Kinabalu",
+          "addressRegion": "Sabah",
+          "addressCountry": "MY"
+        }
+      },
+      "image": "https://freedomdiscovery.net/assets/promo-poster-2.jpg",
+      "description": "A 2-day HRD Corp-claimable masterclass with Coach Nan on leading with confidence in the AI era through leadership, coaching, communication, emotional intelligence and critical thinking.",
+      "url": "https://freedomdiscovery.net/events.html",
+      "performer": {
+        "@type": "Person",
+        "@id": "https://freedomdiscovery.net/about.html#coachnan",
+        "name": "Coach Nan (Pathmanatan V E Govindasamy)"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "@id": "https://freedomdiscovery.net/#organization",
+        "name": "Freedom Discovery Management Sdn. Bhd.",
+        "url": "https://freedomdiscovery.net/"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://freedomdiscovery.net/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Events",
+              "item": "https://freedomdiscovery.net/events.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -168,44 +196,67 @@
         </section>
 
         <!-- ════════════════════════════════════════════════════════════════
-             FEATURED EVENT  —  ★ EDIT THE CURRENT EVENT HERE ★
+             UPCOMING EVENTS  —  ★ EDIT THE EVENTS HERE ★
              ----------------------------------------------------------------
-             This is the main, visible event block. To publish a new event:
-               1. POSTER IMAGE  ← EASIEST: just overwrite the file
-                  assets/promo-poster.jpg with the new poster, keeping the
-                  SAME filename. That single file is reused everywhere:
-                  this Featured Event, the social-share tags in <head>, and
-                  the floating announcement capsule that appears on EVERY page
-                  (index, about, services, team, events, testimonials, contact).
-                  Only if you rename the file do you need to update each src=""
-                  path (search the project for "promo-poster.jpg"). Either way,
-                  update the "alt" text wherever it still names the old event.
-               2. EVENT TITLE: edit the <h2> text.
-               3. DATE / VENUE: edit the three <li> items in <ul class="event-meta">.
-               4. The "alt" text on the <img> should describe the new event.
-               5. Don't forget to also update the Schema.org JSON-LD in <head>.
+             One <div class="event-feature"> block per session. To publish a
+             new session, copy a block and edit:
+               1. data-expires="YYYY-MM-DD" — the session's LAST day. The block
+                  hides itself automatically the day after (js/home.js), so
+                  finished events drop off without an edit.
+               2. POSTER: the <img> src + alt. Posters live in assets/
+                  (promo-poster.jpg, promo-poster-2.jpg, …). The same files
+                  are used by the announcement capsule on EVERY page — keep the
+                  capsule's src/alt/data-expires in step (search the project
+                  for the poster filename).
+               3. TITLE (<h2>), then DATE / TIME / VENUE in <ul class="event-meta">.
+               4. The "Register Now" WhatsApp text (names the city and dates).
+               5. The matching Schema.org JSON-LD block in <head>.
+             If every block has expired, only the "More public sessions…"
+             note below remains.
              ════════════════════════════════════════════════════════════════ -->
         <section class="section">
             <div class="container">
-                <div class="event-feature">
+                <!-- Session 1 — Petaling Jaya -->
+                <div class="event-feature" data-expires="2026-11-03">
                     <div class="event-poster reveal">
-                        <span class="event-flag">Now Open</span>
-                        <!-- POSTER: swap assets/promo-poster.jpg (same name) or edit this src -->
-                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — Aug–Sep 2026, Batu Pahat / Kuching / Petaling Jaya">
+                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — 2 &amp; 3 Nov 2026, Armada Hotel, Petaling Jaya">
                     </div>
                     <div class="event-detail reveal">
-                        <div class="event-label">Featured Event</div>
-                        <!-- EVENT TITLE -->
+                        <div class="event-label">Upcoming Session <span class="event-flag">Now Open</span></div>
                         <h2>Essential Manager Skills Masterclass</h2>
-                        <!-- EVENT DETAILS: date · venue · claimable status -->
                         <ul class="event-meta">
-                            <li><i class="fas fa-calendar-day"></i> <span><strong>26 &amp; 27 Aug 2026</strong> · The Landmark Hotel, Batu Pahat, Johor</span></li>
-                            <li><i class="fas fa-calendar-day"></i> <span><strong>2 &amp; 3 Sep 2026</strong> · Grand Margherita Hotel, Kuching, Sarawak</span></li>
-                            <li><i class="fas fa-calendar-day"></i> <span><strong>7 &amp; 8 Sep 2026</strong> · Armada Hotel, Petaling Jaya</span></li>
+                            <li><i class="fas fa-calendar-day"></i> <span><strong>2 &amp; 3 Nov 2026</strong></span></li>
+                            <li><i class="fas fa-clock"></i> <span><strong>9.00 AM – 5.00 PM</strong></span></li>
+                            <li><i class="fas fa-location-dot"></i> <span><strong>Armada Hotel</strong> · Petaling Jaya, Selangor</span></li>
                             <li><i class="fas fa-circle-check"></i> <span><strong>HRD Corp Claimable</strong> · Certificate of Completion</span></li>
                         </ul>
                         <div class="event-actions">
-                            <a href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20register%20for%20the%20Essential%20Manager%20Skills%20Masterclass."
+                            <a href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20register%20for%20the%20Essential%20Manager%20Skills%20Masterclass%20in%20Petaling%20Jaya%20%282%20%26%203%20Nov%202026%29."
+                               class="btn-primary" target="_blank" rel="noopener noreferrer">Register Now</a>
+                            <a href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20upcoming%20events."
+                               class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Enquire on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session 2 — Kota Kinabalu -->
+                <div class="event-feature" data-expires="2026-11-24">
+                    <div class="event-poster reveal">
+                        <img src="assets/promo-poster-2.jpg" alt="Essential Manager Skills Masterclass — 23 &amp; 24 Nov 2026, Horizon Hotel, Kota Kinabalu, Sabah">
+                    </div>
+                    <div class="event-detail reveal">
+                        <div class="event-label">Upcoming Session <span class="event-flag">Now Open</span></div>
+                        <h2>Essential Manager Skills Masterclass</h2>
+                        <ul class="event-meta">
+                            <li><i class="fas fa-calendar-day"></i> <span><strong>23 &amp; 24 Nov 2026</strong></span></li>
+                            <li><i class="fas fa-clock"></i> <span><strong>9.00 AM – 5.00 PM</strong></span></li>
+                            <li><i class="fas fa-location-dot"></i> <span><strong>Horizon Hotel</strong> · Kota Kinabalu, Sabah</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span><strong>HRD Corp Claimable</strong> · Certificate of Completion</span></li>
+                        </ul>
+                        <div class="event-actions">
+                            <a href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20register%20for%20the%20Essential%20Manager%20Skills%20Masterclass%20in%20Kota%20Kinabalu%20%2823%20%26%2024%20Nov%202026%29."
                                class="btn-primary" target="_blank" rel="noopener noreferrer">Register Now</a>
                             <a href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20upcoming%20events."
                                class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
@@ -272,7 +323,7 @@
             </div>
             <div class="footer-contact">
                 <h4>Contact Info</h4>
-                <p><i class="fas fa-location-dot"></i> Kedah, Malaysia</p>
+                <p><i class="fas fa-location-dot"></i> Kulim, Kedah, Malaysia</p>
                 <p><i class="fas fa-phone"></i> 012 488 3300</p>
                 <p><i class="fas fa-envelope"></i> myfdm@yahoo.com</p>
             </div>
@@ -299,25 +350,25 @@
                 <!-- Card 1 — promo poster shown in the floating announcement capsule.
                      Uses the SAME poster file as the Featured Event above; if you
                      rename assets/promo-poster.jpg, update this src/alt too. -->
-                <div class="cap-slide">
-                    <button class="cap-poster-btn" id="capZoom" type="button" aria-label="Enlarge poster">
-                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — Aug–Sep 2026, Batu Pahat / Kuching / Petaling Jaya" class="cap-poster" id="capPoster" loading="lazy" decoding="async">
+                <div class="cap-slide" data-expires="2026-11-03">
+                    <button class="cap-poster-btn" type="button" aria-label="Enlarge poster">
+                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — 2 &amp; 3 Nov 2026, Armada Hotel, Petaling Jaya" class="cap-poster" loading="lazy" decoding="async">
                         <span class="cap-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i> Tap to enlarge</span>
                     </button>
                     <a class="cap-action"
-                       href="https://wa.me/60124883300?text=EMSM"
+                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20register%20for%20the%20Essential%20Manager%20Skills%20Masterclass%20in%20Petaling%20Jaya%20%282%20%26%203%20Nov%202026%29."
                        target="_blank" rel="noopener noreferrer">
                         Register / Enquire Now <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-                <!-- Card 2 — Leadership training promo poster -->
-                <div class="cap-slide">
+                <!-- Card 2 — EMSM Kota Kinabalu promo poster -->
+                <div class="cap-slide" data-expires="2026-11-24">
                     <button class="cap-poster-btn" type="button" aria-label="Enlarge poster">
-                        <img src="assets/promo-poster-2.jpg" alt="Empower Leaders. Drive Results — HRD Corp claimable high-impact leadership training" class="cap-poster" loading="lazy" decoding="async">
+                        <img src="assets/promo-poster-2.jpg" alt="Essential Manager Skills Masterclass — 23 &amp; 24 Nov 2026, Horizon Hotel, Kota Kinabalu, Sabah" class="cap-poster" loading="lazy" decoding="async">
                         <span class="cap-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i> Tap to enlarge</span>
                     </button>
                     <a class="cap-action"
-                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20leadership%20training%20programmes."
+                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20register%20for%20the%20Essential%20Manager%20Skills%20Masterclass%20in%20Kota%20Kinabalu%20%2823%20%26%2024%20Nov%202026%29."
                        target="_blank" rel="noopener noreferrer">
                         Register / Enquire Now <i class="fas fa-arrow-right"></i>
                     </a>

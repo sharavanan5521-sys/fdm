@@ -1,4 +1,20 @@
 User-agent: *
 Allow: /
 
+# Answer engines & AI assistants — explicitly welcome, so the site can be
+# cited in ChatGPT, Claude, Perplexity, Gemini / Google AI and Copilot answers.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://freedomdiscovery.net/sitemap.xml
