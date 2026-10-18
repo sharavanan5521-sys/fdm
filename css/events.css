@@ -7,6 +7,11 @@
   gap: clamp(30px, 5vw, 64px); align-items: center;
   max-width: 1040px; margin: 0 auto;
 }
+/* one block per session — separate consecutive sessions */
+.event-feature + .event-feature {
+  margin-top: clamp(48px, 7vw, 84px); padding-top: clamp(48px, 7vw, 84px);
+  border-top: 1px solid var(--line);
+}
 
 /* poster */
 .event-poster {
@@ -15,17 +20,18 @@
   background: var(--soft);
 }
 .event-poster img { width: 100%; display: block; }
-.event-poster .event-flag {
-  position: absolute; top: 16px; left: 16px;
-  background: var(--orange); color: #fff; font-size: 12px; font-weight: 700;
-  letter-spacing: 0.05em; text-transform: uppercase;
-  padding: 7px 15px; border-radius: 999px; box-shadow: 0 8px 20px rgba(244,124,31,0.35);
-}
 
 /* details */
 .event-label {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
   font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--orange); margin-bottom: 12px;
+}
+/* status pill sits beside the label, never on top of the poster artwork */
+.event-flag {
+  background: var(--orange); color: #fff; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.05em; padding: 5px 12px; border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(244,124,31,0.3);
 }
 .event-detail h2 {
   font-size: clamp(24px, 3.6vw, 38px); font-weight: 800; color: var(--ink);
@@ -49,6 +55,7 @@
   .event-feature { grid-template-columns: 1fr; gap: 36px; }
   .event-poster { max-width: 420px; margin: 0 auto; }
   .event-detail { text-align: center; }
+  .event-label { justify-content: center; }
   .event-meta li { justify-content: flex-start; text-align: left; }
   .event-actions { justify-content: center; }
 }

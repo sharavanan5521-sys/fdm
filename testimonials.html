@@ -10,6 +10,7 @@
     <meta name="keywords"
         content="Freedom Discovery testimonials, Coach Nan reviews, HRD Corp training reviews, corporate training gallery Malaysia, Google reviews">
     <link rel="canonical" href="https://freedomdiscovery.net/testimonials.html">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
@@ -28,8 +29,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" data-async-css>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/testimonials.css">
 
@@ -37,16 +38,38 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Freedom Discovery Management Sdn. Bhd.",
-      "url": "https://freedomdiscovery.net/testimonials.html",
-      "logo": "https://freedomdiscovery.net/assets/logo.png",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "ratingCount": "6"
-      }
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://freedomdiscovery.net/#organization",
+          "name": "Freedom Discovery Management Sdn. Bhd.",
+          "url": "https://freedomdiscovery.net/",
+          "logo": "https://freedomdiscovery.net/assets/logo.png",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "bestRating": "5",
+            "ratingCount": "14"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://freedomdiscovery.net/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Testimonials",
+              "item": "https://freedomdiscovery.net/testimonials.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -134,14 +157,124 @@
                 </div>
 
                 <!-- Review cards -->
+                <!-- Newest first. Dates are written the way Google shows them ("2 weeks ago") — static text, refresh them when adding reviews. -->
                 <div class="gr-grid reveal">
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#EF6C00;">M</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Muhamad Jumari Mjumanji</span>
+                                <span class="gr-date">2 weeks ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"The training was very helpful and informative. The trainer was highly experienced and
+                        delivered the content clearly and effectively. The training materials provided were also very useful
+                        and helped me to better understand and apply the knowledge gained during the training."</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#F4511E;">M</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Mohd Tasnim</span>
+                                <span class="gr-date">2 weeks ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Very good trainer, very talented &amp; entertaining training. So much knowledges i learn
+                        during training."</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#43A047;">I</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Izziyan Amran</span>
+                                <span class="gr-date">2 weeks ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"It was a good experience and training for me, it really helps me especially in my soft
+                        skills, thank you Coach Nan 👍🏻"</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#5E35B1;">C</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Cecilia Chow</span>
+                                <span class="gr-date">2 weeks ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Great trainer, who provide lots of support and recommendations"</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#D81B60;">A</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Abbey Ng</span>
+                                <span class="gr-date">2 weeks ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Coach Nan is the best coach ever!"</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#3949AB;">J</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Jessica</span>
+                                <span class="gr-date">2 weeks ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Very resourceful"</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#1E88E5;">K</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Kaito Kawazoe</span>
+                                <span class="gr-date">3 weeks ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"I have attended the course led by Coach Nam and it is a very eye-opening experience for
+                        me. It helped me rethink my ways of thinking and approaches for my career. Very good overall."</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#00ACC1;">S</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Siti Zulaikha Binti Ahnan</span>
+                                <span class="gr-date">3 weeks ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Coach Nan is the best. So much input 🙌🏻"</p>
+                    </div>
 
                     <div class="gr-card">
                         <div class="gr-card-top">
                             <div class="gr-avatar" style="background:#4285F4;">N</div>
                             <div class="gr-info">
                                 <span class="gr-name">Nurul Farahheliyana</span>
-                                <span class="gr-date">2 months ago</span>
+                                <span class="gr-date">1 month ago</span>
                             </div>
                             <i class="fab fa-google"></i>
                         </div>
@@ -154,39 +287,10 @@
 
                     <div class="gr-card">
                         <div class="gr-card-top">
-                            <div class="gr-avatar" style="background:#EA4335;">R</div>
-                            <div class="gr-info">
-                                <span class="gr-name">Raymond R Lawrence</span>
-                                <span class="gr-date">6 months ago</span>
-                            </div>
-                            <i class="fab fa-google"></i>
-                        </div>
-                        <div class="gr-stars">★★★★★</div>
-                        <p class="gr-text">"Coach Nan has given a deeper understanding and meaning towards leadership,
-                        communication and coaching. With his lively presentation and explanation, it has made this
-                        experience very fruitful and fulfilling."</p>
-                    </div>
-
-                    <div class="gr-card">
-                        <div class="gr-card-top">
-                            <div class="gr-avatar" style="background:#34A853;">L</div>
-                            <div class="gr-info">
-                                <span class="gr-name">Ling Ling Beh</span>
-                                <span class="gr-date">7 months ago</span>
-                            </div>
-                            <i class="fab fa-google"></i>
-                        </div>
-                        <div class="gr-stars">★★★★★</div>
-                        <p class="gr-text">"Thank you Coach Nan for his lively session — I have benefited greatly. I am now
-                        an HRD Corp certified trainer!"</p>
-                    </div>
-
-                    <div class="gr-card">
-                        <div class="gr-card-top">
                             <div class="gr-avatar" style="background:#FBBC05;color:#333;">J</div>
                             <div class="gr-info">
                                 <span class="gr-name">Joanna Loo</span>
-                                <span class="gr-date">5 months ago</span>
+                                <span class="gr-date">1 month ago</span>
                             </div>
                             <i class="fab fa-google"></i>
                         </div>
@@ -198,10 +302,25 @@
 
                     <div class="gr-card">
                         <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#EA4335;">R</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Raymond R Lawrence</span>
+                                <span class="gr-date">1 month ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Coach Nan has given a deeper understanding and meaning towards leadership,
+                        communication and coaching. With his lively presentation and explanation, it has made this
+                        experience very fruitful and fulfilling."</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
                             <div class="gr-avatar" style="background:#9C27B0;">M</div>
                             <div class="gr-info">
                                 <span class="gr-name">Margaret Kibat</span>
-                                <span class="gr-date">6 months ago</span>
+                                <span class="gr-date">2 months ago</span>
                             </div>
                             <i class="fab fa-google"></i>
                         </div>
@@ -216,13 +335,27 @@
                             <div class="gr-avatar" style="background:#00897B;">J</div>
                             <div class="gr-info">
                                 <span class="gr-name">Jacy J Channel</span>
-                                <span class="gr-date">6 months ago</span>
+                                <span class="gr-date">2 months ago</span>
                             </div>
                             <i class="fab fa-google"></i>
                         </div>
                         <div class="gr-stars">★★★★★</div>
                         <p class="gr-text">"Coach Nan is a very humble and supportive trainer. His explanation is very clear
                         and easy to understand. I enjoy every session of his teaching and training activities."</p>
+                    </div>
+
+                    <div class="gr-card">
+                        <div class="gr-card-top">
+                            <div class="gr-avatar" style="background:#34A853;">L</div>
+                            <div class="gr-info">
+                                <span class="gr-name">Ling Ling Beh</span>
+                                <span class="gr-date">2 months ago</span>
+                            </div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="gr-stars">★★★★★</div>
+                        <p class="gr-text">"Thank you Coach Nan for his lively session — I have benefited greatly. I am now
+                        an HRD Corp certified trainer!"</p>
                     </div>
 
                 </div>
@@ -359,7 +492,7 @@
             </div>
             <div class="footer-contact">
                 <h4>Contact Info</h4>
-                <p><i class="fas fa-location-dot"></i> Kedah, Malaysia</p>
+                <p><i class="fas fa-location-dot"></i> Kulim, Kedah, Malaysia</p>
                 <p><i class="fas fa-phone"></i> 012 488 3300</p>
                 <p><i class="fas fa-envelope"></i> myfdm@yahoo.com</p>
             </div>
@@ -383,26 +516,26 @@
                 <i class="fas fa-xmark"></i>
             </button>
             <div class="cap-deck">
-                <!-- Card 1 — EMSM promo poster -->
-                <div class="cap-slide">
-                    <button class="cap-poster-btn" id="capZoom" type="button" aria-label="Enlarge poster">
-                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — Aug–Sep 2026, Batu Pahat / Kuching / Petaling Jaya" class="cap-poster" id="capPoster" loading="lazy" decoding="async">
+                <!-- Card 1 — EMSM Petaling Jaya promo poster -->
+                <div class="cap-slide" data-expires="2026-11-03">
+                    <button class="cap-poster-btn" type="button" aria-label="Enlarge poster">
+                        <img src="assets/promo-poster.jpg" alt="Essential Manager Skills Masterclass — 2 &amp; 3 Nov 2026, Armada Hotel, Petaling Jaya" class="cap-poster" loading="lazy" decoding="async">
                         <span class="cap-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i> Tap to enlarge</span>
                     </button>
                     <a class="cap-action"
-                       href="https://wa.me/60124883300?text=EMSM"
+                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20register%20for%20the%20Essential%20Manager%20Skills%20Masterclass%20in%20Petaling%20Jaya%20%282%20%26%203%20Nov%202026%29."
                        target="_blank" rel="noopener noreferrer">
                         Register / Enquire Now <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-                <!-- Card 2 — Leadership training promo poster -->
-                <div class="cap-slide">
+                <!-- Card 2 — EMSM Kota Kinabalu promo poster -->
+                <div class="cap-slide" data-expires="2026-11-24">
                     <button class="cap-poster-btn" type="button" aria-label="Enlarge poster">
-                        <img src="assets/promo-poster-2.jpg" alt="Empower Leaders. Drive Results — HRD Corp claimable high-impact leadership training" class="cap-poster" loading="lazy" decoding="async">
+                        <img src="assets/promo-poster-2.jpg" alt="Essential Manager Skills Masterclass — 23 &amp; 24 Nov 2026, Horizon Hotel, Kota Kinabalu, Sabah" class="cap-poster" loading="lazy" decoding="async">
                         <span class="cap-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i> Tap to enlarge</span>
                     </button>
                     <a class="cap-action"
-                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20leadership%20training%20programmes."
+                       href="https://wa.me/60124883300?text=Hi%2C%20I%27d%20like%20to%20register%20for%20the%20Essential%20Manager%20Skills%20Masterclass%20in%20Kota%20Kinabalu%20%2823%20%26%2024%20Nov%202026%29."
                        target="_blank" rel="noopener noreferrer">
                         Register / Enquire Now <i class="fas fa-arrow-right"></i>
                     </a>
@@ -454,61 +587,7 @@
     <button id="backToTop" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="js/home.js"></script>
-
-    <!-- ════════ GALLERY LIGHTBOX (self-contained) ════════ -->
-    <script>
-    (function () {
-        var marquee = document.getElementById('galleryMarquee');
-        var lb = document.getElementById('gLightbox');
-        if (!marquee || !lb) return;
-
-        var lbImg = document.getElementById('gLbImg');
-        var btnClose = document.getElementById('gLbClose');
-        var btnPrev = document.getElementById('gLbPrev');
-        var btnNext = document.getElementById('gLbNext');
-
-        // Build a unique, ordered list of real photos (skip the duplicated clones).
-        var sources = [];
-        marquee.querySelectorAll('.g-pic:not([aria-hidden="true"]) img').forEach(function (img) {
-            if (sources.indexOf(img.getAttribute('src')) === -1) sources.push(img.getAttribute('src'));
-        });
-        var current = 0;
-
-        function show(i) {
-            current = (i + sources.length) % sources.length;
-            lbImg.setAttribute('src', sources[current]);
-        }
-        function open(src) {
-            var i = sources.indexOf(src);
-            show(i === -1 ? 0 : i);
-            lb.classList.add('open');
-            lb.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-        }
-        function close() {
-            lb.classList.remove('open');
-            lb.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        }
-
-        marquee.addEventListener('click', function (e) {
-            var pic = e.target.closest('.g-pic');
-            if (!pic) return;
-            var img = pic.querySelector('img');
-            if (img) open(img.getAttribute('src'));
-        });
-        btnClose.addEventListener('click', close);
-        btnPrev.addEventListener('click', function () { show(current - 1); });
-        btnNext.addEventListener('click', function () { show(current + 1); });
-        lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
-        document.addEventListener('keydown', function (e) {
-            if (!lb.classList.contains('open')) return;
-            if (e.key === 'Escape') close();
-            else if (e.key === 'ArrowLeft') show(current - 1);
-            else if (e.key === 'ArrowRight') show(current + 1);
-        });
-    })();
-    </script>
+    <script src="js/gallery.js"></script>
 </body>
 
 </html>
